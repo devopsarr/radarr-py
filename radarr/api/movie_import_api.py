@@ -17,9 +17,9 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt
+from pydantic import StrictInt, conlist
 
-from typing import List, Optional
+from typing import Optional
 
 from radarr.models.movie_resource import MovieResource
 
@@ -43,7 +43,7 @@ class MovieImportApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def create_movie_import(self, movie_resource : Optional[List[MovieResource]] = None, **kwargs) -> None:  # noqa: E501
+    def create_movie_import(self, movie_resource : Optional[conlist(MovieResource)] = None, **kwargs) -> None:  # noqa: E501
         """create_movie_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -73,7 +73,7 @@ class MovieImportApi(object):
         return self.create_movie_import_with_http_info(movie_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_movie_import_with_http_info(self, movie_resource : Optional[List[MovieResource]] = None, **kwargs):  # noqa: E501
+    def create_movie_import_with_http_info(self, movie_resource : Optional[conlist(MovieResource)] = None, **kwargs):  # noqa: E501
         """create_movie_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -163,7 +163,7 @@ class MovieImportApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -302,7 +302,7 @@ class MovieImportApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "MovieResource",

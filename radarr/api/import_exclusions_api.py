@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
@@ -167,7 +167,7 @@ class ImportExclusionsApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "ImportExclusionsResource",
@@ -191,7 +191,7 @@ class ImportExclusionsApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def create_exclusions_bulk(self, import_exclusions_resource : Optional[List[ImportExclusionsResource]] = None, **kwargs) -> None:  # noqa: E501
+    def create_exclusions_bulk(self, import_exclusions_resource : Optional[conlist(ImportExclusionsResource)] = None, **kwargs) -> None:  # noqa: E501
         """create_exclusions_bulk  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -221,7 +221,7 @@ class ImportExclusionsApi(object):
         return self.create_exclusions_bulk_with_http_info(import_exclusions_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_exclusions_bulk_with_http_info(self, import_exclusions_resource : Optional[List[ImportExclusionsResource]] = None, **kwargs):  # noqa: E501
+    def create_exclusions_bulk_with_http_info(self, import_exclusions_resource : Optional[conlist(ImportExclusionsResource)] = None, **kwargs):  # noqa: E501
         """create_exclusions_bulk  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -311,7 +311,7 @@ class ImportExclusionsApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -446,7 +446,7 @@ class ImportExclusionsApi(object):
         _body_params = None
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -585,7 +585,7 @@ class ImportExclusionsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "ImportExclusionsResource",
@@ -719,7 +719,7 @@ class ImportExclusionsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "List[ImportExclusionsResource]",
@@ -874,7 +874,7 @@ class ImportExclusionsApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "ImportExclusionsResource",

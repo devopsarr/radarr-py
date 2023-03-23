@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
@@ -160,7 +160,7 @@ class QualityDefinitionApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "QualityDefinitionResource",
@@ -294,7 +294,7 @@ class QualityDefinitionApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "List[QualityDefinitionResource]",
@@ -318,7 +318,7 @@ class QualityDefinitionApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def put_quality_definition_update(self, quality_definition_resource : Optional[List[QualityDefinitionResource]] = None, **kwargs) -> None:  # noqa: E501
+    def put_quality_definition_update(self, quality_definition_resource : Optional[conlist(QualityDefinitionResource)] = None, **kwargs) -> None:  # noqa: E501
         """put_quality_definition_update  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -348,7 +348,7 @@ class QualityDefinitionApi(object):
         return self.put_quality_definition_update_with_http_info(quality_definition_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def put_quality_definition_update_with_http_info(self, quality_definition_resource : Optional[List[QualityDefinitionResource]] = None, **kwargs):  # noqa: E501
+    def put_quality_definition_update_with_http_info(self, quality_definition_resource : Optional[conlist(QualityDefinitionResource)] = None, **kwargs):  # noqa: E501
         """put_quality_definition_update  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -438,7 +438,7 @@ class QualityDefinitionApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -591,7 +591,7 @@ class QualityDefinitionApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "QualityDefinitionResource",

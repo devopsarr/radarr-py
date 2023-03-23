@@ -17,51 +17,6 @@ Method | HTTP request | Description
 
 ### Example
 
-* Api Key Authentication (X-Api-Key):
-```python
-from __future__ import print_function
-import time
-import os
-import radarr
-from radarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:7878
-# See configuration.py for a list of all supported configuration parameters.
-configuration = radarr.Configuration(
-    host = "http://localhost:7878"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with radarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = radarr.QueueApi(api_client)
-    id = 56 # int | 
-    remove_from_client = True # bool |  (optional) (default to True)
-    blocklist = False # bool |  (optional) (default to False)
-
-    try:
-        api_instance.delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist)
-    except Exception as e:
-        print("Exception when calling QueueApi->delete_queue: %s\n" % e)
-```
-
 * Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
@@ -81,17 +36,62 @@ configuration = radarr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
 # Configure API key authorization: X-Api-Key
 configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.QueueApi(api_client)
+    id = 56 # int | 
+    remove_from_client = True # bool |  (optional) (default to True)
+    blocklist = False # bool |  (optional) (default to False)
+
+    try:
+        api_instance.delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist)
+    except Exception as e:
+        print("Exception when calling QueueApi->delete_queue: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: apikey
 configuration.api_key['apikey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with radarr.ApiClient(configuration) as api_client:
@@ -121,7 +121,7 @@ void (empty response body)
 
 ### Authorization
 
-[X-Api-Key](../README.md#X-Api-Key), [apikey](../README.md#apikey)
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 
@@ -142,51 +142,6 @@ void (empty response body)
 
 ### Example
 
-* Api Key Authentication (X-Api-Key):
-```python
-from __future__ import print_function
-import time
-import os
-import radarr
-from radarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:7878
-# See configuration.py for a list of all supported configuration parameters.
-configuration = radarr.Configuration(
-    host = "http://localhost:7878"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with radarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = radarr.QueueApi(api_client)
-    remove_from_client = True # bool |  (optional) (default to True)
-    blocklist = False # bool |  (optional) (default to False)
-    queue_bulk_resource = radarr.QueueBulkResource() # QueueBulkResource |  (optional)
-
-    try:
-        api_instance.delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, queue_bulk_resource=queue_bulk_resource)
-    except Exception as e:
-        print("Exception when calling QueueApi->delete_queue_bulk: %s\n" % e)
-```
-
 * Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
@@ -206,17 +161,62 @@ configuration = radarr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
 # Configure API key authorization: X-Api-Key
 configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.QueueApi(api_client)
+    remove_from_client = True # bool |  (optional) (default to True)
+    blocklist = False # bool |  (optional) (default to False)
+    queue_bulk_resource = radarr.QueueBulkResource() # QueueBulkResource |  (optional)
+
+    try:
+        api_instance.delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, queue_bulk_resource=queue_bulk_resource)
+    except Exception as e:
+        print("Exception when calling QueueApi->delete_queue_bulk: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: apikey
 configuration.api_key['apikey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with radarr.ApiClient(configuration) as api_client:
@@ -246,7 +246,7 @@ void (empty response body)
 
 ### Authorization
 
-[X-Api-Key](../README.md#X-Api-Key), [apikey](../README.md#apikey)
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 
@@ -267,52 +267,6 @@ void (empty response body)
 
 ### Example
 
-* Api Key Authentication (X-Api-Key):
-```python
-from __future__ import print_function
-import time
-import os
-import radarr
-from radarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:7878
-# See configuration.py for a list of all supported configuration parameters.
-configuration = radarr.Configuration(
-    host = "http://localhost:7878"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with radarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = radarr.QueueApi(api_client)
-    include_unknown_movie_items = False # bool |  (optional) (default to False)
-    include_movie = False # bool |  (optional) (default to False)
-
-    try:
-        api_response = api_instance.get_queue(include_unknown_movie_items=include_unknown_movie_items, include_movie=include_movie)
-        print("The response of QueueApi->get_queue:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling QueueApi->get_queue: %s\n" % e)
-```
-
 * Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
@@ -332,17 +286,63 @@ configuration = radarr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
 # Configure API key authorization: X-Api-Key
 configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.QueueApi(api_client)
+    include_unknown_movie_items = False # bool |  (optional) (default to False)
+    include_movie = False # bool |  (optional) (default to False)
+
+    try:
+        api_response = api_instance.get_queue(include_unknown_movie_items=include_unknown_movie_items, include_movie=include_movie)
+        print("The response of QueueApi->get_queue:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling QueueApi->get_queue: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: apikey
 configuration.api_key['apikey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with radarr.ApiClient(configuration) as api_client:
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[X-Api-Key](../README.md#X-Api-Key), [apikey](../README.md#apikey)
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 
@@ -393,51 +393,6 @@ Name | Type | Description  | Notes
 
 ### Example
 
-* Api Key Authentication (X-Api-Key):
-```python
-from __future__ import print_function
-import time
-import os
-import radarr
-from radarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:7878
-# See configuration.py for a list of all supported configuration parameters.
-configuration = radarr.Configuration(
-    host = "http://localhost:7878"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with radarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = radarr.QueueApi(api_client)
-    id = 56 # int | 
-
-    try:
-        api_response = api_instance.get_queue_by_id(id)
-        print("The response of QueueApi->get_queue_by_id:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling QueueApi->get_queue_by_id: %s\n" % e)
-```
-
 * Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
@@ -457,17 +412,62 @@ configuration = radarr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
 # Configure API key authorization: X-Api-Key
 configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.QueueApi(api_client)
+    id = 56 # int | 
+
+    try:
+        api_response = api_instance.get_queue_by_id(id)
+        print("The response of QueueApi->get_queue_by_id:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling QueueApi->get_queue_by_id: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: apikey
 configuration.api_key['apikey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with radarr.ApiClient(configuration) as api_client:
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[X-Api-Key](../README.md#X-Api-Key), [apikey](../README.md#apikey)
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 

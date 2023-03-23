@@ -71,6 +71,10 @@ class CustomFormatResource(BaseModel):
         if self.name is None:
             _dict['name'] = None
 
+        # set to None if include_custom_format_when_renaming (nullable) is None
+        if self.include_custom_format_when_renaming is None:
+            _dict['includeCustomFormatWhenRenaming'] = None
+
         # set to None if specifications (nullable) is None
         if self.specifications is None:
             _dict['specifications'] = None

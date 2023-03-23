@@ -37,13 +37,14 @@ class HistoryResource(BaseModel):
     languages: Optional[List]
     quality: Optional[QualityModel]
     custom_formats: Optional[List]
+    custom_format_score: Optional[int]
     quality_cutoff_not_met: Optional[bool]
     var_date: Optional[datetime]
     download_id: Optional[str]
     event_type: Optional[MovieHistoryEventType]
     data: Optional[Dict]
     movie: Optional[MovieResource]
-    __properties = ["id", "movieId", "sourceTitle", "languages", "quality", "customFormats", "qualityCutoffNotMet", "date", "downloadId", "eventType", "data", "movie"]
+    __properties = ["id", "movieId", "sourceTitle", "languages", "quality", "customFormats", "customFormatScore", "qualityCutoffNotMet", "date", "downloadId", "eventType", "data", "movie"]
 
     class Config:
         allow_population_by_field_name = True
@@ -130,6 +131,7 @@ class HistoryResource(BaseModel):
             "languages": [Language.from_dict(_item) for _item in obj.get("languages")] if obj.get("languages") is not None else None,
             "quality": QualityModel.from_dict(obj.get("quality")) if obj.get("quality") is not None else None,
             "custom_formats": [CustomFormatResource.from_dict(_item) for _item in obj.get("customFormats")] if obj.get("customFormats") is not None else None,
+            "custom_format_score": obj.get("customFormatScore"),
             "quality_cutoff_not_met": obj.get("qualityCutoffNotMet"),
             "var_date": obj.get("date"),
             "download_id": obj.get("downloadId"),

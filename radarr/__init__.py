@@ -14,7 +14,9 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.0.1"
+# x-release-please-start-version
+__version__ = "0.1.0"
+# x-release-please-end
 
 # import apis into sdk package
 from radarr.api.alternative_title_api import AlternativeTitleApi
@@ -138,7 +140,6 @@ from radarr.models.health_resource import HealthResource
 from radarr.models.history_resource import HistoryResource
 from radarr.models.history_resource_paging_resource import HistoryResourcePagingResource
 from radarr.models.host_config_resource import HostConfigResource
-from radarr.models.http_uri import HttpUri
 from radarr.models.import_exclusions_resource import ImportExclusionsResource
 from radarr.models.import_list_config_resource import ImportListConfigResource
 from radarr.models.import_list_resource import ImportListResource
@@ -213,7 +214,6 @@ from radarr.models.tmdb_country_code import TMDbCountryCode
 from radarr.models.tag_details_resource import TagDetailsResource
 from radarr.models.tag_resource import TagResource
 from radarr.models.task_resource import TaskResource
-from radarr.models.time_span import TimeSpan
 from radarr.models.tracked_download_state import TrackedDownloadState
 from radarr.models.tracked_download_status import TrackedDownloadStatus
 from radarr.models.tracked_download_status_message import TrackedDownloadStatusMessage
@@ -222,4 +222,3 @@ from radarr.models.unmapped_folder import UnmappedFolder
 from radarr.models.update_changes import UpdateChanges
 from radarr.models.update_mechanism import UpdateMechanism
 from radarr.models.update_resource import UpdateResource
-from radarr.models.version import Version

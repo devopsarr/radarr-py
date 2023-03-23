@@ -30,7 +30,7 @@ class Modifier(str, Enum):
     allowed enum values
     """
 
-    var_NONE = 'none'
+    NONE = 'none'
     REGIONAL = 'regional'
     SCREENER = 'screener'
     RAWHD = 'rawhd'

@@ -30,6 +30,6 @@ class MovieRuntimeFormatType(str, Enum):
     allowed enum values
     """
 
-    HOURS_MINUTES = 'hoursMinutes'
+    HOURSMINUTES = 'hoursMinutes'
     MINUTES = 'minutes'
 

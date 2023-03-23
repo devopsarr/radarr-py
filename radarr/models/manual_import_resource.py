@@ -19,6 +19,7 @@ import json
 
 from typing import List, Optional
 from pydantic import BaseModel
+from radarr.models.custom_format_resource import CustomFormatResource
 from radarr.models.language import Language
 from radarr.models.movie_resource import MovieResource
 from radarr.models.quality_model import QualityModel
@@ -42,8 +43,9 @@ class ManualImportResource(BaseModel):
     release_group: Optional[str]
     quality_weight: Optional[int]
     download_id: Optional[str]
+    custom_formats: Optional[List]
     rejections: Optional[List]
-    __properties = ["id", "path", "relativePath", "folderName", "name", "size", "movie", "quality", "languages", "releaseGroup", "qualityWeight", "downloadId", "rejections"]
+    __properties = ["id", "path", "relativePath", "folderName", "name", "size", "movie", "quality", "languages", "releaseGroup", "qualityWeight", "downloadId", "customFormats", "rejections"]
 
     class Config:
         allow_population_by_field_name = True
@@ -85,6 +87,13 @@ class ManualImportResource(BaseModel):
                 if _item:
                     _items.append(_item.to_dict())
             _dict['languages'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in custom_formats (list)
+        _items = []
+        if self.custom_formats:
+            for _item in self.custom_formats:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['customFormats'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in rejections (list)
         _items = []
         if self.rejections:
@@ -120,6 +129,10 @@ class ManualImportResource(BaseModel):
         if self.download_id is None:
             _dict['downloadId'] = None
 
+        # set to None if custom_formats (nullable) is None
+        if self.custom_formats is None:
+            _dict['customFormats'] = None
+
         # set to None if rejections (nullable) is None
         if self.rejections is None:
             _dict['rejections'] = None
@@ -148,6 +161,7 @@ class ManualImportResource(BaseModel):
             "release_group": obj.get("releaseGroup"),
             "quality_weight": obj.get("qualityWeight"),
             "download_id": obj.get("downloadId"),
+            "custom_formats": [CustomFormatResource.from_dict(_item) for _item in obj.get("customFormats")] if obj.get("customFormats") is not None else None,
             "rejections": [Rejection.from_dict(_item) for _item in obj.get("rejections")] if obj.get("rejections") is not None else None
         })
         return _obj

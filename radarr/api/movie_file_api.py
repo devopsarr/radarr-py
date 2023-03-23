@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
@@ -157,7 +157,7 @@ class MovieFileApi(object):
         _body_params = None
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -299,7 +299,7 @@ class MovieFileApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -438,7 +438,7 @@ class MovieFileApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "MovieFileResource",
@@ -462,7 +462,7 @@ class MovieFileApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_movie_file(self, movie_id : Optional[StrictInt] = None, movie_file_ids : Optional[List[StrictInt]] = None, **kwargs) -> List[MovieFileResource]:  # noqa: E501
+    def list_movie_file(self, movie_id : Optional[StrictInt] = None, movie_file_ids : Optional[conlist(StrictInt)] = None, **kwargs) -> List[MovieFileResource]:  # noqa: E501
         """list_movie_file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -494,7 +494,7 @@ class MovieFileApi(object):
         return self.list_movie_file_with_http_info(movie_id, movie_file_ids, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_movie_file_with_http_info(self, movie_id : Optional[StrictInt] = None, movie_file_ids : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
+    def list_movie_file_with_http_info(self, movie_id : Optional[StrictInt] = None, movie_file_ids : Optional[conlist(StrictInt)] = None, **kwargs):  # noqa: E501
         """list_movie_file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -587,7 +587,7 @@ class MovieFileApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "List[MovieFileResource]",
@@ -731,7 +731,7 @@ class MovieFileApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -884,7 +884,7 @@ class MovieFileApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "MovieFileResource",
