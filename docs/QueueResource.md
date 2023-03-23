@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **size** | **float** |  | [optional] 
 **title** | **str** |  | [optional] 
 **sizeleft** | **float** |  | [optional] 
-**timeleft** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
+**timeleft** | **str** |  | [optional] 
 **estimated_completion_time** | **datetime** |  | [optional] 
 **status** | **str** |  | [optional] 
 **tracked_download_status** | [**TrackedDownloadStatus**](TrackedDownloadStatus.md) |  | [optional] 

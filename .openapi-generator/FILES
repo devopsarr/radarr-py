@@ -64,7 +64,6 @@ docs/HistoryResource.md
 docs/HistoryResourcePagingResource.md
 docs/HostConfigApi.md
 docs/HostConfigResource.md
-docs/HttpUri.md
 docs/ImportExclusionsApi.md
 docs/ImportExclusionsResource.md
 docs/ImportListApi.md
@@ -183,7 +182,6 @@ docs/TagDetailsResource.md
 docs/TagResource.md
 docs/TaskApi.md
 docs/TaskResource.md
-docs/TimeSpan.md
 docs/TrackedDownloadState.md
 docs/TrackedDownloadStatus.md
 docs/TrackedDownloadStatusMessage.md
@@ -195,7 +193,7 @@ docs/UpdateChanges.md
 docs/UpdateLogFileApi.md
 docs/UpdateMechanism.md
 docs/UpdateResource.md
-docs/Version.md
+pyproject.toml
 radarr/__init__.py
 radarr/api/__init__.py
 radarr/api/alternative_title_api.py
@@ -312,7 +310,6 @@ radarr/models/health_resource.py
 radarr/models/history_resource.py
 radarr/models/history_resource_paging_resource.py
 radarr/models/host_config_resource.py
-radarr/models/http_uri.py
 radarr/models/import_exclusions_resource.py
 radarr/models/import_list_config_resource.py
 radarr/models/import_list_resource.py
@@ -386,7 +383,6 @@ radarr/models/system_resource.py
 radarr/models/tag_details_resource.py
 radarr/models/tag_resource.py
 radarr/models/task_resource.py
-radarr/models/time_span.py
 radarr/models/tmdb_country_code.py
 radarr/models/tracked_download_state.py
 radarr/models/tracked_download_status.py
@@ -396,7 +392,6 @@ radarr/models/unmapped_folder.py
 radarr/models/update_changes.py
 radarr/models/update_mechanism.py
 radarr/models/update_resource.py
-radarr/models/version.py
 radarr/rest.py
 setup.cfg
 setup.py

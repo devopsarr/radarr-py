@@ -36,6 +36,7 @@ class TMDbCountryCode(str, Enum):
     FR = 'fr'
     DE = 'de'
     GB = 'gb'
+    IE = 'ie'
     IT = 'it'
     ES = 'es'
     US = 'us'

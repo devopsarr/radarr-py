@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **quality** | [**Quality**](Quality.md) |  | [optional] 
 **revision** | [**Revision**](Revision.md) |  | [optional] 
-**hardcoded_subs** | **str** |  | [optional] 
 
 ## Example
 

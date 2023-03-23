@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **year** | **int** |  | [optional] 
 **imdb_id** | **str** |  | [optional] 
 **tmdb_id** | **int** |  | [optional] 
-**extra_info** | **Dict[str, object]** |  | [optional] 
+**hardcoded_subs** | **str** |  | [optional] 
 **movie_title** | **str** |  | [optional] [readonly] 
 **primary_movie_title** | **str** |  | [optional] [readonly] 
 

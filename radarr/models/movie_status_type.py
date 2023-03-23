@@ -32,7 +32,7 @@ class MovieStatusType(str, Enum):
 
     TBA = 'tba'
     ANNOUNCED = 'announced'
-    IN_CINEMAS = 'inCinemas'
+    INCINEMAS = 'inCinemas'
     RELEASED = 'released'
     DELETED = 'deleted'
 

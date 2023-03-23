@@ -18,13 +18,12 @@ import json
 
 from datetime import datetime
 from typing import List, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 from radarr.models.custom_format_resource import CustomFormatResource
 from radarr.models.download_protocol import DownloadProtocol
 from radarr.models.language import Language
 from radarr.models.movie_resource import MovieResource
 from radarr.models.quality_model import QualityModel
-from radarr.models.time_span import TimeSpan
 from radarr.models.tracked_download_state import TrackedDownloadState
 from radarr.models.tracked_download_status import TrackedDownloadStatus
 from radarr.models.tracked_download_status_message import TrackedDownloadStatusMessage
@@ -44,7 +43,7 @@ class QueueResource(BaseModel):
     size: Optional[float]
     title: Optional[str]
     sizeleft: Optional[float]
-    timeleft: Optional[TimeSpan]
+    timeleft: Optional[str]
     estimated_completion_time: Optional[datetime]
     status: Optional[str]
     tracked_download_status: Optional[TrackedDownloadStatus]
@@ -57,6 +56,12 @@ class QueueResource(BaseModel):
     indexer: Optional[str]
     output_path: Optional[str]
     __properties = ["id", "movieId", "movie", "languages", "quality", "customFormats", "size", "title", "sizeleft", "timeleft", "estimatedCompletionTime", "status", "trackedDownloadStatus", "trackedDownloadState", "statusMessages", "errorMessage", "downloadId", "protocol", "downloadClient", "indexer", "outputPath"]
+
+    @validator('timeleft')
+    def timeleft_validate_regular_expression(cls, v):
+        if not re.match(r"\d{2}:\d{2}:\d{2}", v):
+            raise ValueError(r"must validate the regular expression /\d{2}:\d{2}:\d{2}/")
+        return v
 
     class Config:
         allow_population_by_field_name = True
@@ -105,9 +110,6 @@ class QueueResource(BaseModel):
                 if _item:
                     _items.append(_item.to_dict())
             _dict['customFormats'] = _items
-        # override the default output from pydantic by calling `to_dict()` of timeleft
-        if self.timeleft:
-            _dict['timeleft'] = self.timeleft.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in status_messages (list)
         _items = []
         if self.status_messages:
@@ -184,7 +186,7 @@ class QueueResource(BaseModel):
             "size": obj.get("size"),
             "title": obj.get("title"),
             "sizeleft": obj.get("sizeleft"),
-            "timeleft": TimeSpan.from_dict(obj.get("timeleft")) if obj.get("timeleft") is not None else None,
+            "timeleft": obj.get("timeleft"),
             "estimated_completion_time": obj.get("estimatedCompletionTime"),
             "status": obj.get("status"),
             "tracked_download_status": obj.get("trackedDownloadStatus"),

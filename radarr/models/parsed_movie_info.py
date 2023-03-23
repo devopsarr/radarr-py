@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from pydantic import BaseModel
 from radarr.models.language import Language
 from radarr.models.quality_model import QualityModel
@@ -40,10 +40,10 @@ class ParsedMovieInfo(BaseModel):
     year: Optional[int]
     imdb_id: Optional[str]
     tmdb_id: Optional[int]
-    extra_info: Optional[Dict]
+    hardcoded_subs: Optional[str]
     movie_title: Optional[str]
     primary_movie_title: Optional[str]
-    __properties = ["movieTitles", "originalTitle", "releaseTitle", "simpleReleaseTitle", "quality", "languages", "releaseGroup", "releaseHash", "edition", "year", "imdbId", "tmdbId", "extraInfo", "movieTitle", "primaryMovieTitle"]
+    __properties = ["movieTitles", "originalTitle", "releaseTitle", "simpleReleaseTitle", "quality", "languages", "releaseGroup", "releaseHash", "edition", "year", "imdbId", "tmdbId", "hardcodedSubs", "movieTitle", "primaryMovieTitle"]
 
     class Config:
         allow_population_by_field_name = True
@@ -120,9 +120,9 @@ class ParsedMovieInfo(BaseModel):
         if self.imdb_id is None:
             _dict['imdbId'] = None
 
-        # set to None if extra_info (nullable) is None
-        if self.extra_info is None:
-            _dict['extraInfo'] = None
+        # set to None if hardcoded_subs (nullable) is None
+        if self.hardcoded_subs is None:
+            _dict['hardcodedSubs'] = None
 
         # set to None if movie_title (nullable) is None
         if self.movie_title is None:
@@ -156,7 +156,7 @@ class ParsedMovieInfo(BaseModel):
             "year": obj.get("year"),
             "imdb_id": obj.get("imdbId"),
             "tmdb_id": obj.get("tmdbId"),
-            "extra_info": obj.get("extraInfo"),
+            "hardcoded_subs": obj.get("hardcodedSubs"),
             "movie_title": obj.get("movieTitle"),
             "primary_movie_title": obj.get("primaryMovieTitle")
         })

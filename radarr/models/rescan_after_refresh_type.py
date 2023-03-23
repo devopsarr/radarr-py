@@ -31,6 +31,6 @@ class RescanAfterRefreshType(str, Enum):
     """
 
     ALWAYS = 'always'
-    AFTER_MANUAL = 'afterManual'
+    AFTERMANUAL = 'afterManual'
     NEVER = 'never'
 

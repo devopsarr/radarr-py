@@ -428,7 +428,9 @@ conf = radarr.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 3.0.0\n"\
-               "SDK Package Version: 0.0.1".\
+                // x-release-please-start-version
+               "SDK Package Version: 0.1.0".\
+                // x-release-please-end
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

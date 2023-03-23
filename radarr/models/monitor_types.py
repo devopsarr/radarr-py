@@ -30,7 +30,7 @@ class MonitorTypes(str, Enum):
     allowed enum values
     """
 
-    MOVIE_ONLY = 'movieOnly'
-    MOVIE_AND_COLLECTION = 'movieAndCollection'
-    var_NONE = 'none'
+    MOVIEONLY = 'movieOnly'
+    MOVIEANDCOLLECTION = 'movieAndCollection'
+    NONE = 'none'
 

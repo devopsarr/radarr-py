@@ -30,8 +30,7 @@ class QualityModel(BaseModel):
     """
     quality: Optional[Quality]
     revision: Optional[Revision]
-    hardcoded_subs: Optional[str]
-    __properties = ["quality", "revision", "hardcodedSubs"]
+    __properties = ["quality", "revision"]
 
     class Config:
         allow_population_by_field_name = True
@@ -66,10 +65,6 @@ class QualityModel(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of revision
         if self.revision:
             _dict['revision'] = self.revision.to_dict()
-        # set to None if hardcoded_subs (nullable) is None
-        if self.hardcoded_subs is None:
-            _dict['hardcodedSubs'] = None
-
         return _dict
 
     @classmethod
@@ -83,8 +78,7 @@ class QualityModel(BaseModel):
 
         _obj = QualityModel.parse_obj({
             "quality": Quality.from_dict(obj.get("quality")) if obj.get("quality") is not None else None,
-            "revision": Revision.from_dict(obj.get("revision")) if obj.get("revision") is not None else None,
-            "hardcoded_subs": obj.get("hardcodedSubs")
+            "revision": Revision.from_dict(obj.get("revision")) if obj.get("revision") is not None else None
         })
         return _obj
 

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **release_group** | **str** |  | [optional] 
 **quality_weight** | **int** |  | [optional] 
 **download_id** | **str** |  | [optional] 
+**custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
 **rejections** | [**List[Rejection]**](Rejection.md) |  | [optional] 
 
 ## Example

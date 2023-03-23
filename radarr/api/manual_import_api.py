@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictBool, StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
@@ -44,7 +44,7 @@ class ManualImportApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def create_manual_import(self, manual_import_reprocess_resource : Optional[List[ManualImportReprocessResource]] = None, **kwargs) -> None:  # noqa: E501
+    def create_manual_import(self, manual_import_reprocess_resource : Optional[conlist(ManualImportReprocessResource)] = None, **kwargs) -> None:  # noqa: E501
         """create_manual_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -74,7 +74,7 @@ class ManualImportApi(object):
         return self.create_manual_import_with_http_info(manual_import_reprocess_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_manual_import_with_http_info(self, manual_import_reprocess_resource : Optional[List[ManualImportReprocessResource]] = None, **kwargs):  # noqa: E501
+    def create_manual_import_with_http_info(self, manual_import_reprocess_resource : Optional[conlist(ManualImportReprocessResource)] = None, **kwargs):  # noqa: E501
         """create_manual_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -164,7 +164,7 @@ class ManualImportApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {}
 
@@ -324,7 +324,7 @@ class ManualImportApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "List[ManualImportResource]",

@@ -162,7 +162,7 @@ class CalendarApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "MovieResource",
@@ -317,7 +317,7 @@ class CalendarApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "List[MovieResource]",
