@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/devopsarr/radarr-py/compare/v0.2.0...v0.2.1) (2023-03-24)
+
+
+### Bug Fixes
+
+* **devopsarr/radarr-py#6:** indentation error on config ([f6f429b](https://github.com/devopsarr/radarr-py/commit/f6f429bbeeec287dca65ed3fb32da03ce10f16ab))
+
 ## [0.2.0](https://github.com/devopsarr/radarr-py/compare/v0.1.0...v0.2.0) (2023-03-23)
 
 
