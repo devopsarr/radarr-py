@@ -424,14 +424,15 @@ conf = radarr.Configuration(
 
         :return: The report for debugging.
         """
+        # x-release-please-start-version
+        sdkversion = '0.2.0'
+        # x-release-please-end
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 3.0.0\n"\
-                // x-release-please-start-version
-               "SDK Package Version: 0.2.0".\
-                // x-release-please-end
-               format(env=sys.platform, pyversion=sys.version)
+               "SDK Package Version: {sdkversion}".\
+               format(env=sys.platform, pyversion=sys.version, sdkversion=sdkversion)
 
     def get_host_settings(self):
         """Gets an array of host settings
