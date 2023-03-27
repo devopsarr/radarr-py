@@ -18,7 +18,7 @@ import json
 
 from datetime import datetime
 from typing import List, Optional
-from pydantic import BaseModel, validator
+from pydantic import BaseModel
 from radarr.models.custom_format_resource import CustomFormatResource
 from radarr.models.download_protocol import DownloadProtocol
 from radarr.models.language import Language
@@ -56,12 +56,6 @@ class QueueResource(BaseModel):
     indexer: Optional[str]
     output_path: Optional[str]
     __properties = ["id", "movieId", "movie", "languages", "quality", "customFormats", "size", "title", "sizeleft", "timeleft", "estimatedCompletionTime", "status", "trackedDownloadStatus", "trackedDownloadState", "statusMessages", "errorMessage", "downloadId", "protocol", "downloadClient", "indexer", "outputPath"]
-
-    @validator('timeleft')
-    def timeleft_validate_regular_expression(cls, v):
-        if not re.match(r"\d{2}:\d{2}:\d{2}", v):
-            raise ValueError(r"must validate the regular expression /\d{2}:\d{2}:\d{2}/")
-        return v
 
     class Config:
         allow_population_by_field_name = True
