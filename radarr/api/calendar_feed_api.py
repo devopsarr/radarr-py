@@ -42,21 +42,21 @@ class CalendarFeedApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_feed_v3_calendar_radarr_ics(self, past_days : Optional[StrictInt] = None, future_days : Optional[StrictInt] = None, tag_list : Optional[StrictStr] = None, unmonitored : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
+    def get_feed_v3_calendar_radarr_ics(self, past_days : Optional[StrictInt] = None, future_days : Optional[StrictInt] = None, tags : Optional[StrictStr] = None, unmonitored : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
         """get_feed_v3_calendar_radarr_ics  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_feed_v3_calendar_radarr_ics(past_days, future_days, tag_list, unmonitored, async_req=True)
+        >>> thread = api.get_feed_v3_calendar_radarr_ics(past_days, future_days, tags, unmonitored, async_req=True)
         >>> result = thread.get()
 
         :param past_days:
         :type past_days: int
         :param future_days:
         :type future_days: int
-        :param tag_list:
-        :type tag_list: str
+        :param tags:
+        :type tags: str
         :param unmonitored:
         :type unmonitored: bool
         :param async_req: Whether to execute the request asynchronously.
@@ -75,24 +75,24 @@ class CalendarFeedApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_feed_v3_calendar_radarr_ics_with_http_info(past_days, future_days, tag_list, unmonitored, **kwargs)  # noqa: E501
+        return self.get_feed_v3_calendar_radarr_ics_with_http_info(past_days, future_days, tags, unmonitored, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_feed_v3_calendar_radarr_ics_with_http_info(self, past_days : Optional[StrictInt] = None, future_days : Optional[StrictInt] = None, tag_list : Optional[StrictStr] = None, unmonitored : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def get_feed_v3_calendar_radarr_ics_with_http_info(self, past_days : Optional[StrictInt] = None, future_days : Optional[StrictInt] = None, tags : Optional[StrictStr] = None, unmonitored : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """get_feed_v3_calendar_radarr_ics  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_feed_v3_calendar_radarr_ics_with_http_info(past_days, future_days, tag_list, unmonitored, async_req=True)
+        >>> thread = api.get_feed_v3_calendar_radarr_ics_with_http_info(past_days, future_days, tags, unmonitored, async_req=True)
         >>> result = thread.get()
 
         :param past_days:
         :type past_days: int
         :param future_days:
         :type future_days: int
-        :param tag_list:
-        :type tag_list: str
+        :param tags:
+        :type tags: str
         :param unmonitored:
         :type unmonitored: bool
         :param async_req: Whether to execute the request asynchronously.
@@ -124,7 +124,7 @@ class CalendarFeedApi(object):
         _all_params = [
             'past_days',
             'future_days',
-            'tag_list',
+            'tags',
             'unmonitored'
         ]
         _all_params.extend(
@@ -160,8 +160,8 @@ class CalendarFeedApi(object):
             _query_params.append(('pastDays', _params['past_days']))
         if _params.get('future_days') is not None:  # noqa: E501
             _query_params.append(('futureDays', _params['future_days']))
-        if _params.get('tag_list') is not None:  # noqa: E501
-            _query_params.append(('tagList', _params['tag_list']))
+        if _params.get('tags') is not None:  # noqa: E501
+            _query_params.append(('tags', _params['tags']))
         if _params.get('unmonitored') is not None:  # noqa: E501
             _query_params.append(('unmonitored', _params['unmonitored']))
 

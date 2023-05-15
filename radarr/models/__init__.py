@@ -35,6 +35,7 @@ from radarr.models.colon_replacement_format import ColonReplacementFormat
 from radarr.models.command import Command
 from radarr.models.command_priority import CommandPriority
 from radarr.models.command_resource import CommandResource
+from radarr.models.command_result import CommandResult
 from radarr.models.command_status import CommandStatus
 from radarr.models.command_trigger import CommandTrigger
 from radarr.models.credit_resource import CreditResource
