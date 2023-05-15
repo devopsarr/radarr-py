@@ -349,6 +349,7 @@ Class | Method | HTTP request | Description
  - [Command](docs/Command.md)
  - [CommandPriority](docs/CommandPriority.md)
  - [CommandResource](docs/CommandResource.md)
+ - [CommandResult](docs/CommandResult.md)
  - [CommandStatus](docs/CommandStatus.md)
  - [CommandTrigger](docs/CommandTrigger.md)
  - [CreditResource](docs/CreditResource.md)

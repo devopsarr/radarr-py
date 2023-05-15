@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_feed_v3_calendar_radarr_ics**
-> get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tag_list=tag_list, unmonitored=unmonitored)
+> get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored)
 
 
 
@@ -51,11 +51,11 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.CalendarFeedApi(api_client)
     past_days = 7 # int |  (optional) (default to 7)
     future_days = 28 # int |  (optional) (default to 28)
-    tag_list = '' # str |  (optional) (default to '')
+    tags = '' # str |  (optional) (default to '')
     unmonitored = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tag_list=tag_list, unmonitored=unmonitored)
+        api_instance.get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored)
     except Exception as e:
         print("Exception when calling CalendarFeedApi->get_feed_v3_calendar_radarr_ics: %s\n" % e)
 ```
@@ -97,11 +97,11 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.CalendarFeedApi(api_client)
     past_days = 7 # int |  (optional) (default to 7)
     future_days = 28 # int |  (optional) (default to 28)
-    tag_list = '' # str |  (optional) (default to '')
+    tags = '' # str |  (optional) (default to '')
     unmonitored = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tag_list=tag_list, unmonitored=unmonitored)
+        api_instance.get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored)
     except Exception as e:
         print("Exception when calling CalendarFeedApi->get_feed_v3_calendar_radarr_ics: %s\n" % e)
 ```
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **past_days** | **int**|  | [optional] [default to 7]
  **future_days** | **int**|  | [optional] [default to 28]
- **tag_list** | **str**|  | [optional] [default to &#39;&#39;]
+ **tags** | **str**|  | [optional] [default to &#39;&#39;]
  **unmonitored** | **bool**|  | [optional] [default to False]
 
 ### Return type

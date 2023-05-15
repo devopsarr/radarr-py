@@ -30,6 +30,7 @@ docs/Command.md
 docs/CommandApi.md
 docs/CommandPriority.md
 docs/CommandResource.md
+docs/CommandResult.md
 docs/CommandStatus.md
 docs/CommandTrigger.md
 docs/CreditApi.md
@@ -289,6 +290,7 @@ radarr/models/colon_replacement_format.py
 radarr/models/command.py
 radarr/models/command_priority.py
 radarr/models/command_resource.py
+radarr/models/command_result.py
 radarr/models/command_status.py
 radarr/models/command_trigger.py
 radarr/models/credit_resource.py

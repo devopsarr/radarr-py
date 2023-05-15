@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **body** | [**Command**](Command.md) |  | [optional] 
 **priority** | [**CommandPriority**](CommandPriority.md) |  | [optional] 
 **status** | [**CommandStatus**](CommandStatus.md) |  | [optional] 
+**result** | [**CommandResult**](CommandResult.md) |  | [optional] 
 **queued** | **datetime** |  | [optional] 
 **started** | **datetime** |  | [optional] 
 **ended** | **datetime** |  | [optional] 

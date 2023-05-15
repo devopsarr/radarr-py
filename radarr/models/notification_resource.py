@@ -48,7 +48,9 @@ class NotificationResource(BaseModel):
     on_movie_file_delete: Optional[bool]
     on_movie_file_delete_for_upgrade: Optional[bool]
     on_health_issue: Optional[bool]
+    on_health_restored: Optional[bool]
     on_application_update: Optional[bool]
+    on_manual_interaction_required: Optional[bool]
     supports_on_grab: Optional[bool]
     supports_on_download: Optional[bool]
     supports_on_upgrade: Optional[bool]
@@ -58,10 +60,12 @@ class NotificationResource(BaseModel):
     supports_on_movie_file_delete: Optional[bool]
     supports_on_movie_file_delete_for_upgrade: Optional[bool]
     supports_on_health_issue: Optional[bool]
+    supports_on_health_restored: Optional[bool]
     supports_on_application_update: Optional[bool]
+    supports_on_manual_interaction_required: Optional[bool]
     include_health_warnings: Optional[bool]
     test_command: Optional[str]
-    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "link", "onGrab", "onDownload", "onUpgrade", "onRename", "onMovieAdded", "onMovieDelete", "onMovieFileDelete", "onMovieFileDeleteForUpgrade", "onHealthIssue", "onApplicationUpdate", "supportsOnGrab", "supportsOnDownload", "supportsOnUpgrade", "supportsOnRename", "supportsOnMovieAdded", "supportsOnMovieDelete", "supportsOnMovieFileDelete", "supportsOnMovieFileDeleteForUpgrade", "supportsOnHealthIssue", "supportsOnApplicationUpdate", "includeHealthWarnings", "testCommand"]
+    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "link", "onGrab", "onDownload", "onUpgrade", "onRename", "onMovieAdded", "onMovieDelete", "onMovieFileDelete", "onMovieFileDeleteForUpgrade", "onHealthIssue", "onHealthRestored", "onApplicationUpdate", "onManualInteractionRequired", "supportsOnGrab", "supportsOnDownload", "supportsOnUpgrade", "supportsOnRename", "supportsOnMovieAdded", "supportsOnMovieDelete", "supportsOnMovieFileDelete", "supportsOnMovieFileDeleteForUpgrade", "supportsOnHealthIssue", "supportsOnHealthRestored", "supportsOnApplicationUpdate", "supportsOnManualInteractionRequired", "includeHealthWarnings", "testCommand"]
 
     class Config:
         allow_population_by_field_name = True
@@ -179,7 +183,9 @@ class NotificationResource(BaseModel):
             "on_movie_file_delete": obj.get("onMovieFileDelete"),
             "on_movie_file_delete_for_upgrade": obj.get("onMovieFileDeleteForUpgrade"),
             "on_health_issue": obj.get("onHealthIssue"),
+            "on_health_restored": obj.get("onHealthRestored"),
             "on_application_update": obj.get("onApplicationUpdate"),
+            "on_manual_interaction_required": obj.get("onManualInteractionRequired"),
             "supports_on_grab": obj.get("supportsOnGrab"),
             "supports_on_download": obj.get("supportsOnDownload"),
             "supports_on_upgrade": obj.get("supportsOnUpgrade"),
@@ -189,7 +195,9 @@ class NotificationResource(BaseModel):
             "supports_on_movie_file_delete": obj.get("supportsOnMovieFileDelete"),
             "supports_on_movie_file_delete_for_upgrade": obj.get("supportsOnMovieFileDeleteForUpgrade"),
             "supports_on_health_issue": obj.get("supportsOnHealthIssue"),
+            "supports_on_health_restored": obj.get("supportsOnHealthRestored"),
             "supports_on_application_update": obj.get("supportsOnApplicationUpdate"),
+            "supports_on_manual_interaction_required": obj.get("supportsOnManualInteractionRequired"),
             "include_health_warnings": obj.get("includeHealthWarnings"),
             "test_command": obj.get("testCommand")
         })
