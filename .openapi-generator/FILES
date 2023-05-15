@@ -265,6 +265,7 @@ radarr/api/ui_config_api.py
 radarr/api/update_api.py
 radarr/api/update_log_file_api.py
 radarr/api_client.py
+radarr/api_response.py
 radarr/configuration.py
 radarr/exceptions.py
 radarr/models/__init__.py
