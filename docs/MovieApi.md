@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_movie**
-> delete_movie(id)
+> delete_movie(id, delete_files=delete_files, add_import_exclusion=add_import_exclusion)
 
 
 
@@ -177,9 +177,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.MovieApi(api_client)
     id = 56 # int | 
+    delete_files = False # bool |  (optional) (default to False)
+    add_import_exclusion = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_movie(id)
+        api_instance.delete_movie(id, delete_files=delete_files, add_import_exclusion=add_import_exclusion)
     except Exception as e:
         print("Exception when calling MovieApi->delete_movie: %s\n" % e)
 ```
@@ -220,9 +222,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.MovieApi(api_client)
     id = 56 # int | 
+    delete_files = False # bool |  (optional) (default to False)
+    add_import_exclusion = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_movie(id)
+        api_instance.delete_movie(id, delete_files=delete_files, add_import_exclusion=add_import_exclusion)
     except Exception as e:
         print("Exception when calling MovieApi->delete_movie: %s\n" % e)
 ```
@@ -232,6 +236,8 @@ with radarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
+ **delete_files** | **bool**|  | [optional] [default to False]
+ **add_import_exclusion** | **bool**|  | [optional] [default to False]
 
 ### Return type
 
@@ -500,7 +506,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_movie**
-> MovieResource update_movie(id, movie_resource=movie_resource)
+> MovieResource update_movie(id, move_files=move_files, movie_resource=movie_resource)
 
 
 
@@ -542,10 +548,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.MovieApi(api_client)
     id = 'id_example' # str | 
+    move_files = False # bool |  (optional) (default to False)
     movie_resource = radarr.MovieResource() # MovieResource |  (optional)
 
     try:
-        api_response = api_instance.update_movie(id, movie_resource=movie_resource)
+        api_response = api_instance.update_movie(id, move_files=move_files, movie_resource=movie_resource)
         print("The response of MovieApi->update_movie:\n")
         pprint(api_response)
     except Exception as e:
@@ -588,10 +595,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.MovieApi(api_client)
     id = 'id_example' # str | 
+    move_files = False # bool |  (optional) (default to False)
     movie_resource = radarr.MovieResource() # MovieResource |  (optional)
 
     try:
-        api_response = api_instance.update_movie(id, movie_resource=movie_resource)
+        api_response = api_instance.update_movie(id, move_files=move_files, movie_resource=movie_resource)
         print("The response of MovieApi->update_movie:\n")
         pprint(api_response)
     except Exception as e:
@@ -603,6 +611,7 @@ with radarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
+ **move_files** | **bool**|  | [optional] [default to False]
  **movie_resource** | [**MovieResource**](MovieResource.md)|  | [optional] 
 
 ### Return type
