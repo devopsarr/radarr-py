@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -191,17 +191,21 @@ class MovieApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def delete_movie(self, id : StrictInt, **kwargs) -> None:  # noqa: E501
+    def delete_movie(self, id : StrictInt, delete_files : Optional[StrictBool] = None, add_import_exclusion : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
         """delete_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_movie(id, async_req=True)
+        >>> thread = api.delete_movie(id, delete_files, add_import_exclusion, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: int
+        :param delete_files:
+        :type delete_files: bool
+        :param add_import_exclusion:
+        :type add_import_exclusion: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -218,20 +222,24 @@ class MovieApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_movie_with_http_info(id, **kwargs)  # noqa: E501
+        return self.delete_movie_with_http_info(id, delete_files, add_import_exclusion, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def delete_movie_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+    def delete_movie_with_http_info(self, id : StrictInt, delete_files : Optional[StrictBool] = None, add_import_exclusion : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """delete_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_movie_with_http_info(id, async_req=True)
+        >>> thread = api.delete_movie_with_http_info(id, delete_files, add_import_exclusion, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: int
+        :param delete_files:
+        :type delete_files: bool
+        :param add_import_exclusion:
+        :type add_import_exclusion: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -259,7 +267,9 @@ class MovieApi(object):
         _params = locals()
 
         _all_params = [
-            'id'
+            'id',
+            'delete_files',
+            'add_import_exclusion'
         ]
         _all_params.extend(
             [
@@ -292,6 +302,10 @@ class MovieApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('delete_files') is not None:  # noqa: E501
+            _query_params.append(('deleteFiles', _params['delete_files']))
+        if _params.get('add_import_exclusion') is not None:  # noqa: E501
+            _query_params.append(('addImportExclusion', _params['add_import_exclusion']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
@@ -608,17 +622,19 @@ class MovieApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def update_movie(self, id : StrictStr, movie_resource : Optional[MovieResource] = None, **kwargs) -> MovieResource:  # noqa: E501
+    def update_movie(self, id : StrictStr, move_files : Optional[StrictBool] = None, movie_resource : Optional[MovieResource] = None, **kwargs) -> MovieResource:  # noqa: E501
         """update_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_movie(id, movie_resource, async_req=True)
+        >>> thread = api.update_movie(id, move_files, movie_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param move_files:
+        :type move_files: bool
         :param movie_resource:
         :type movie_resource: MovieResource
         :param async_req: Whether to execute the request asynchronously.
@@ -637,20 +653,22 @@ class MovieApi(object):
         :rtype: MovieResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_movie_with_http_info(id, movie_resource, **kwargs)  # noqa: E501
+        return self.update_movie_with_http_info(id, move_files, movie_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def update_movie_with_http_info(self, id : StrictStr, movie_resource : Optional[MovieResource] = None, **kwargs):  # noqa: E501
+    def update_movie_with_http_info(self, id : StrictStr, move_files : Optional[StrictBool] = None, movie_resource : Optional[MovieResource] = None, **kwargs):  # noqa: E501
         """update_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_movie_with_http_info(id, movie_resource, async_req=True)
+        >>> thread = api.update_movie_with_http_info(id, move_files, movie_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param move_files:
+        :type move_files: bool
         :param movie_resource:
         :type movie_resource: MovieResource
         :param async_req: Whether to execute the request asynchronously.
@@ -681,6 +699,7 @@ class MovieApi(object):
 
         _all_params = [
             'id',
+            'move_files',
             'movie_resource'
         ]
         _all_params.extend(
@@ -714,6 +733,8 @@ class MovieApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('move_files') is not None:  # noqa: E501
+            _query_params.append(('moveFiles', _params['move_files']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
