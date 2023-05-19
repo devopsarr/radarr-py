@@ -972,7 +972,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_metadata**
-> MetadataResource update_metadata(id, metadata_resource=metadata_resource)
+> MetadataResource update_metadata(id, force_save=force_save, metadata_resource=metadata_resource)
 
 
 
@@ -1014,10 +1014,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.MetadataApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     metadata_resource = radarr.MetadataResource() # MetadataResource |  (optional)
 
     try:
-        api_response = api_instance.update_metadata(id, metadata_resource=metadata_resource)
+        api_response = api_instance.update_metadata(id, force_save=force_save, metadata_resource=metadata_resource)
         print("The response of MetadataApi->update_metadata:\n")
         pprint(api_response)
     except Exception as e:
@@ -1060,10 +1061,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.MetadataApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     metadata_resource = radarr.MetadataResource() # MetadataResource |  (optional)
 
     try:
-        api_response = api_instance.update_metadata(id, metadata_resource=metadata_resource)
+        api_response = api_instance.update_metadata(id, force_save=force_save, metadata_resource=metadata_resource)
         print("The response of MetadataApi->update_metadata:\n")
         pprint(api_response)
     except Exception as e:
@@ -1075,6 +1077,7 @@ with radarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
+ **force_save** | **bool**|  | [optional] [default to False]
  **metadata_resource** | [**MetadataResource**](MetadataResource.md)|  | [optional] 
 
 ### Return type
