@@ -972,7 +972,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_import_list**
-> ImportListResource update_import_list(id, import_list_resource=import_list_resource)
+> ImportListResource update_import_list(id, force_save=force_save, import_list_resource=import_list_resource)
 
 
 
@@ -1014,10 +1014,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.ImportListApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     import_list_resource = radarr.ImportListResource() # ImportListResource |  (optional)
 
     try:
-        api_response = api_instance.update_import_list(id, import_list_resource=import_list_resource)
+        api_response = api_instance.update_import_list(id, force_save=force_save, import_list_resource=import_list_resource)
         print("The response of ImportListApi->update_import_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -1060,10 +1061,11 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.ImportListApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     import_list_resource = radarr.ImportListResource() # ImportListResource |  (optional)
 
     try:
-        api_response = api_instance.update_import_list(id, import_list_resource=import_list_resource)
+        api_response = api_instance.update_import_list(id, force_save=force_save, import_list_resource=import_list_resource)
         print("The response of ImportListApi->update_import_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -1075,6 +1077,7 @@ with radarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
+ **force_save** | **bool**|  | [optional] [default to False]
  **import_list_resource** | [**ImportListResource**](ImportListResource.md)|  | [optional] 
 
 ### Return type
