@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/devopsarr/radarr-py/compare/v0.2.2...v0.3.0) (2023-05-25)
+
+
+### Features
+
+* **devopsarr/prowlarr-py#11:** add request timeout to config ([87eb757](https://github.com/devopsarr/radarr-py/commit/87eb757431ac1ef56ceca2d78c43480e4c27f97a))
+* pin openapi version and add version management ([7bc8334](https://github.com/devopsarr/radarr-py/commit/7bc8334a6094ed411955dd394bd64cbd35927f3f))
+
 ## [0.2.2](https://github.com/devopsarr/radarr-py/compare/v0.2.1...v0.2.2) (2023-03-27)
 
 
