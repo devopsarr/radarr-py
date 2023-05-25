@@ -36,4 +36,5 @@ class MediaCoverTypes(str, Enum):
     FANART = 'fanart'
     SCREENSHOT = 'screenshot'
     HEADSHOT = 'headshot'
+    CLEARLOGO = 'clearlogo'
 
