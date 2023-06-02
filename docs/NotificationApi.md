@@ -7,16 +7,18 @@ Method | HTTP request | Description
 [**create_notification**](NotificationApi.md#create_notification) | **POST** /api/v3/notification | 
 [**create_notification_action_by_name**](NotificationApi.md#create_notification_action_by_name) | **POST** /api/v3/notification/action/{name} | 
 [**delete_notification**](NotificationApi.md#delete_notification) | **DELETE** /api/v3/notification/{id} | 
+[**delete_notification_bulk**](NotificationApi.md#delete_notification_bulk) | **DELETE** /api/v3/notification/bulk | 
 [**get_notification_by_id**](NotificationApi.md#get_notification_by_id) | **GET** /api/v3/notification/{id} | 
 [**list_notification**](NotificationApi.md#list_notification) | **GET** /api/v3/notification | 
 [**list_notification_schema**](NotificationApi.md#list_notification_schema) | **GET** /api/v3/notification/schema | 
+[**put_notification_bulk**](NotificationApi.md#put_notification_bulk) | **PUT** /api/v3/notification/bulk | 
 [**test_notification**](NotificationApi.md#test_notification) | **POST** /api/v3/notification/test | 
 [**testall_notification**](NotificationApi.md#testall_notification) | **POST** /api/v3/notification/testall | 
 [**update_notification**](NotificationApi.md#update_notification) | **PUT** /api/v3/notification/{id} | 
 
 
 # **create_notification**
-> NotificationResource create_notification(notification_resource=notification_resource)
+> NotificationResource create_notification(force_save=force_save, notification_resource=notification_resource)
 
 
 
@@ -57,10 +59,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.NotificationApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     notification_resource = radarr.NotificationResource() # NotificationResource |  (optional)
 
     try:
-        api_response = api_instance.create_notification(notification_resource=notification_resource)
+        api_response = api_instance.create_notification(force_save=force_save, notification_resource=notification_resource)
         print("The response of NotificationApi->create_notification:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,10 +105,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.NotificationApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     notification_resource = radarr.NotificationResource() # NotificationResource |  (optional)
 
     try:
-        api_response = api_instance.create_notification(notification_resource=notification_resource)
+        api_response = api_instance.create_notification(force_save=force_save, notification_resource=notification_resource)
         print("The response of NotificationApi->create_notification:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,6 +120,7 @@ with radarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_save** | **bool**|  | [optional] [default to False]
  **notification_resource** | [**NotificationResource**](NotificationResource.md)|  | [optional] 
 
 ### Return type
@@ -370,6 +375,125 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_notification_bulk**
+> delete_notification_bulk(notification_bulk_resource=notification_bulk_resource)
+
+
+
+### Example
+
+* Api Key Authentication (apikey):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.NotificationApi(api_client)
+    notification_bulk_resource = radarr.NotificationBulkResource() # NotificationBulkResource |  (optional)
+
+    try:
+        api_instance.delete_notification_bulk(notification_bulk_resource=notification_bulk_resource)
+    except Exception as e:
+        print("Exception when calling NotificationApi->delete_notification_bulk: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.NotificationApi(api_client)
+    notification_bulk_resource = radarr.NotificationBulkResource() # NotificationBulkResource |  (optional)
+
+    try:
+        api_instance.delete_notification_bulk(notification_bulk_resource=notification_bulk_resource)
+    except Exception as e:
+        print("Exception when calling NotificationApi->delete_notification_bulk: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **notification_bulk_resource** | [**NotificationBulkResource**](NotificationBulkResource.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -729,6 +853,129 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_notification_bulk**
+> NotificationResource put_notification_bulk(notification_bulk_resource=notification_bulk_resource)
+
+
+
+### Example
+
+* Api Key Authentication (apikey):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.NotificationApi(api_client)
+    notification_bulk_resource = radarr.NotificationBulkResource() # NotificationBulkResource |  (optional)
+
+    try:
+        api_response = api_instance.put_notification_bulk(notification_bulk_resource=notification_bulk_resource)
+        print("The response of NotificationApi->put_notification_bulk:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling NotificationApi->put_notification_bulk: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.NotificationApi(api_client)
+    notification_bulk_resource = radarr.NotificationBulkResource() # NotificationBulkResource |  (optional)
+
+    try:
+        api_response = api_instance.put_notification_bulk(notification_bulk_resource=notification_bulk_resource)
+        print("The response of NotificationApi->put_notification_bulk:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling NotificationApi->put_notification_bulk: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **notification_bulk_resource** | [**NotificationBulkResource**](NotificationBulkResource.md)|  | [optional] 
+
+### Return type
+
+[**NotificationResource**](NotificationResource.md)
+
+### Authorization
+
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details

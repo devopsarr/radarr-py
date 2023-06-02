@@ -147,9 +147,11 @@ Class | Method | HTTP request | Description
 *DownloadClientApi* | [**create_download_client**](docs/DownloadClientApi.md#create_download_client) | **POST** /api/v3/downloadclient | 
 *DownloadClientApi* | [**create_download_client_action_by_name**](docs/DownloadClientApi.md#create_download_client_action_by_name) | **POST** /api/v3/downloadclient/action/{name} | 
 *DownloadClientApi* | [**delete_download_client**](docs/DownloadClientApi.md#delete_download_client) | **DELETE** /api/v3/downloadclient/{id} | 
+*DownloadClientApi* | [**delete_download_client_bulk**](docs/DownloadClientApi.md#delete_download_client_bulk) | **DELETE** /api/v3/downloadclient/bulk | 
 *DownloadClientApi* | [**get_download_client_by_id**](docs/DownloadClientApi.md#get_download_client_by_id) | **GET** /api/v3/downloadclient/{id} | 
 *DownloadClientApi* | [**list_download_client**](docs/DownloadClientApi.md#list_download_client) | **GET** /api/v3/downloadclient | 
 *DownloadClientApi* | [**list_download_client_schema**](docs/DownloadClientApi.md#list_download_client_schema) | **GET** /api/v3/downloadclient/schema | 
+*DownloadClientApi* | [**put_download_client_bulk**](docs/DownloadClientApi.md#put_download_client_bulk) | **PUT** /api/v3/downloadclient/bulk | 
 *DownloadClientApi* | [**test_download_client**](docs/DownloadClientApi.md#test_download_client) | **POST** /api/v3/downloadclient/test | 
 *DownloadClientApi* | [**testall_download_client**](docs/DownloadClientApi.md#testall_download_client) | **POST** /api/v3/downloadclient/testall | 
 *DownloadClientApi* | [**update_download_client**](docs/DownloadClientApi.md#update_download_client) | **PUT** /api/v3/downloadclient/{id} | 
@@ -178,9 +180,11 @@ Class | Method | HTTP request | Description
 *ImportListApi* | [**create_import_list**](docs/ImportListApi.md#create_import_list) | **POST** /api/v3/importlist | 
 *ImportListApi* | [**create_import_list_action_by_name**](docs/ImportListApi.md#create_import_list_action_by_name) | **POST** /api/v3/importlist/action/{name} | 
 *ImportListApi* | [**delete_import_list**](docs/ImportListApi.md#delete_import_list) | **DELETE** /api/v3/importlist/{id} | 
+*ImportListApi* | [**delete_import_list_bulk**](docs/ImportListApi.md#delete_import_list_bulk) | **DELETE** /api/v3/importlist/bulk | 
 *ImportListApi* | [**get_import_list_by_id**](docs/ImportListApi.md#get_import_list_by_id) | **GET** /api/v3/importlist/{id} | 
 *ImportListApi* | [**list_import_list**](docs/ImportListApi.md#list_import_list) | **GET** /api/v3/importlist | 
 *ImportListApi* | [**list_import_list_schema**](docs/ImportListApi.md#list_import_list_schema) | **GET** /api/v3/importlist/schema | 
+*ImportListApi* | [**put_import_list_bulk**](docs/ImportListApi.md#put_import_list_bulk) | **PUT** /api/v3/importlist/bulk | 
 *ImportListApi* | [**test_import_list**](docs/ImportListApi.md#test_import_list) | **POST** /api/v3/importlist/test | 
 *ImportListApi* | [**testall_import_list**](docs/ImportListApi.md#testall_import_list) | **POST** /api/v3/importlist/testall | 
 *ImportListApi* | [**update_import_list**](docs/ImportListApi.md#update_import_list) | **PUT** /api/v3/importlist/{id} | 
@@ -192,9 +196,11 @@ Class | Method | HTTP request | Description
 *IndexerApi* | [**create_indexer**](docs/IndexerApi.md#create_indexer) | **POST** /api/v3/indexer | 
 *IndexerApi* | [**create_indexer_action_by_name**](docs/IndexerApi.md#create_indexer_action_by_name) | **POST** /api/v3/indexer/action/{name} | 
 *IndexerApi* | [**delete_indexer**](docs/IndexerApi.md#delete_indexer) | **DELETE** /api/v3/indexer/{id} | 
+*IndexerApi* | [**delete_indexer_bulk**](docs/IndexerApi.md#delete_indexer_bulk) | **DELETE** /api/v3/indexer/bulk | 
 *IndexerApi* | [**get_indexer_by_id**](docs/IndexerApi.md#get_indexer_by_id) | **GET** /api/v3/indexer/{id} | 
 *IndexerApi* | [**list_indexer**](docs/IndexerApi.md#list_indexer) | **GET** /api/v3/indexer | 
 *IndexerApi* | [**list_indexer_schema**](docs/IndexerApi.md#list_indexer_schema) | **GET** /api/v3/indexer/schema | 
+*IndexerApi* | [**put_indexer_bulk**](docs/IndexerApi.md#put_indexer_bulk) | **PUT** /api/v3/indexer/bulk | 
 *IndexerApi* | [**test_indexer**](docs/IndexerApi.md#test_indexer) | **POST** /api/v3/indexer/test | 
 *IndexerApi* | [**testall_indexer**](docs/IndexerApi.md#testall_indexer) | **POST** /api/v3/indexer/testall | 
 *IndexerApi* | [**update_indexer**](docs/IndexerApi.md#update_indexer) | **PUT** /api/v3/indexer/{id} | 
@@ -218,9 +224,11 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**create_metadata**](docs/MetadataApi.md#create_metadata) | **POST** /api/v3/metadata | 
 *MetadataApi* | [**create_metadata_action_by_name**](docs/MetadataApi.md#create_metadata_action_by_name) | **POST** /api/v3/metadata/action/{name} | 
 *MetadataApi* | [**delete_metadata**](docs/MetadataApi.md#delete_metadata) | **DELETE** /api/v3/metadata/{id} | 
+*MetadataApi* | [**delete_metadata_bulk**](docs/MetadataApi.md#delete_metadata_bulk) | **DELETE** /api/v3/metadata/bulk | 
 *MetadataApi* | [**get_metadata_by_id**](docs/MetadataApi.md#get_metadata_by_id) | **GET** /api/v3/metadata/{id} | 
 *MetadataApi* | [**list_metadata**](docs/MetadataApi.md#list_metadata) | **GET** /api/v3/metadata | 
 *MetadataApi* | [**list_metadata_schema**](docs/MetadataApi.md#list_metadata_schema) | **GET** /api/v3/metadata/schema | 
+*MetadataApi* | [**put_metadata_bulk**](docs/MetadataApi.md#put_metadata_bulk) | **PUT** /api/v3/metadata/bulk | 
 *MetadataApi* | [**test_metadata**](docs/MetadataApi.md#test_metadata) | **POST** /api/v3/metadata/test | 
 *MetadataApi* | [**testall_metadata**](docs/MetadataApi.md#testall_metadata) | **POST** /api/v3/metadata/testall | 
 *MetadataApi* | [**update_metadata**](docs/MetadataApi.md#update_metadata) | **PUT** /api/v3/metadata/{id} | 
@@ -253,9 +261,11 @@ Class | Method | HTTP request | Description
 *NotificationApi* | [**create_notification**](docs/NotificationApi.md#create_notification) | **POST** /api/v3/notification | 
 *NotificationApi* | [**create_notification_action_by_name**](docs/NotificationApi.md#create_notification_action_by_name) | **POST** /api/v3/notification/action/{name} | 
 *NotificationApi* | [**delete_notification**](docs/NotificationApi.md#delete_notification) | **DELETE** /api/v3/notification/{id} | 
+*NotificationApi* | [**delete_notification_bulk**](docs/NotificationApi.md#delete_notification_bulk) | **DELETE** /api/v3/notification/bulk | 
 *NotificationApi* | [**get_notification_by_id**](docs/NotificationApi.md#get_notification_by_id) | **GET** /api/v3/notification/{id} | 
 *NotificationApi* | [**list_notification**](docs/NotificationApi.md#list_notification) | **GET** /api/v3/notification | 
 *NotificationApi* | [**list_notification_schema**](docs/NotificationApi.md#list_notification_schema) | **GET** /api/v3/notification/schema | 
+*NotificationApi* | [**put_notification_bulk**](docs/NotificationApi.md#put_notification_bulk) | **PUT** /api/v3/notification/bulk | 
 *NotificationApi* | [**test_notification**](docs/NotificationApi.md#test_notification) | **POST** /api/v3/notification/test | 
 *NotificationApi* | [**testall_notification**](docs/NotificationApi.md#testall_notification) | **POST** /api/v3/notification/testall | 
 *NotificationApi* | [**update_notification**](docs/NotificationApi.md#update_notification) | **PUT** /api/v3/notification/{id} | 
@@ -360,6 +370,7 @@ Class | Method | HTTP request | Description
  - [DatabaseType](docs/DatabaseType.md)
  - [DelayProfileResource](docs/DelayProfileResource.md)
  - [DiskSpaceResource](docs/DiskSpaceResource.md)
+ - [DownloadClientBulkResource](docs/DownloadClientBulkResource.md)
  - [DownloadClientConfigResource](docs/DownloadClientConfigResource.md)
  - [DownloadClientResource](docs/DownloadClientResource.md)
  - [DownloadProtocol](docs/DownloadProtocol.md)
@@ -373,9 +384,11 @@ Class | Method | HTTP request | Description
  - [HistoryResourcePagingResource](docs/HistoryResourcePagingResource.md)
  - [HostConfigResource](docs/HostConfigResource.md)
  - [ImportExclusionsResource](docs/ImportExclusionsResource.md)
+ - [ImportListBulkResource](docs/ImportListBulkResource.md)
  - [ImportListConfigResource](docs/ImportListConfigResource.md)
  - [ImportListResource](docs/ImportListResource.md)
  - [ImportListType](docs/ImportListType.md)
+ - [IndexerBulkResource](docs/IndexerBulkResource.md)
  - [IndexerConfigResource](docs/IndexerConfigResource.md)
  - [IndexerFlagResource](docs/IndexerFlagResource.md)
  - [IndexerResource](docs/IndexerResource.md)
@@ -390,6 +403,7 @@ Class | Method | HTTP request | Description
  - [MediaCoverTypes](docs/MediaCoverTypes.md)
  - [MediaInfoResource](docs/MediaInfoResource.md)
  - [MediaManagementConfigResource](docs/MediaManagementConfigResource.md)
+ - [MetadataBulkResource](docs/MetadataBulkResource.md)
  - [MetadataConfigResource](docs/MetadataConfigResource.md)
  - [MetadataResource](docs/MetadataResource.md)
  - [Modifier](docs/Modifier.md)
@@ -405,6 +419,7 @@ Class | Method | HTTP request | Description
  - [MovieStatusType](docs/MovieStatusType.md)
  - [MovieTranslation](docs/MovieTranslation.md)
  - [NamingConfigResource](docs/NamingConfigResource.md)
+ - [NotificationBulkResource](docs/NotificationBulkResource.md)
  - [NotificationResource](docs/NotificationResource.md)
  - [PagingResourceFilter](docs/PagingResourceFilter.md)
  - [ParseResource](docs/ParseResource.md)
