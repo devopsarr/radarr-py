@@ -46,6 +46,7 @@ from radarr.models.custom_format_specification_schema import CustomFormatSpecifi
 from radarr.models.database_type import DatabaseType
 from radarr.models.delay_profile_resource import DelayProfileResource
 from radarr.models.disk_space_resource import DiskSpaceResource
+from radarr.models.download_client_bulk_resource import DownloadClientBulkResource
 from radarr.models.download_client_config_resource import DownloadClientConfigResource
 from radarr.models.download_client_resource import DownloadClientResource
 from radarr.models.download_protocol import DownloadProtocol
@@ -59,9 +60,11 @@ from radarr.models.history_resource import HistoryResource
 from radarr.models.history_resource_paging_resource import HistoryResourcePagingResource
 from radarr.models.host_config_resource import HostConfigResource
 from radarr.models.import_exclusions_resource import ImportExclusionsResource
+from radarr.models.import_list_bulk_resource import ImportListBulkResource
 from radarr.models.import_list_config_resource import ImportListConfigResource
 from radarr.models.import_list_resource import ImportListResource
 from radarr.models.import_list_type import ImportListType
+from radarr.models.indexer_bulk_resource import IndexerBulkResource
 from radarr.models.indexer_config_resource import IndexerConfigResource
 from radarr.models.indexer_flag_resource import IndexerFlagResource
 from radarr.models.indexer_resource import IndexerResource
@@ -76,6 +79,7 @@ from radarr.models.media_cover import MediaCover
 from radarr.models.media_cover_types import MediaCoverTypes
 from radarr.models.media_info_resource import MediaInfoResource
 from radarr.models.media_management_config_resource import MediaManagementConfigResource
+from radarr.models.metadata_bulk_resource import MetadataBulkResource
 from radarr.models.metadata_config_resource import MetadataConfigResource
 from radarr.models.metadata_resource import MetadataResource
 from radarr.models.modifier import Modifier
@@ -91,6 +95,7 @@ from radarr.models.movie_runtime_format_type import MovieRuntimeFormatType
 from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.movie_translation import MovieTranslation
 from radarr.models.naming_config_resource import NamingConfigResource
+from radarr.models.notification_bulk_resource import NotificationBulkResource
 from radarr.models.notification_resource import NotificationResource
 from radarr.models.paging_resource_filter import PagingResourceFilter
 from radarr.models.parse_resource import ParseResource

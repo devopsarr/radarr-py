@@ -47,6 +47,7 @@ docs/DelayProfileResource.md
 docs/DiskSpaceApi.md
 docs/DiskSpaceResource.md
 docs/DownloadClientApi.md
+docs/DownloadClientBulkResource.md
 docs/DownloadClientConfigApi.md
 docs/DownloadClientConfigResource.md
 docs/DownloadClientResource.md
@@ -68,12 +69,14 @@ docs/HostConfigResource.md
 docs/ImportExclusionsApi.md
 docs/ImportExclusionsResource.md
 docs/ImportListApi.md
+docs/ImportListBulkResource.md
 docs/ImportListConfigApi.md
 docs/ImportListConfigResource.md
 docs/ImportListMoviesApi.md
 docs/ImportListResource.md
 docs/ImportListType.md
 docs/IndexerApi.md
+docs/IndexerBulkResource.md
 docs/IndexerConfigApi.md
 docs/IndexerConfigResource.md
 docs/IndexerFlagApi.md
@@ -99,6 +102,7 @@ docs/MediaInfoResource.md
 docs/MediaManagementConfigApi.md
 docs/MediaManagementConfigResource.md
 docs/MetadataApi.md
+docs/MetadataBulkResource.md
 docs/MetadataConfigApi.md
 docs/MetadataConfigResource.md
 docs/MetadataResource.md
@@ -122,6 +126,7 @@ docs/MovieTranslation.md
 docs/NamingConfigApi.md
 docs/NamingConfigResource.md
 docs/NotificationApi.md
+docs/NotificationBulkResource.md
 docs/NotificationResource.md
 docs/PagingResourceFilter.md
 docs/ParseApi.md
@@ -301,6 +306,7 @@ radarr/models/custom_format_specification_schema.py
 radarr/models/database_type.py
 radarr/models/delay_profile_resource.py
 radarr/models/disk_space_resource.py
+radarr/models/download_client_bulk_resource.py
 radarr/models/download_client_config_resource.py
 radarr/models/download_client_resource.py
 radarr/models/download_protocol.py
@@ -314,9 +320,11 @@ radarr/models/history_resource.py
 radarr/models/history_resource_paging_resource.py
 radarr/models/host_config_resource.py
 radarr/models/import_exclusions_resource.py
+radarr/models/import_list_bulk_resource.py
 radarr/models/import_list_config_resource.py
 radarr/models/import_list_resource.py
 radarr/models/import_list_type.py
+radarr/models/indexer_bulk_resource.py
 radarr/models/indexer_config_resource.py
 radarr/models/indexer_flag_resource.py
 radarr/models/indexer_resource.py
@@ -331,6 +339,7 @@ radarr/models/media_cover.py
 radarr/models/media_cover_types.py
 radarr/models/media_info_resource.py
 radarr/models/media_management_config_resource.py
+radarr/models/metadata_bulk_resource.py
 radarr/models/metadata_config_resource.py
 radarr/models/metadata_resource.py
 radarr/models/modifier.py
@@ -346,6 +355,7 @@ radarr/models/movie_runtime_format_type.py
 radarr/models/movie_status_type.py
 radarr/models/movie_translation.py
 radarr/models/naming_config_resource.py
+radarr/models/notification_bulk_resource.py
 radarr/models/notification_resource.py
 radarr/models/paging_resource_filter.py
 radarr/models/parse_resource.py

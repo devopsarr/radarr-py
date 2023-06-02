@@ -46,10 +46,12 @@ class MediaManagementConfigResource(BaseModel):
     skip_free_space_check_when_importing: Optional[bool]
     minimum_free_space_when_importing: Optional[int]
     copy_using_hardlinks: Optional[bool]
+    use_script_import: Optional[bool]
+    script_import_path: Optional[str]
     import_extra_files: Optional[bool]
     extra_file_extensions: Optional[str]
     enable_media_info: Optional[bool]
-    __properties = ["id", "autoUnmonitorPreviouslyDownloadedMovies", "recycleBin", "recycleBinCleanupDays", "downloadPropersAndRepacks", "createEmptyMovieFolders", "deleteEmptyFolders", "fileDate", "rescanAfterRefresh", "autoRenameFolders", "pathsDefaultStatic", "setPermissionsLinux", "chmodFolder", "chownGroup", "skipFreeSpaceCheckWhenImporting", "minimumFreeSpaceWhenImporting", "copyUsingHardlinks", "importExtraFiles", "extraFileExtensions", "enableMediaInfo"]
+    __properties = ["id", "autoUnmonitorPreviouslyDownloadedMovies", "recycleBin", "recycleBinCleanupDays", "downloadPropersAndRepacks", "createEmptyMovieFolders", "deleteEmptyFolders", "fileDate", "rescanAfterRefresh", "autoRenameFolders", "pathsDefaultStatic", "setPermissionsLinux", "chmodFolder", "chownGroup", "skipFreeSpaceCheckWhenImporting", "minimumFreeSpaceWhenImporting", "copyUsingHardlinks", "useScriptImport", "scriptImportPath", "importExtraFiles", "extraFileExtensions", "enableMediaInfo"]
 
     class Config:
         allow_population_by_field_name = True
@@ -90,6 +92,10 @@ class MediaManagementConfigResource(BaseModel):
         if self.chown_group is None:
             _dict['chownGroup'] = None
 
+        # set to None if script_import_path (nullable) is None
+        if self.script_import_path is None:
+            _dict['scriptImportPath'] = None
+
         # set to None if extra_file_extensions (nullable) is None
         if self.extra_file_extensions is None:
             _dict['extraFileExtensions'] = None
@@ -123,6 +129,8 @@ class MediaManagementConfigResource(BaseModel):
             "skip_free_space_check_when_importing": obj.get("skipFreeSpaceCheckWhenImporting"),
             "minimum_free_space_when_importing": obj.get("minimumFreeSpaceWhenImporting"),
             "copy_using_hardlinks": obj.get("copyUsingHardlinks"),
+            "use_script_import": obj.get("useScriptImport"),
+            "script_import_path": obj.get("scriptImportPath"),
             "import_extra_files": obj.get("importExtraFiles"),
             "extra_file_extensions": obj.get("extraFileExtensions"),
             "enable_media_info": obj.get("enableMediaInfo")

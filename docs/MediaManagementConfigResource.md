@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **skip_free_space_check_when_importing** | **bool** |  | [optional] 
 **minimum_free_space_when_importing** | **int** |  | [optional] 
 **copy_using_hardlinks** | **bool** |  | [optional] 
+**use_script_import** | **bool** |  | [optional] 
+**script_import_path** | **str** |  | [optional] 
 **import_extra_files** | **bool** |  | [optional] 
 **extra_file_extensions** | **str** |  | [optional] 
 **enable_media_info** | **bool** |  | [optional] 
