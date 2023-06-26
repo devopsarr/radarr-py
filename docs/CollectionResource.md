@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **search_on_add** | **bool** |  | [optional] 
 **minimum_availability** | [**MovieStatusType**](MovieStatusType.md) |  | [optional] 
 **movies** | [**List[CollectionMovieResource]**](CollectionMovieResource.md) |  | [optional] 
+**missing_movies** | **int** |  | [optional] 
 
 ## Example
 
