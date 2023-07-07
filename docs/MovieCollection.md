@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **images** | [**List[MediaCover]**](MediaCover.md) |  | [optional] 
 **added** | **datetime** |  | [optional] 
 **movies** | [**List[MovieMetadata]**](MovieMetadata.md) |  | [optional] 
+**tags** | **List[int]** |  | [optional] 
 
 ## Example
 

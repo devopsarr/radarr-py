@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **minimum_availability** | [**MovieStatusType**](MovieStatusType.md) |  | [optional] 
 **list_type** | [**ImportListType**](ImportListType.md) |  | [optional] 
 **list_order** | **int** |  | [optional] 
+**min_refresh_interval** | **str** |  | [optional] 
 
 ## Example
 

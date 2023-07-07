@@ -50,7 +50,8 @@ class ImportListResource(BaseModel):
     minimum_availability: Optional[MovieStatusType]
     list_type: Optional[ImportListType]
     list_order: Optional[int]
-    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "enabled", "enableAuto", "monitor", "rootFolderPath", "qualityProfileId", "searchOnAdd", "minimumAvailability", "listType", "listOrder"]
+    min_refresh_interval: Optional[str]
+    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "enabled", "enableAuto", "monitor", "rootFolderPath", "qualityProfileId", "searchOnAdd", "minimumAvailability", "listType", "listOrder", "minRefreshInterval"]
 
     class Config:
         allow_population_by_field_name = True
@@ -162,7 +163,8 @@ class ImportListResource(BaseModel):
             "search_on_add": obj.get("searchOnAdd"),
             "minimum_availability": obj.get("minimumAvailability"),
             "list_type": obj.get("listType"),
-            "list_order": obj.get("listOrder")
+            "list_order": obj.get("listOrder"),
+            "min_refresh_interval": obj.get("minRefreshInterval")
         })
         return _obj
 

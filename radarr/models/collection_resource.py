@@ -42,7 +42,8 @@ class CollectionResource(BaseModel):
     minimum_availability: Optional[MovieStatusType]
     movies: Optional[List]
     missing_movies: Optional[int]
-    __properties = ["id", "title", "sortTitle", "tmdbId", "images", "overview", "monitored", "rootFolderPath", "qualityProfileId", "searchOnAdd", "minimumAvailability", "movies", "missingMovies"]
+    tags: Optional[List]
+    __properties = ["id", "title", "sortTitle", "tmdbId", "images", "overview", "monitored", "rootFolderPath", "qualityProfileId", "searchOnAdd", "minimumAvailability", "movies", "missingMovies", "tags"]
 
     class Config:
         allow_population_by_field_name = True
@@ -109,6 +110,10 @@ class CollectionResource(BaseModel):
         if self.movies is None:
             _dict['movies'] = None
 
+        # set to None if tags (nullable) is None
+        if self.tags is None:
+            _dict['tags'] = None
+
         return _dict
 
     @classmethod
@@ -133,7 +138,8 @@ class CollectionResource(BaseModel):
             "search_on_add": obj.get("searchOnAdd"),
             "minimum_availability": obj.get("minimumAvailability"),
             "movies": [CollectionMovieResource.from_dict(_item) for _item in obj.get("movies")] if obj.get("movies") is not None else None,
-            "missing_movies": obj.get("missingMovies")
+            "missing_movies": obj.get("missingMovies"),
+            "tags": obj.get("tags")
         })
         return _obj
 
