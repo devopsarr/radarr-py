@@ -27,10 +27,9 @@ class ImportListConfigResource(BaseModel):
     Do not edit the class manually.
     """
     id: Optional[int]
-    import_list_sync_interval: Optional[int]
     list_sync_level: Optional[str]
     import_exclusions: Optional[str]
-    __properties = ["id", "importListSyncInterval", "listSyncLevel", "importExclusions"]
+    __properties = ["id", "listSyncLevel", "importExclusions"]
 
     class Config:
         allow_population_by_field_name = True
@@ -80,7 +79,6 @@ class ImportListConfigResource(BaseModel):
 
         _obj = ImportListConfigResource.parse_obj({
             "id": obj.get("id"),
-            "import_list_sync_interval": obj.get("importListSyncInterval"),
             "list_sync_level": obj.get("listSyncLevel"),
             "import_exclusions": obj.get("importExclusions")
         })

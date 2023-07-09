@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**import_list_sync_interval** | **int** |  | [optional] 
 **list_sync_level** | **str** |  | [optional] 
 **import_exclusions** | **str** |  | [optional] 
 

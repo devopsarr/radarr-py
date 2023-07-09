@@ -44,7 +44,8 @@ class MovieCollection(BaseModel):
     images: Optional[List]
     added: Optional[datetime]
     movies: Optional[List]
-    __properties = ["id", "title", "cleanTitle", "sortTitle", "tmdbId", "overview", "monitored", "qualityProfileId", "rootFolderPath", "searchOnAdd", "minimumAvailability", "lastInfoSync", "images", "added", "movies"]
+    tags: Optional[List]
+    __properties = ["id", "title", "cleanTitle", "sortTitle", "tmdbId", "overview", "monitored", "qualityProfileId", "rootFolderPath", "searchOnAdd", "minimumAvailability", "lastInfoSync", "images", "added", "movies", "tags"]
 
     class Config:
         allow_population_by_field_name = True
@@ -119,6 +120,10 @@ class MovieCollection(BaseModel):
         if self.movies is None:
             _dict['movies'] = None
 
+        # set to None if tags (nullable) is None
+        if self.tags is None:
+            _dict['tags'] = None
+
         return _dict
 
     @classmethod
@@ -145,7 +150,8 @@ class MovieCollection(BaseModel):
             "last_info_sync": obj.get("lastInfoSync"),
             "images": [MediaCover.from_dict(_item) for _item in obj.get("images")] if obj.get("images") is not None else None,
             "added": obj.get("added"),
-            "movies": [MovieMetadata.from_dict(_item) for _item in obj.get("movies")] if obj.get("movies") is not None else None
+            "movies": [MovieMetadata.from_dict(_item) for _item in obj.get("movies")] if obj.get("movies") is not None else None,
+            "tags": obj.get("tags")
         })
         return _obj
 
