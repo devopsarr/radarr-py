@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **languages** | [**List[Language]**](Language.md) |  | [optional] 
 **quality** | [**QualityModel**](QualityModel.md) |  | [optional] 
 **custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
+**custom_format_score** | **int** |  | [optional] 
 **size** | **float** |  | [optional] 
 **title** | **str** |  | [optional] 
 **sizeleft** | **float** |  | [optional] 

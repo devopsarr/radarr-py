@@ -34,6 +34,7 @@ class ImportListType(str, Enum):
     TMDB = 'tmdb'
     TRAKT = 'trakt'
     PLEX = 'plex'
+    SIMKL = 'simkl'
     OTHER = 'other'
     ADVANCED = 'advanced'
 

@@ -224,11 +224,9 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**create_metadata**](docs/MetadataApi.md#create_metadata) | **POST** /api/v3/metadata | 
 *MetadataApi* | [**create_metadata_action_by_name**](docs/MetadataApi.md#create_metadata_action_by_name) | **POST** /api/v3/metadata/action/{name} | 
 *MetadataApi* | [**delete_metadata**](docs/MetadataApi.md#delete_metadata) | **DELETE** /api/v3/metadata/{id} | 
-*MetadataApi* | [**delete_metadata_bulk**](docs/MetadataApi.md#delete_metadata_bulk) | **DELETE** /api/v3/metadata/bulk | 
 *MetadataApi* | [**get_metadata_by_id**](docs/MetadataApi.md#get_metadata_by_id) | **GET** /api/v3/metadata/{id} | 
 *MetadataApi* | [**list_metadata**](docs/MetadataApi.md#list_metadata) | **GET** /api/v3/metadata | 
 *MetadataApi* | [**list_metadata_schema**](docs/MetadataApi.md#list_metadata_schema) | **GET** /api/v3/metadata/schema | 
-*MetadataApi* | [**put_metadata_bulk**](docs/MetadataApi.md#put_metadata_bulk) | **PUT** /api/v3/metadata/bulk | 
 *MetadataApi* | [**test_metadata**](docs/MetadataApi.md#test_metadata) | **POST** /api/v3/metadata/test | 
 *MetadataApi* | [**testall_metadata**](docs/MetadataApi.md#testall_metadata) | **POST** /api/v3/metadata/testall | 
 *MetadataApi* | [**update_metadata**](docs/MetadataApi.md#update_metadata) | **PUT** /api/v3/metadata/{id} | 
@@ -261,11 +259,9 @@ Class | Method | HTTP request | Description
 *NotificationApi* | [**create_notification**](docs/NotificationApi.md#create_notification) | **POST** /api/v3/notification | 
 *NotificationApi* | [**create_notification_action_by_name**](docs/NotificationApi.md#create_notification_action_by_name) | **POST** /api/v3/notification/action/{name} | 
 *NotificationApi* | [**delete_notification**](docs/NotificationApi.md#delete_notification) | **DELETE** /api/v3/notification/{id} | 
-*NotificationApi* | [**delete_notification_bulk**](docs/NotificationApi.md#delete_notification_bulk) | **DELETE** /api/v3/notification/bulk | 
 *NotificationApi* | [**get_notification_by_id**](docs/NotificationApi.md#get_notification_by_id) | **GET** /api/v3/notification/{id} | 
 *NotificationApi* | [**list_notification**](docs/NotificationApi.md#list_notification) | **GET** /api/v3/notification | 
 *NotificationApi* | [**list_notification_schema**](docs/NotificationApi.md#list_notification_schema) | **GET** /api/v3/notification/schema | 
-*NotificationApi* | [**put_notification_bulk**](docs/NotificationApi.md#put_notification_bulk) | **PUT** /api/v3/notification/bulk | 
 *NotificationApi* | [**test_notification**](docs/NotificationApi.md#test_notification) | **POST** /api/v3/notification/test | 
 *NotificationApi* | [**testall_notification**](docs/NotificationApi.md#testall_notification) | **POST** /api/v3/notification/testall | 
 *NotificationApi* | [**update_notification**](docs/NotificationApi.md#update_notification) | **PUT** /api/v3/notification/{id} | 
@@ -403,7 +399,6 @@ Class | Method | HTTP request | Description
  - [MediaCoverTypes](docs/MediaCoverTypes.md)
  - [MediaInfoResource](docs/MediaInfoResource.md)
  - [MediaManagementConfigResource](docs/MediaManagementConfigResource.md)
- - [MetadataBulkResource](docs/MetadataBulkResource.md)
  - [MetadataConfigResource](docs/MetadataConfigResource.md)
  - [MetadataResource](docs/MetadataResource.md)
  - [Modifier](docs/Modifier.md)
@@ -419,7 +414,6 @@ Class | Method | HTTP request | Description
  - [MovieStatusType](docs/MovieStatusType.md)
  - [MovieTranslation](docs/MovieTranslation.md)
  - [NamingConfigResource](docs/NamingConfigResource.md)
- - [NotificationBulkResource](docs/NotificationBulkResource.md)
  - [NotificationResource](docs/NotificationResource.md)
  - [PagingResourceFilter](docs/PagingResourceFilter.md)
  - [ParseResource](docs/ParseResource.md)

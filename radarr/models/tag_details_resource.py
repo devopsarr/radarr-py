@@ -34,7 +34,8 @@ class TagDetailsResource(BaseModel):
     import_list_ids: Optional[List]
     movie_ids: Optional[List]
     indexer_ids: Optional[List]
-    __properties = ["id", "label", "delayProfileIds", "notificationIds", "restrictionIds", "importListIds", "movieIds", "indexerIds"]
+    download_client_ids: Optional[List]
+    __properties = ["id", "label", "delayProfileIds", "notificationIds", "restrictionIds", "importListIds", "movieIds", "indexerIds", "downloadClientIds"]
 
     class Config:
         allow_population_by_field_name = True
@@ -91,6 +92,10 @@ class TagDetailsResource(BaseModel):
         if self.indexer_ids is None:
             _dict['indexerIds'] = None
 
+        # set to None if download_client_ids (nullable) is None
+        if self.download_client_ids is None:
+            _dict['downloadClientIds'] = None
+
         return _dict
 
     @classmethod
@@ -110,7 +115,8 @@ class TagDetailsResource(BaseModel):
             "restriction_ids": obj.get("restrictionIds"),
             "import_list_ids": obj.get("importListIds"),
             "movie_ids": obj.get("movieIds"),
-            "indexer_ids": obj.get("indexerIds")
+            "indexer_ids": obj.get("indexerIds"),
+            "download_client_ids": obj.get("downloadClientIds")
         })
         return _obj
 
