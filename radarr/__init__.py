@@ -162,7 +162,6 @@ from radarr.models.media_cover import MediaCover
 from radarr.models.media_cover_types import MediaCoverTypes
 from radarr.models.media_info_resource import MediaInfoResource
 from radarr.models.media_management_config_resource import MediaManagementConfigResource
-from radarr.models.metadata_bulk_resource import MetadataBulkResource
 from radarr.models.metadata_config_resource import MetadataConfigResource
 from radarr.models.metadata_resource import MetadataResource
 from radarr.models.modifier import Modifier
@@ -178,7 +177,6 @@ from radarr.models.movie_runtime_format_type import MovieRuntimeFormatType
 from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.movie_translation import MovieTranslation
 from radarr.models.naming_config_resource import NamingConfigResource
-from radarr.models.notification_bulk_resource import NotificationBulkResource
 from radarr.models.notification_resource import NotificationResource
 from radarr.models.paging_resource_filter import PagingResourceFilter
 from radarr.models.parse_resource import ParseResource

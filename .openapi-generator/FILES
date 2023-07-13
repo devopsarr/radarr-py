@@ -102,7 +102,6 @@ docs/MediaInfoResource.md
 docs/MediaManagementConfigApi.md
 docs/MediaManagementConfigResource.md
 docs/MetadataApi.md
-docs/MetadataBulkResource.md
 docs/MetadataConfigApi.md
 docs/MetadataConfigResource.md
 docs/MetadataResource.md
@@ -126,7 +125,6 @@ docs/MovieTranslation.md
 docs/NamingConfigApi.md
 docs/NamingConfigResource.md
 docs/NotificationApi.md
-docs/NotificationBulkResource.md
 docs/NotificationResource.md
 docs/PagingResourceFilter.md
 docs/ParseApi.md
@@ -339,7 +337,6 @@ radarr/models/media_cover.py
 radarr/models/media_cover_types.py
 radarr/models/media_info_resource.py
 radarr/models/media_management_config_resource.py
-radarr/models/metadata_bulk_resource.py
 radarr/models/metadata_config_resource.py
 radarr/models/metadata_resource.py
 radarr/models/modifier.py
@@ -355,7 +352,6 @@ radarr/models/movie_runtime_format_type.py
 radarr/models/movie_status_type.py
 radarr/models/movie_translation.py
 radarr/models/naming_config_resource.py
-radarr/models/notification_bulk_resource.py
 radarr/models/notification_resource.py
 radarr/models/paging_resource_filter.py
 radarr/models/parse_resource.py

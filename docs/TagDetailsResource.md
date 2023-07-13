@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **import_list_ids** | **List[int]** |  | [optional] 
 **movie_ids** | **List[int]** |  | [optional] 
 **indexer_ids** | **List[int]** |  | [optional] 
+**download_client_ids** | **List[int]** |  | [optional] 
 
 ## Example
 
