@@ -17,8 +17,10 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
+from typing import List, Optional
 from pydantic import BaseModel
+from radarr.models.custom_format_resource import CustomFormatResource
+from radarr.models.language import Language
 from radarr.models.movie_resource import MovieResource
 from radarr.models.parsed_movie_info import ParsedMovieInfo
 
@@ -32,7 +34,10 @@ class ParseResource(BaseModel):
     title: Optional[str]
     parsed_movie_info: Optional[ParsedMovieInfo]
     movie: Optional[MovieResource]
-    __properties = ["id", "title", "parsedMovieInfo", "movie"]
+    languages: Optional[List]
+    custom_formats: Optional[List]
+    custom_format_score: Optional[int]
+    __properties = ["id", "title", "parsedMovieInfo", "movie", "languages", "customFormats", "customFormatScore"]
 
     class Config:
         allow_population_by_field_name = True
@@ -67,9 +72,31 @@ class ParseResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of movie
         if self.movie:
             _dict['movie'] = self.movie.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in languages (list)
+        _items = []
+        if self.languages:
+            for _item in self.languages:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['languages'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in custom_formats (list)
+        _items = []
+        if self.custom_formats:
+            for _item in self.custom_formats:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['customFormats'] = _items
         # set to None if title (nullable) is None
         if self.title is None:
             _dict['title'] = None
+
+        # set to None if languages (nullable) is None
+        if self.languages is None:
+            _dict['languages'] = None
+
+        # set to None if custom_formats (nullable) is None
+        if self.custom_formats is None:
+            _dict['customFormats'] = None
 
         return _dict
 
@@ -86,7 +113,10 @@ class ParseResource(BaseModel):
             "id": obj.get("id"),
             "title": obj.get("title"),
             "parsed_movie_info": ParsedMovieInfo.from_dict(obj.get("parsedMovieInfo")) if obj.get("parsedMovieInfo") is not None else None,
-            "movie": MovieResource.from_dict(obj.get("movie")) if obj.get("movie") is not None else None
+            "movie": MovieResource.from_dict(obj.get("movie")) if obj.get("movie") is not None else None,
+            "languages": [Language.from_dict(_item) for _item in obj.get("languages")] if obj.get("languages") is not None else None,
+            "custom_formats": [CustomFormatResource.from_dict(_item) for _item in obj.get("customFormats")] if obj.get("customFormats") is not None else None,
+            "custom_format_score": obj.get("customFormatScore")
         })
         return _obj
 

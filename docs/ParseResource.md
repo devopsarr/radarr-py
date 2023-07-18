@@ -8,6 +8,9 @@ Name | Type | Description | Notes
 **title** | **str** |  | [optional] 
 **parsed_movie_info** | [**ParsedMovieInfo**](ParsedMovieInfo.md) |  | [optional] 
 **movie** | [**MovieResource**](MovieResource.md) |  | [optional] 
+**languages** | [**List[Language]**](Language.md) |  | [optional] 
+**custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
+**custom_format_score** | **int** |  | [optional] 
 
 ## Example
 
