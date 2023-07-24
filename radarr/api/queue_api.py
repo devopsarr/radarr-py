@@ -45,13 +45,13 @@ class QueueApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def delete_queue(self, id : StrictInt, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
+    def delete_queue(self, id : StrictInt, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, skip_redownload : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
         """delete_queue  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_queue(id, remove_from_client, blocklist, async_req=True)
+        >>> thread = api.delete_queue(id, remove_from_client, blocklist, skip_redownload, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -60,6 +60,8 @@ class QueueApi(object):
         :type remove_from_client: bool
         :param blocklist:
         :type blocklist: bool
+        :param skip_redownload:
+        :type skip_redownload: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -76,16 +78,16 @@ class QueueApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_queue_with_http_info(id, remove_from_client, blocklist, **kwargs)  # noqa: E501
+        return self.delete_queue_with_http_info(id, remove_from_client, blocklist, skip_redownload, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def delete_queue_with_http_info(self, id : StrictInt, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def delete_queue_with_http_info(self, id : StrictInt, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, skip_redownload : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """delete_queue  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_queue_with_http_info(id, remove_from_client, blocklist, async_req=True)
+        >>> thread = api.delete_queue_with_http_info(id, remove_from_client, blocklist, skip_redownload, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -94,6 +96,8 @@ class QueueApi(object):
         :type remove_from_client: bool
         :param blocklist:
         :type blocklist: bool
+        :param skip_redownload:
+        :type skip_redownload: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -123,7 +127,8 @@ class QueueApi(object):
         _all_params = [
             'id',
             'remove_from_client',
-            'blocklist'
+            'blocklist',
+            'skip_redownload'
         ]
         _all_params.extend(
             [
@@ -160,6 +165,8 @@ class QueueApi(object):
             _query_params.append(('removeFromClient', _params['remove_from_client']))
         if _params.get('blocklist') is not None:  # noqa: E501
             _query_params.append(('blocklist', _params['blocklist']))
+        if _params.get('skip_redownload') is not None:  # noqa: E501
+            _query_params.append(('skipRedownload', _params['skip_redownload']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
@@ -194,19 +201,21 @@ class QueueApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def delete_queue_bulk(self, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, queue_bulk_resource : Optional[QueueBulkResource] = None, **kwargs) -> None:  # noqa: E501
+    def delete_queue_bulk(self, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, skip_redownload : Optional[StrictBool] = None, queue_bulk_resource : Optional[QueueBulkResource] = None, **kwargs) -> None:  # noqa: E501
         """delete_queue_bulk  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_queue_bulk(remove_from_client, blocklist, queue_bulk_resource, async_req=True)
+        >>> thread = api.delete_queue_bulk(remove_from_client, blocklist, skip_redownload, queue_bulk_resource, async_req=True)
         >>> result = thread.get()
 
         :param remove_from_client:
         :type remove_from_client: bool
         :param blocklist:
         :type blocklist: bool
+        :param skip_redownload:
+        :type skip_redownload: bool
         :param queue_bulk_resource:
         :type queue_bulk_resource: QueueBulkResource
         :param async_req: Whether to execute the request asynchronously.
@@ -225,22 +234,24 @@ class QueueApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_queue_bulk_with_http_info(remove_from_client, blocklist, queue_bulk_resource, **kwargs)  # noqa: E501
+        return self.delete_queue_bulk_with_http_info(remove_from_client, blocklist, skip_redownload, queue_bulk_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def delete_queue_bulk_with_http_info(self, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, queue_bulk_resource : Optional[QueueBulkResource] = None, **kwargs):  # noqa: E501
+    def delete_queue_bulk_with_http_info(self, remove_from_client : Optional[StrictBool] = None, blocklist : Optional[StrictBool] = None, skip_redownload : Optional[StrictBool] = None, queue_bulk_resource : Optional[QueueBulkResource] = None, **kwargs):  # noqa: E501
         """delete_queue_bulk  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_queue_bulk_with_http_info(remove_from_client, blocklist, queue_bulk_resource, async_req=True)
+        >>> thread = api.delete_queue_bulk_with_http_info(remove_from_client, blocklist, skip_redownload, queue_bulk_resource, async_req=True)
         >>> result = thread.get()
 
         :param remove_from_client:
         :type remove_from_client: bool
         :param blocklist:
         :type blocklist: bool
+        :param skip_redownload:
+        :type skip_redownload: bool
         :param queue_bulk_resource:
         :type queue_bulk_resource: QueueBulkResource
         :param async_req: Whether to execute the request asynchronously.
@@ -272,6 +283,7 @@ class QueueApi(object):
         _all_params = [
             'remove_from_client',
             'blocklist',
+            'skip_redownload',
             'queue_bulk_resource'
         ]
         _all_params.extend(
@@ -307,6 +319,8 @@ class QueueApi(object):
             _query_params.append(('removeFromClient', _params['remove_from_client']))
         if _params.get('blocklist') is not None:  # noqa: E501
             _query_params.append(('blocklist', _params['blocklist']))
+        if _params.get('skip_redownload') is not None:  # noqa: E501
+            _query_params.append(('skipRedownload', _params['skip_redownload']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))

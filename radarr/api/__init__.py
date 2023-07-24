@@ -41,7 +41,6 @@ from radarr.api.import_list_movies_api import ImportListMoviesApi
 from radarr.api.indexer_api import IndexerApi
 from radarr.api.indexer_config_api import IndexerConfigApi
 from radarr.api.indexer_flag_api import IndexerFlagApi
-from radarr.api.initialize_js_api import InitializeJsApi
 from radarr.api.language_api import LanguageApi
 from radarr.api.localization_api import LocalizationApi
 from radarr.api.log_api import LogApi
