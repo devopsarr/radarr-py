@@ -82,7 +82,6 @@ docs/IndexerConfigResource.md
 docs/IndexerFlagApi.md
 docs/IndexerFlagResource.md
 docs/IndexerResource.md
-docs/InitializeJsApi.md
 docs/Language.md
 docs/LanguageApi.md
 docs/LanguageResource.md
@@ -228,7 +227,6 @@ radarr/api/import_list_movies_api.py
 radarr/api/indexer_api.py
 radarr/api/indexer_config_api.py
 radarr/api/indexer_flag_api.py
-radarr/api/initialize_js_api.py
 radarr/api/language_api.py
 radarr/api/localization_api.py
 radarr/api/log_api.py
