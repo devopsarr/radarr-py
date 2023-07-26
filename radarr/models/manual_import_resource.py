@@ -44,8 +44,9 @@ class ManualImportResource(BaseModel):
     quality_weight: Optional[int]
     download_id: Optional[str]
     custom_formats: Optional[List]
+    custom_format_score: Optional[int]
     rejections: Optional[List]
-    __properties = ["id", "path", "relativePath", "folderName", "name", "size", "movie", "quality", "languages", "releaseGroup", "qualityWeight", "downloadId", "customFormats", "rejections"]
+    __properties = ["id", "path", "relativePath", "folderName", "name", "size", "movie", "quality", "languages", "releaseGroup", "qualityWeight", "downloadId", "customFormats", "customFormatScore", "rejections"]
 
     class Config:
         allow_population_by_field_name = True
@@ -162,6 +163,7 @@ class ManualImportResource(BaseModel):
             "quality_weight": obj.get("qualityWeight"),
             "download_id": obj.get("downloadId"),
             "custom_formats": [CustomFormatResource.from_dict(_item) for _item in obj.get("customFormats")] if obj.get("customFormats") is not None else None,
+            "custom_format_score": obj.get("customFormatScore"),
             "rejections": [Rejection.from_dict(_item) for _item in obj.get("rejections")] if obj.get("rejections") is not None else None
         })
         return _obj

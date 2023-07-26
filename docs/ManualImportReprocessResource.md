@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **languages** | [**List[Language]**](Language.md) |  | [optional] 
 **release_group** | **str** |  | [optional] 
 **download_id** | **str** |  | [optional] 
+**custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
+**custom_format_score** | **int** |  | [optional] 
 **rejections** | [**List[Rejection]**](Rejection.md) |  | [optional] 
 
 ## Example
