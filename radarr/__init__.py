@@ -22,6 +22,7 @@ __version__ = "0.3.1"
 from radarr.api.alternative_title_api import AlternativeTitleApi
 from radarr.api.api_info_api import ApiInfoApi
 from radarr.api.authentication_api import AuthenticationApi
+from radarr.api.auto_tagging_api import AutoTaggingApi
 from radarr.api.backup_api import BackupApi
 from radarr.api.blocklist_api import BlocklistApi
 from radarr.api.calendar_api import CalendarApi
@@ -104,6 +105,8 @@ from radarr.models.alternative_title_resource import AlternativeTitleResource
 from radarr.models.api_info_resource import ApiInfoResource
 from radarr.models.apply_tags import ApplyTags
 from radarr.models.authentication_type import AuthenticationType
+from radarr.models.auto_tagging_resource import AutoTaggingResource
+from radarr.models.auto_tagging_specification_schema import AutoTaggingSpecificationSchema
 from radarr.models.backup_resource import BackupResource
 from radarr.models.backup_type import BackupType
 from radarr.models.blocklist_bulk_resource import BlocklistBulkResource

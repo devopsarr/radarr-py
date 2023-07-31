@@ -29,13 +29,14 @@ class TagDetailsResource(BaseModel):
     id: Optional[int]
     label: Optional[str]
     delay_profile_ids: Optional[List]
+    import_list_ids: Optional[List]
     notification_ids: Optional[List]
     restriction_ids: Optional[List]
-    import_list_ids: Optional[List]
-    movie_ids: Optional[List]
     indexer_ids: Optional[List]
     download_client_ids: Optional[List]
-    __properties = ["id", "label", "delayProfileIds", "notificationIds", "restrictionIds", "importListIds", "movieIds", "indexerIds", "downloadClientIds"]
+    auto_tag_ids: Optional[List]
+    movie_ids: Optional[List]
+    __properties = ["id", "label", "delayProfileIds", "importListIds", "notificationIds", "restrictionIds", "indexerIds", "downloadClientIds", "autoTagIds", "movieIds"]
 
     class Config:
         allow_population_by_field_name = True
@@ -72,6 +73,10 @@ class TagDetailsResource(BaseModel):
         if self.delay_profile_ids is None:
             _dict['delayProfileIds'] = None
 
+        # set to None if import_list_ids (nullable) is None
+        if self.import_list_ids is None:
+            _dict['importListIds'] = None
+
         # set to None if notification_ids (nullable) is None
         if self.notification_ids is None:
             _dict['notificationIds'] = None
@@ -80,14 +85,6 @@ class TagDetailsResource(BaseModel):
         if self.restriction_ids is None:
             _dict['restrictionIds'] = None
 
-        # set to None if import_list_ids (nullable) is None
-        if self.import_list_ids is None:
-            _dict['importListIds'] = None
-
-        # set to None if movie_ids (nullable) is None
-        if self.movie_ids is None:
-            _dict['movieIds'] = None
-
         # set to None if indexer_ids (nullable) is None
         if self.indexer_ids is None:
             _dict['indexerIds'] = None
@@ -95,6 +92,14 @@ class TagDetailsResource(BaseModel):
         # set to None if download_client_ids (nullable) is None
         if self.download_client_ids is None:
             _dict['downloadClientIds'] = None
+
+        # set to None if auto_tag_ids (nullable) is None
+        if self.auto_tag_ids is None:
+            _dict['autoTagIds'] = None
+
+        # set to None if movie_ids (nullable) is None
+        if self.movie_ids is None:
+            _dict['movieIds'] = None
 
         return _dict
 
@@ -111,12 +116,13 @@ class TagDetailsResource(BaseModel):
             "id": obj.get("id"),
             "label": obj.get("label"),
             "delay_profile_ids": obj.get("delayProfileIds"),
+            "import_list_ids": obj.get("importListIds"),
             "notification_ids": obj.get("notificationIds"),
             "restriction_ids": obj.get("restrictionIds"),
-            "import_list_ids": obj.get("importListIds"),
-            "movie_ids": obj.get("movieIds"),
             "indexer_ids": obj.get("indexerIds"),
-            "download_client_ids": obj.get("downloadClientIds")
+            "download_client_ids": obj.get("downloadClientIds"),
+            "auto_tag_ids": obj.get("autoTagIds"),
+            "movie_ids": obj.get("movieIds")
         })
         return _obj
 

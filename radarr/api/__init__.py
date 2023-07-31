@@ -16,6 +16,7 @@
 from radarr.api.alternative_title_api import AlternativeTitleApi
 from radarr.api.api_info_api import ApiInfoApi
 from radarr.api.authentication_api import AuthenticationApi
+from radarr.api.auto_tagging_api import AutoTaggingApi
 from radarr.api.backup_api import BackupApi
 from radarr.api.blocklist_api import BlocklistApi
 from radarr.api.calendar_api import CalendarApi

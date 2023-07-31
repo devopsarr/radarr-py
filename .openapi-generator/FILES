@@ -11,6 +11,9 @@ docs/ApiInfoResource.md
 docs/ApplyTags.md
 docs/AuthenticationApi.md
 docs/AuthenticationType.md
+docs/AutoTaggingApi.md
+docs/AutoTaggingResource.md
+docs/AutoTaggingSpecificationSchema.md
 docs/BackupApi.md
 docs/BackupResource.md
 docs/BackupType.md
@@ -202,6 +205,7 @@ radarr/api/__init__.py
 radarr/api/alternative_title_api.py
 radarr/api/api_info_api.py
 radarr/api/authentication_api.py
+radarr/api/auto_tagging_api.py
 radarr/api/backup_api.py
 radarr/api/blocklist_api.py
 radarr/api/calendar_api.py
@@ -278,6 +282,8 @@ radarr/models/alternative_title_resource.py
 radarr/models/api_info_resource.py
 radarr/models/apply_tags.py
 radarr/models/authentication_type.py
+radarr/models/auto_tagging_resource.py
+radarr/models/auto_tagging_specification_schema.py
 radarr/models/backup_resource.py
 radarr/models/backup_type.py
 radarr/models/blocklist_bulk_resource.py
