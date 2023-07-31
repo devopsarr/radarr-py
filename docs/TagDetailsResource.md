@@ -7,12 +7,13 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **label** | **str** |  | [optional] 
 **delay_profile_ids** | **List[int]** |  | [optional] 
+**import_list_ids** | **List[int]** |  | [optional] 
 **notification_ids** | **List[int]** |  | [optional] 
 **restriction_ids** | **List[int]** |  | [optional] 
-**import_list_ids** | **List[int]** |  | [optional] 
-**movie_ids** | **List[int]** |  | [optional] 
 **indexer_ids** | **List[int]** |  | [optional] 
 **download_client_ids** | **List[int]** |  | [optional] 
+**auto_tag_ids** | **List[int]** |  | [optional] 
+**movie_ids** | **List[int]** |  | [optional] 
 
 ## Example
 
