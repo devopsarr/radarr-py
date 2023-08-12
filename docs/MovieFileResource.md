@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **indexer_flags** | **int** |  | [optional] 
 **quality** | [**QualityModel**](QualityModel.md) |  | [optional] 
 **custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
+**custom_format_score** | **int** |  | [optional] 
 **media_info** | [**MediaInfoResource**](MediaInfoResource.md) |  | [optional] 
 **original_file_path** | **str** |  | [optional] 
 **quality_cutoff_not_met** | **bool** |  | [optional] 

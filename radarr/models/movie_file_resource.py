@@ -40,13 +40,14 @@ class MovieFileResource(BaseModel):
     indexer_flags: Optional[int]
     quality: Optional[QualityModel]
     custom_formats: Optional[List]
+    custom_format_score: Optional[int]
     media_info: Optional[MediaInfoResource]
     original_file_path: Optional[str]
     quality_cutoff_not_met: Optional[bool]
     languages: Optional[List]
     release_group: Optional[str]
     edition: Optional[str]
-    __properties = ["id", "movieId", "relativePath", "path", "size", "dateAdded", "sceneName", "indexerFlags", "quality", "customFormats", "mediaInfo", "originalFilePath", "qualityCutoffNotMet", "languages", "releaseGroup", "edition"]
+    __properties = ["id", "movieId", "relativePath", "path", "size", "dateAdded", "sceneName", "indexerFlags", "quality", "customFormats", "customFormatScore", "mediaInfo", "originalFilePath", "qualityCutoffNotMet", "languages", "releaseGroup", "edition"]
 
     class Config:
         allow_population_by_field_name = True
@@ -149,6 +150,7 @@ class MovieFileResource(BaseModel):
             "indexer_flags": obj.get("indexerFlags"),
             "quality": QualityModel.from_dict(obj.get("quality")) if obj.get("quality") is not None else None,
             "custom_formats": [CustomFormatResource.from_dict(_item) for _item in obj.get("customFormats")] if obj.get("customFormats") is not None else None,
+            "custom_format_score": obj.get("customFormatScore"),
             "media_info": MediaInfoResource.from_dict(obj.get("mediaInfo")) if obj.get("mediaInfo") is not None else None,
             "original_file_path": obj.get("originalFilePath"),
             "quality_cutoff_not_met": obj.get("qualityCutoffNotMet"),
