@@ -19,6 +19,7 @@ import json
 
 from typing import Optional
 from pydantic import BaseModel
+from radarr.models.authentication_required_type import AuthenticationRequiredType
 from radarr.models.authentication_type import AuthenticationType
 from radarr.models.certificate_validation_type import CertificateValidationType
 from radarr.models.proxy_type import ProxyType
@@ -37,6 +38,7 @@ class HostConfigResource(BaseModel):
     enable_ssl: Optional[bool]
     launch_browser: Optional[bool]
     authentication_method: Optional[AuthenticationType]
+    authentication_required: Optional[AuthenticationRequiredType]
     analytics_enabled: Optional[bool]
     username: Optional[str]
     password: Optional[str]
@@ -64,7 +66,7 @@ class HostConfigResource(BaseModel):
     backup_folder: Optional[str]
     backup_interval: Optional[int]
     backup_retention: Optional[int]
-    __properties = ["id", "bindAddress", "port", "sslPort", "enableSsl", "launchBrowser", "authenticationMethod", "analyticsEnabled", "username", "password", "logLevel", "consoleLogLevel", "branch", "apiKey", "sslCertPath", "sslCertPassword", "urlBase", "instanceName", "applicationUrl", "updateAutomatically", "updateMechanism", "updateScriptPath", "proxyEnabled", "proxyType", "proxyHostname", "proxyPort", "proxyUsername", "proxyPassword", "proxyBypassFilter", "proxyBypassLocalAddresses", "certificateValidation", "backupFolder", "backupInterval", "backupRetention"]
+    __properties = ["id", "bindAddress", "port", "sslPort", "enableSsl", "launchBrowser", "authenticationMethod", "authenticationRequired", "analyticsEnabled", "username", "password", "logLevel", "consoleLogLevel", "branch", "apiKey", "sslCertPath", "sslCertPassword", "urlBase", "instanceName", "applicationUrl", "updateAutomatically", "updateMechanism", "updateScriptPath", "proxyEnabled", "proxyType", "proxyHostname", "proxyPort", "proxyUsername", "proxyPassword", "proxyBypassFilter", "proxyBypassLocalAddresses", "certificateValidation", "backupFolder", "backupInterval", "backupRetention"]
 
     class Config:
         allow_population_by_field_name = True
@@ -184,6 +186,7 @@ class HostConfigResource(BaseModel):
             "enable_ssl": obj.get("enableSsl"),
             "launch_browser": obj.get("launchBrowser"),
             "authentication_method": obj.get("authenticationMethod"),
+            "authentication_required": obj.get("authenticationRequired"),
             "analytics_enabled": obj.get("analyticsEnabled"),
             "username": obj.get("username"),
             "password": obj.get("password"),

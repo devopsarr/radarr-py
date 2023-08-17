@@ -34,9 +34,11 @@ class DelayProfileResource(BaseModel):
     usenet_delay: Optional[int]
     torrent_delay: Optional[int]
     bypass_if_highest_quality: Optional[bool]
+    bypass_if_above_custom_format_score: Optional[bool]
+    minimum_custom_format_score: Optional[int]
     order: Optional[int]
     tags: Optional[List]
-    __properties = ["id", "enableUsenet", "enableTorrent", "preferredProtocol", "usenetDelay", "torrentDelay", "bypassIfHighestQuality", "order", "tags"]
+    __properties = ["id", "enableUsenet", "enableTorrent", "preferredProtocol", "usenetDelay", "torrentDelay", "bypassIfHighestQuality", "bypassIfAboveCustomFormatScore", "minimumCustomFormatScore", "order", "tags"]
 
     class Config:
         allow_population_by_field_name = True
@@ -88,6 +90,8 @@ class DelayProfileResource(BaseModel):
             "usenet_delay": obj.get("usenetDelay"),
             "torrent_delay": obj.get("torrentDelay"),
             "bypass_if_highest_quality": obj.get("bypassIfHighestQuality"),
+            "bypass_if_above_custom_format_score": obj.get("bypassIfAboveCustomFormatScore"),
+            "minimum_custom_format_score": obj.get("minimumCustomFormatScore"),
             "order": obj.get("order"),
             "tags": obj.get("tags")
         })

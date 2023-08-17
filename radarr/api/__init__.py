@@ -68,10 +68,10 @@ from radarr.api.queue_action_api import QueueActionApi
 from radarr.api.queue_details_api import QueueDetailsApi
 from radarr.api.queue_status_api import QueueStatusApi
 from radarr.api.release_api import ReleaseApi
+from radarr.api.release_profile_api import ReleaseProfileApi
 from radarr.api.release_push_api import ReleasePushApi
 from radarr.api.remote_path_mapping_api import RemotePathMappingApi
 from radarr.api.rename_movie_api import RenameMovieApi
-from radarr.api.restriction_api import RestrictionApi
 from radarr.api.root_folder_api import RootFolderApi
 from radarr.api.static_resource_api import StaticResourceApi
 from radarr.api.system_api import SystemApi
