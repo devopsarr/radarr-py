@@ -10,6 +10,7 @@ docs/ApiInfoApi.md
 docs/ApiInfoResource.md
 docs/ApplyTags.md
 docs/AuthenticationApi.md
+docs/AuthenticationRequiredType.md
 docs/AuthenticationType.md
 docs/AutoTaggingApi.md
 docs/AutoTaggingResource.md
@@ -134,6 +135,7 @@ docs/ParseResource.md
 docs/ParsedMovieInfo.md
 docs/PingApi.md
 docs/PingResource.md
+docs/PrivacyLevel.md
 docs/ProfileFormatItemResource.md
 docs/ProperDownloadTypes.md
 docs/ProviderMessage.md
@@ -161,6 +163,8 @@ docs/Ratings.md
 docs/Rejection.md
 docs/RejectionType.md
 docs/ReleaseApi.md
+docs/ReleaseProfileApi.md
+docs/ReleaseProfileResource.md
 docs/ReleasePushApi.md
 docs/ReleaseResource.md
 docs/RemotePathMappingApi.md
@@ -168,8 +172,6 @@ docs/RemotePathMappingResource.md
 docs/RenameMovieApi.md
 docs/RenameMovieResource.md
 docs/RescanAfterRefreshType.md
-docs/RestrictionApi.md
-docs/RestrictionResource.md
 docs/Revision.md
 docs/RootFolderApi.md
 docs/RootFolderResource.md
@@ -257,10 +259,10 @@ radarr/api/queue_api.py
 radarr/api/queue_details_api.py
 radarr/api/queue_status_api.py
 radarr/api/release_api.py
+radarr/api/release_profile_api.py
 radarr/api/release_push_api.py
 radarr/api/remote_path_mapping_api.py
 radarr/api/rename_movie_api.py
-radarr/api/restriction_api.py
 radarr/api/root_folder_api.py
 radarr/api/static_resource_api.py
 radarr/api/system_api.py
@@ -281,6 +283,7 @@ radarr/models/alternative_title.py
 radarr/models/alternative_title_resource.py
 radarr/models/api_info_resource.py
 radarr/models/apply_tags.py
+radarr/models/authentication_required_type.py
 radarr/models/authentication_type.py
 radarr/models/auto_tagging_resource.py
 radarr/models/auto_tagging_specification_schema.py
@@ -361,6 +364,7 @@ radarr/models/paging_resource_filter.py
 radarr/models/parse_resource.py
 radarr/models/parsed_movie_info.py
 radarr/models/ping_resource.py
+radarr/models/privacy_level.py
 radarr/models/profile_format_item_resource.py
 radarr/models/proper_download_types.py
 radarr/models/provider_message.py
@@ -380,11 +384,11 @@ radarr/models/rating_type.py
 radarr/models/ratings.py
 radarr/models/rejection.py
 radarr/models/rejection_type.py
+radarr/models/release_profile_resource.py
 radarr/models/release_resource.py
 radarr/models/remote_path_mapping_resource.py
 radarr/models/rename_movie_resource.py
 radarr/models/rescan_after_refresh_type.py
-radarr/models/restriction_resource.py
 radarr/models/revision.py
 radarr/models/root_folder_resource.py
 radarr/models/runtime_mode.py

@@ -19,6 +19,7 @@ import json
 
 from typing import Any, List, Optional
 from pydantic import BaseModel
+from radarr.models.privacy_level import PrivacyLevel
 from radarr.models.select_option import SelectOption
 
 class Field(BaseModel):
@@ -41,8 +42,9 @@ class Field(BaseModel):
     select_options_provider_action: Optional[str]
     section: Optional[str]
     hidden: Optional[str]
+    privacy: Optional[PrivacyLevel]
     placeholder: Optional[str]
-    __properties = ["order", "name", "label", "unit", "helpText", "helpTextWarning", "helpLink", "value", "type", "advanced", "selectOptions", "selectOptionsProviderAction", "section", "hidden", "placeholder"]
+    __properties = ["order", "name", "label", "unit", "helpText", "helpTextWarning", "helpLink", "value", "type", "advanced", "selectOptions", "selectOptionsProviderAction", "section", "hidden", "privacy", "placeholder"]
 
     class Config:
         allow_population_by_field_name = True
@@ -156,6 +158,7 @@ class Field(BaseModel):
             "select_options_provider_action": obj.get("selectOptionsProviderAction"),
             "section": obj.get("section"),
             "hidden": obj.get("hidden"),
+            "privacy": obj.get("privacy"),
             "placeholder": obj.get("placeholder")
         })
         return _obj

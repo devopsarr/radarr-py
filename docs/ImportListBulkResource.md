@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **apply_tags** | [**ApplyTags**](ApplyTags.md) |  | [optional] 
 **enable_auto** | **bool** |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 
-**profile_id** | **int** |  | [optional] 
+**quality_profile_id** | **int** |  | [optional] 
 
 ## Example
 

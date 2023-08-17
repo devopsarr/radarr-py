@@ -74,10 +74,10 @@ from radarr.api.queue_action_api import QueueActionApi
 from radarr.api.queue_details_api import QueueDetailsApi
 from radarr.api.queue_status_api import QueueStatusApi
 from radarr.api.release_api import ReleaseApi
+from radarr.api.release_profile_api import ReleaseProfileApi
 from radarr.api.release_push_api import ReleasePushApi
 from radarr.api.remote_path_mapping_api import RemotePathMappingApi
 from radarr.api.rename_movie_api import RenameMovieApi
-from radarr.api.restriction_api import RestrictionApi
 from radarr.api.root_folder_api import RootFolderApi
 from radarr.api.static_resource_api import StaticResourceApi
 from radarr.api.system_api import SystemApi
@@ -104,6 +104,7 @@ from radarr.models.alternative_title import AlternativeTitle
 from radarr.models.alternative_title_resource import AlternativeTitleResource
 from radarr.models.api_info_resource import ApiInfoResource
 from radarr.models.apply_tags import ApplyTags
+from radarr.models.authentication_required_type import AuthenticationRequiredType
 from radarr.models.authentication_type import AuthenticationType
 from radarr.models.auto_tagging_resource import AutoTaggingResource
 from radarr.models.auto_tagging_specification_schema import AutoTaggingSpecificationSchema
@@ -184,6 +185,7 @@ from radarr.models.paging_resource_filter import PagingResourceFilter
 from radarr.models.parse_resource import ParseResource
 from radarr.models.parsed_movie_info import ParsedMovieInfo
 from radarr.models.ping_resource import PingResource
+from radarr.models.privacy_level import PrivacyLevel
 from radarr.models.profile_format_item_resource import ProfileFormatItemResource
 from radarr.models.proper_download_types import ProperDownloadTypes
 from radarr.models.provider_message import ProviderMessage
@@ -203,11 +205,11 @@ from radarr.models.rating_type import RatingType
 from radarr.models.ratings import Ratings
 from radarr.models.rejection import Rejection
 from radarr.models.rejection_type import RejectionType
+from radarr.models.release_profile_resource import ReleaseProfileResource
 from radarr.models.release_resource import ReleaseResource
 from radarr.models.remote_path_mapping_resource import RemotePathMappingResource
 from radarr.models.rename_movie_resource import RenameMovieResource
 from radarr.models.rescan_after_refresh_type import RescanAfterRefreshType
-from radarr.models.restriction_resource import RestrictionResource
 from radarr.models.revision import Revision
 from radarr.models.root_folder_resource import RootFolderResource
 from radarr.models.runtime_mode import RuntimeMode
