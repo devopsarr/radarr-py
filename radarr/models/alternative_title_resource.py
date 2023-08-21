@@ -19,7 +19,6 @@ import json
 
 from typing import Optional
 from pydantic import BaseModel
-from radarr.models.language import Language
 from radarr.models.source_type import SourceType
 
 class AlternativeTitleResource(BaseModel):
@@ -33,11 +32,7 @@ class AlternativeTitleResource(BaseModel):
     movie_metadata_id: Optional[int]
     title: Optional[str]
     clean_title: Optional[str]
-    source_id: Optional[int]
-    votes: Optional[int]
-    vote_count: Optional[int]
-    language: Optional[Language]
-    __properties = ["id", "sourceType", "movieMetadataId", "title", "cleanTitle", "sourceId", "votes", "voteCount", "language"]
+    __properties = ["id", "sourceType", "movieMetadataId", "title", "cleanTitle"]
 
     class Config:
         allow_population_by_field_name = True
@@ -66,9 +61,6 @@ class AlternativeTitleResource(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of language
-        if self.language:
-            _dict['language'] = self.language.to_dict()
         # set to None if title (nullable) is None
         if self.title is None:
             _dict['title'] = None
@@ -93,11 +85,7 @@ class AlternativeTitleResource(BaseModel):
             "source_type": obj.get("sourceType"),
             "movie_metadata_id": obj.get("movieMetadataId"),
             "title": obj.get("title"),
-            "clean_title": obj.get("cleanTitle"),
-            "source_id": obj.get("sourceId"),
-            "votes": obj.get("votes"),
-            "vote_count": obj.get("voteCount"),
-            "language": Language.from_dict(obj.get("language")) if obj.get("language") is not None else None
+            "clean_title": obj.get("cleanTitle")
         })
         return _obj
 

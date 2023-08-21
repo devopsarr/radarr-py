@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 
 from datetime import datetime
 
-from pydantic import StrictBool, StrictInt
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -186,13 +186,13 @@ class CalendarApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_calendar(self, start : Optional[datetime] = None, end : Optional[datetime] = None, unmonitored : Optional[StrictBool] = None, **kwargs) -> List[MovieResource]:  # noqa: E501
+    def list_calendar(self, start : Optional[datetime] = None, end : Optional[datetime] = None, unmonitored : Optional[StrictBool] = None, tags : Optional[StrictStr] = None, **kwargs) -> List[MovieResource]:  # noqa: E501
         """list_calendar  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.list_calendar(start, end, unmonitored, async_req=True)
+        >>> thread = api.list_calendar(start, end, unmonitored, tags, async_req=True)
         >>> result = thread.get()
 
         :param start:
@@ -201,6 +201,8 @@ class CalendarApi(object):
         :type end: datetime
         :param unmonitored:
         :type unmonitored: bool
+        :param tags:
+        :type tags: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -217,16 +219,16 @@ class CalendarApi(object):
         :rtype: List[MovieResource]
         """
         kwargs['_return_http_data_only'] = True
-        return self.list_calendar_with_http_info(start, end, unmonitored, **kwargs)  # noqa: E501
+        return self.list_calendar_with_http_info(start, end, unmonitored, tags, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_calendar_with_http_info(self, start : Optional[datetime] = None, end : Optional[datetime] = None, unmonitored : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def list_calendar_with_http_info(self, start : Optional[datetime] = None, end : Optional[datetime] = None, unmonitored : Optional[StrictBool] = None, tags : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """list_calendar  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.list_calendar_with_http_info(start, end, unmonitored, async_req=True)
+        >>> thread = api.list_calendar_with_http_info(start, end, unmonitored, tags, async_req=True)
         >>> result = thread.get()
 
         :param start:
@@ -235,6 +237,8 @@ class CalendarApi(object):
         :type end: datetime
         :param unmonitored:
         :type unmonitored: bool
+        :param tags:
+        :type tags: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -264,7 +268,8 @@ class CalendarApi(object):
         _all_params = [
             'start',
             'end',
-            'unmonitored'
+            'unmonitored',
+            'tags'
         ]
         _all_params.extend(
             [
@@ -301,6 +306,8 @@ class CalendarApi(object):
             _query_params.append(('end', _params['end']))
         if _params.get('unmonitored') is not None:  # noqa: E501
             _query_params.append(('unmonitored', _params['unmonitored']))
+        if _params.get('tags') is not None:  # noqa: E501
+            _query_params.append(('tags', _params['tags']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
@@ -314,7 +321,7 @@ class CalendarApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501

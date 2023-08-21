@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_calendar**
-> List[MovieResource] list_calendar(start=start, end=end, unmonitored=unmonitored)
+> List[MovieResource] list_calendar(start=start, end=end, unmonitored=unmonitored, tags=tags)
 
 
 
@@ -176,9 +176,10 @@ with radarr.ApiClient(configuration) as api_client:
     start = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     end = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     unmonitored = False # bool |  (optional) (default to False)
+    tags = '' # str |  (optional) (default to '')
 
     try:
-        api_response = api_instance.list_calendar(start=start, end=end, unmonitored=unmonitored)
+        api_response = api_instance.list_calendar(start=start, end=end, unmonitored=unmonitored, tags=tags)
         print("The response of CalendarApi->list_calendar:\n")
         pprint(api_response)
     except Exception as e:
@@ -223,9 +224,10 @@ with radarr.ApiClient(configuration) as api_client:
     start = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     end = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     unmonitored = False # bool |  (optional) (default to False)
+    tags = '' # str |  (optional) (default to '')
 
     try:
-        api_response = api_instance.list_calendar(start=start, end=end, unmonitored=unmonitored)
+        api_response = api_instance.list_calendar(start=start, end=end, unmonitored=unmonitored, tags=tags)
         print("The response of CalendarApi->list_calendar:\n")
         pprint(api_response)
     except Exception as e:
@@ -239,6 +241,7 @@ Name | Type | Description  | Notes
  **start** | **datetime**|  | [optional] 
  **end** | **datetime**|  | [optional] 
  **unmonitored** | **bool**|  | [optional] [default to False]
+ **tags** | **str**|  | [optional] [default to &#39;&#39;]
 
 ### Return type
 
@@ -251,7 +254,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

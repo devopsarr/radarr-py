@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **hidden** | **str** |  | [optional] 
 **privacy** | [**PrivacyLevel**](PrivacyLevel.md) |  | [optional] 
 **placeholder** | **str** |  | [optional] 
+**is_float** | **bool** |  | [optional] 
 
 ## Example
 

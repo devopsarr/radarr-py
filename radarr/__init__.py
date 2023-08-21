@@ -156,6 +156,7 @@ from radarr.models.indexer_flag_resource import IndexerFlagResource
 from radarr.models.indexer_resource import IndexerResource
 from radarr.models.language import Language
 from radarr.models.language_resource import LanguageResource
+from radarr.models.localization_language_resource import LocalizationLanguageResource
 from radarr.models.log_file_resource import LogFileResource
 from radarr.models.log_resource import LogResource
 from radarr.models.log_resource_paging_resource import LogResourcePagingResource
