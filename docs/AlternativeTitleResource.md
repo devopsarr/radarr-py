@@ -9,10 +9,6 @@ Name | Type | Description | Notes
 **movie_metadata_id** | **int** |  | [optional] 
 **title** | **str** |  | [optional] 
 **clean_title** | **str** |  | [optional] 
-**source_id** | **int** |  | [optional] 
-**votes** | **int** |  | [optional] 
-**vote_count** | **int** |  | [optional] 
-**language** | [**Language**](Language.md) |  | [optional] 
 
 ## Example
 

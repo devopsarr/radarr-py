@@ -44,7 +44,8 @@ class Field(BaseModel):
     hidden: Optional[str]
     privacy: Optional[PrivacyLevel]
     placeholder: Optional[str]
-    __properties = ["order", "name", "label", "unit", "helpText", "helpTextWarning", "helpLink", "value", "type", "advanced", "selectOptions", "selectOptionsProviderAction", "section", "hidden", "privacy", "placeholder"]
+    is_float: Optional[bool]
+    __properties = ["order", "name", "label", "unit", "helpText", "helpTextWarning", "helpLink", "value", "type", "advanced", "selectOptions", "selectOptionsProviderAction", "section", "hidden", "privacy", "placeholder", "isFloat"]
 
     class Config:
         allow_population_by_field_name = True
@@ -159,7 +160,8 @@ class Field(BaseModel):
             "section": obj.get("section"),
             "hidden": obj.get("hidden"),
             "privacy": obj.get("privacy"),
-            "placeholder": obj.get("placeholder")
+            "placeholder": obj.get("placeholder"),
+            "is_float": obj.get("isFloat")
         })
         return _obj
 

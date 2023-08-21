@@ -90,6 +90,7 @@ docs/Language.md
 docs/LanguageApi.md
 docs/LanguageResource.md
 docs/LocalizationApi.md
+docs/LocalizationLanguageResource.md
 docs/LogApi.md
 docs/LogFileApi.md
 docs/LogFileResource.md
@@ -335,6 +336,7 @@ radarr/models/indexer_flag_resource.py
 radarr/models/indexer_resource.py
 radarr/models/language.py
 radarr/models/language_resource.py
+radarr/models/localization_language_resource.py
 radarr/models/log_file_resource.py
 radarr/models/log_resource.py
 radarr/models/log_resource_paging_resource.py

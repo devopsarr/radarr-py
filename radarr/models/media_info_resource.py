@@ -35,13 +35,14 @@ class MediaInfoResource(BaseModel):
     video_bit_depth: Optional[int]
     video_bitrate: Optional[int]
     video_codec: Optional[str]
-    video_dynamic_range_type: Optional[str]
     video_fps: Optional[float]
+    video_dynamic_range: Optional[str]
+    video_dynamic_range_type: Optional[str]
     resolution: Optional[str]
     run_time: Optional[str]
     scan_type: Optional[str]
     subtitles: Optional[str]
-    __properties = ["id", "audioBitrate", "audioChannels", "audioCodec", "audioLanguages", "audioStreamCount", "videoBitDepth", "videoBitrate", "videoCodec", "videoDynamicRangeType", "videoFps", "resolution", "runTime", "scanType", "subtitles"]
+    __properties = ["id", "audioBitrate", "audioChannels", "audioCodec", "audioLanguages", "audioStreamCount", "videoBitDepth", "videoBitrate", "videoCodec", "videoFps", "videoDynamicRange", "videoDynamicRangeType", "resolution", "runTime", "scanType", "subtitles"]
 
     class Config:
         allow_population_by_field_name = True
@@ -81,6 +82,10 @@ class MediaInfoResource(BaseModel):
         # set to None if video_codec (nullable) is None
         if self.video_codec is None:
             _dict['videoCodec'] = None
+
+        # set to None if video_dynamic_range (nullable) is None
+        if self.video_dynamic_range is None:
+            _dict['videoDynamicRange'] = None
 
         # set to None if video_dynamic_range_type (nullable) is None
         if self.video_dynamic_range_type is None:
@@ -123,8 +128,9 @@ class MediaInfoResource(BaseModel):
             "video_bit_depth": obj.get("videoBitDepth"),
             "video_bitrate": obj.get("videoBitrate"),
             "video_codec": obj.get("videoCodec"),
-            "video_dynamic_range_type": obj.get("videoDynamicRangeType"),
             "video_fps": obj.get("videoFps"),
+            "video_dynamic_range": obj.get("videoDynamicRange"),
+            "video_dynamic_range_type": obj.get("videoDynamicRangeType"),
             "resolution": obj.get("resolution"),
             "run_time": obj.get("runTime"),
             "scan_type": obj.get("scanType"),

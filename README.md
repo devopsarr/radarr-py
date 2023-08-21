@@ -217,6 +217,7 @@ Class | Method | HTTP request | Description
 *LanguageApi* | [**get_language_by_id**](docs/LanguageApi.md#get_language_by_id) | **GET** /api/v3/language/{id} | 
 *LanguageApi* | [**list_language**](docs/LanguageApi.md#list_language) | **GET** /api/v3/language | 
 *LocalizationApi* | [**get_localization**](docs/LocalizationApi.md#get_localization) | **GET** /api/v3/localization | 
+*LocalizationApi* | [**get_localization_language**](docs/LocalizationApi.md#get_localization_language) | **GET** /api/v3/localization/language | 
 *LogApi* | [**get_log**](docs/LogApi.md#get_log) | **GET** /api/v3/log | 
 *LogFileApi* | [**get_log_file_by_filename**](docs/LogFileApi.md#get_log_file_by_filename) | **GET** /api/v3/log/file/{filename} | 
 *LogFileApi* | [**list_log_file**](docs/LogFileApi.md#list_log_file) | **GET** /api/v3/log/file | 
@@ -398,6 +399,7 @@ Class | Method | HTTP request | Description
  - [IndexerResource](docs/IndexerResource.md)
  - [Language](docs/Language.md)
  - [LanguageResource](docs/LanguageResource.md)
+ - [LocalizationLanguageResource](docs/LocalizationLanguageResource.md)
  - [LogFileResource](docs/LogFileResource.md)
  - [LogResource](docs/LogResource.md)
  - [LogResourcePagingResource](docs/LogResourcePagingResource.md)
