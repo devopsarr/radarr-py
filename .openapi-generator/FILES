@@ -150,6 +150,7 @@ docs/QualityProfileApi.md
 docs/QualityProfileQualityItemResource.md
 docs/QualityProfileResource.md
 docs/QualityProfileSchemaApi.md
+docs/QualitySource.md
 docs/QueueActionApi.md
 docs/QueueApi.md
 docs/QueueBulkResource.md
@@ -179,7 +180,6 @@ docs/RootFolderResource.md
 docs/RuntimeMode.md
 docs/SelectOption.md
 docs/SortDirection.md
-docs/Source.md
 docs/SourceType.md
 docs/StaticResourceApi.md
 docs/SystemApi.md
@@ -377,6 +377,7 @@ radarr/models/quality_definition_resource.py
 radarr/models/quality_model.py
 radarr/models/quality_profile_quality_item_resource.py
 radarr/models/quality_profile_resource.py
+radarr/models/quality_source.py
 radarr/models/queue_bulk_resource.py
 radarr/models/queue_resource.py
 radarr/models/queue_resource_paging_resource.py
@@ -396,7 +397,6 @@ radarr/models/root_folder_resource.py
 radarr/models/runtime_mode.py
 radarr/models/select_option.py
 radarr/models/sort_direction.py
-radarr/models/source.py
 radarr/models/source_type.py
 radarr/models/system_resource.py
 radarr/models/tag_details_resource.py

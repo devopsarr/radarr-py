@@ -197,6 +197,7 @@ from radarr.models.quality_definition_resource import QualityDefinitionResource
 from radarr.models.quality_model import QualityModel
 from radarr.models.quality_profile_quality_item_resource import QualityProfileQualityItemResource
 from radarr.models.quality_profile_resource import QualityProfileResource
+from radarr.models.quality_source import QualitySource
 from radarr.models.queue_bulk_resource import QueueBulkResource
 from radarr.models.queue_resource import QueueResource
 from radarr.models.queue_resource_paging_resource import QueueResourcePagingResource
@@ -216,7 +217,6 @@ from radarr.models.root_folder_resource import RootFolderResource
 from radarr.models.runtime_mode import RuntimeMode
 from radarr.models.select_option import SelectOption
 from radarr.models.sort_direction import SortDirection
-from radarr.models.source import Source
 from radarr.models.source_type import SourceType
 from radarr.models.system_resource import SystemResource
 from radarr.models.tmdb_country_code import TMDbCountryCode
