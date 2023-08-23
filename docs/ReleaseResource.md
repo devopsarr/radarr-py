@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **scene_source** | **bool** |  | [optional] 
 **movie_titles** | **List[str]** |  | [optional] 
 **languages** | [**List[Language]**](Language.md) |  | [optional] 
+**mapped_movie_id** | **int** |  | [optional] 
 **approved** | **bool** |  | [optional] 
 **temporarily_rejected** | **bool** |  | [optional] 
 **rejected** | **bool** |  | [optional] 
@@ -43,6 +44,8 @@ Name | Type | Description | Notes
 **leechers** | **int** |  | [optional] 
 **protocol** | [**DownloadProtocol**](DownloadProtocol.md) |  | [optional] 
 **movie_id** | **int** |  | [optional] 
+**download_client_id** | **int** |  | [optional] 
+**should_override** | **bool** |  | [optional] 
 
 ## Example
 
