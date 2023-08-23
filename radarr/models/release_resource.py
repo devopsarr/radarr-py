@@ -49,6 +49,7 @@ class ReleaseResource(BaseModel):
     scene_source: Optional[bool]
     movie_titles: Optional[List]
     languages: Optional[List]
+    mapped_movie_id: Optional[int]
     approved: Optional[bool]
     temporarily_rejected: Optional[bool]
     rejected: Optional[bool]
@@ -69,7 +70,9 @@ class ReleaseResource(BaseModel):
     leechers: Optional[int]
     protocol: Optional[DownloadProtocol]
     movie_id: Optional[int]
-    __properties = ["id", "guid", "quality", "customFormats", "customFormatScore", "qualityWeight", "age", "ageHours", "ageMinutes", "size", "indexerId", "indexer", "releaseGroup", "subGroup", "releaseHash", "title", "sceneSource", "movieTitles", "languages", "approved", "temporarilyRejected", "rejected", "tmdbId", "imdbId", "rejections", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "downloadAllowed", "releaseWeight", "indexerFlags", "edition", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "movieId"]
+    download_client_id: Optional[int]
+    should_override: Optional[bool]
+    __properties = ["id", "guid", "quality", "customFormats", "customFormatScore", "qualityWeight", "age", "ageHours", "ageMinutes", "size", "indexerId", "indexer", "releaseGroup", "subGroup", "releaseHash", "title", "sceneSource", "movieTitles", "languages", "mappedMovieId", "approved", "temporarilyRejected", "rejected", "tmdbId", "imdbId", "rejections", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "downloadAllowed", "releaseWeight", "indexerFlags", "edition", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "movieId", "downloadClientId", "shouldOverride"]
 
     class Config:
         allow_population_by_field_name = True
@@ -151,6 +154,10 @@ class ReleaseResource(BaseModel):
         if self.languages is None:
             _dict['languages'] = None
 
+        # set to None if mapped_movie_id (nullable) is None
+        if self.mapped_movie_id is None:
+            _dict['mappedMovieId'] = None
+
         # set to None if rejections (nullable) is None
         if self.rejections is None:
             _dict['rejections'] = None
@@ -195,6 +202,14 @@ class ReleaseResource(BaseModel):
         if self.movie_id is None:
             _dict['movieId'] = None
 
+        # set to None if download_client_id (nullable) is None
+        if self.download_client_id is None:
+            _dict['downloadClientId'] = None
+
+        # set to None if should_override (nullable) is None
+        if self.should_override is None:
+            _dict['shouldOverride'] = None
+
         return _dict
 
     @classmethod
@@ -226,6 +241,7 @@ class ReleaseResource(BaseModel):
             "scene_source": obj.get("sceneSource"),
             "movie_titles": obj.get("movieTitles"),
             "languages": [Language.from_dict(_item) for _item in obj.get("languages")] if obj.get("languages") is not None else None,
+            "mapped_movie_id": obj.get("mappedMovieId"),
             "approved": obj.get("approved"),
             "temporarily_rejected": obj.get("temporarilyRejected"),
             "rejected": obj.get("rejected"),
@@ -245,7 +261,9 @@ class ReleaseResource(BaseModel):
             "seeders": obj.get("seeders"),
             "leechers": obj.get("leechers"),
             "protocol": obj.get("protocol"),
-            "movie_id": obj.get("movieId")
+            "movie_id": obj.get("movieId"),
+            "download_client_id": obj.get("downloadClientId"),
+            "should_override": obj.get("shouldOverride")
         })
         return _obj
 
