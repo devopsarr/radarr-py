@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**create_auto_tagging**](AutoTaggingApi.md#create_auto_tagging) | **POST** /api/v3/autotagging | 
 [**delete_auto_tagging**](AutoTaggingApi.md#delete_auto_tagging) | **DELETE** /api/v3/autotagging/{id} | 
 [**get_auto_tagging_by_id**](AutoTaggingApi.md#get_auto_tagging_by_id) | **GET** /api/v3/autotagging/{id} | 
-[**get_auto_tagging_schema**](AutoTaggingApi.md#get_auto_tagging_schema) | **GET** /api/v3/autotagging/schema | 
 [**list_auto_tagging**](AutoTaggingApi.md#list_auto_tagging) | **GET** /api/v3/autotagging | 
+[**list_auto_tagging_schema**](AutoTaggingApi.md#list_auto_tagging_schema) | **GET** /api/v3/autotagging/schema | 
 [**update_auto_tagging**](AutoTaggingApi.md#update_auto_tagging) | **PUT** /api/v3/autotagging/{id} | 
 
 
@@ -377,120 +377,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_auto_tagging_schema**
-> get_auto_tagging_schema()
-
-
-
-### Example
-
-* Api Key Authentication (apikey):
-```python
-from __future__ import print_function
-import time
-import os
-import radarr
-from radarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:7878
-# See configuration.py for a list of all supported configuration parameters.
-configuration = radarr.Configuration(
-    host = "http://localhost:7878"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with radarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = radarr.AutoTaggingApi(api_client)
-
-    try:
-        api_instance.get_auto_tagging_schema()
-    except Exception as e:
-        print("Exception when calling AutoTaggingApi->get_auto_tagging_schema: %s\n" % e)
-```
-
-* Api Key Authentication (X-Api-Key):
-```python
-from __future__ import print_function
-import time
-import os
-import radarr
-from radarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:7878
-# See configuration.py for a list of all supported configuration parameters.
-configuration = radarr.Configuration(
-    host = "http://localhost:7878"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with radarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = radarr.AutoTaggingApi(api_client)
-
-    try:
-        api_instance.get_auto_tagging_schema()
-    except Exception as e:
-        print("Exception when calling AutoTaggingApi->get_auto_tagging_schema: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **list_auto_tagging**
 > List[AutoTaggingResource] list_auto_tagging()
 
@@ -592,6 +478,124 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List[AutoTaggingResource]**](AutoTaggingResource.md)
+
+### Authorization
+
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_auto_tagging_schema**
+> List[AutoTaggingSpecificationSchema] list_auto_tagging_schema()
+
+
+
+### Example
+
+* Api Key Authentication (apikey):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.AutoTaggingApi(api_client)
+
+    try:
+        api_response = api_instance.list_auto_tagging_schema()
+        print("The response of AutoTaggingApi->list_auto_tagging_schema:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AutoTaggingApi->list_auto_tagging_schema: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import radarr
+from radarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:7878
+# See configuration.py for a list of all supported configuration parameters.
+configuration = radarr.Configuration(
+    host = "http://localhost:7878"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with radarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = radarr.AutoTaggingApi(api_client)
+
+    try:
+        api_response = api_instance.list_auto_tagging_schema()
+        print("The response of AutoTaggingApi->list_auto_tagging_schema:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AutoTaggingApi->list_auto_tagging_schema: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List[AutoTaggingSpecificationSchema]**](AutoTaggingSpecificationSchema.md)
 
 ### Authorization
 
