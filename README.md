@@ -131,8 +131,8 @@ Class | Method | HTTP request | Description
 *CommandApi* | [**delete_command**](docs/CommandApi.md#delete_command) | **DELETE** /api/v3/command/{id} | 
 *CommandApi* | [**get_command_by_id**](docs/CommandApi.md#get_command_by_id) | **GET** /api/v3/command/{id} | 
 *CommandApi* | [**list_command**](docs/CommandApi.md#list_command) | **GET** /api/v3/command | 
+*CreditApi* | [**get_credit**](docs/CreditApi.md#get_credit) | **GET** /api/v3/credit | 
 *CreditApi* | [**get_credit_by_id**](docs/CreditApi.md#get_credit_by_id) | **GET** /api/v3/credit/{id} | 
-*CreditApi* | [**list_credit**](docs/CreditApi.md#list_credit) | **GET** /api/v3/credit | 
 *CustomFilterApi* | [**create_custom_filter**](docs/CustomFilterApi.md#create_custom_filter) | **POST** /api/v3/customfilter | 
 *CustomFilterApi* | [**delete_custom_filter**](docs/CustomFilterApi.md#delete_custom_filter) | **DELETE** /api/v3/customfilter/{id} | 
 *CustomFilterApi* | [**get_custom_filter_by_id**](docs/CustomFilterApi.md#get_custom_filter_by_id) | **GET** /api/v3/customfilter/{id} | 

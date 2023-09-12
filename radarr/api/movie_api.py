@@ -481,17 +481,19 @@ class MovieApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_movie(self, tmdb_id : Optional[StrictInt] = None, **kwargs) -> List[MovieResource]:  # noqa: E501
+    def list_movie(self, tmdb_id : Optional[StrictInt] = None, exclude_local_covers : Optional[StrictBool] = None, **kwargs) -> List[MovieResource]:  # noqa: E501
         """list_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.list_movie(tmdb_id, async_req=True)
+        >>> thread = api.list_movie(tmdb_id, exclude_local_covers, async_req=True)
         >>> result = thread.get()
 
         :param tmdb_id:
         :type tmdb_id: int
+        :param exclude_local_covers:
+        :type exclude_local_covers: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -508,20 +510,22 @@ class MovieApi(object):
         :rtype: List[MovieResource]
         """
         kwargs['_return_http_data_only'] = True
-        return self.list_movie_with_http_info(tmdb_id, **kwargs)  # noqa: E501
+        return self.list_movie_with_http_info(tmdb_id, exclude_local_covers, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_movie_with_http_info(self, tmdb_id : Optional[StrictInt] = None, **kwargs):  # noqa: E501
+    def list_movie_with_http_info(self, tmdb_id : Optional[StrictInt] = None, exclude_local_covers : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """list_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.list_movie_with_http_info(tmdb_id, async_req=True)
+        >>> thread = api.list_movie_with_http_info(tmdb_id, exclude_local_covers, async_req=True)
         >>> result = thread.get()
 
         :param tmdb_id:
         :type tmdb_id: int
+        :param exclude_local_covers:
+        :type exclude_local_covers: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -549,7 +553,8 @@ class MovieApi(object):
         _params = locals()
 
         _all_params = [
-            'tmdb_id'
+            'tmdb_id',
+            'exclude_local_covers'
         ]
         _all_params.extend(
             [
@@ -582,6 +587,8 @@ class MovieApi(object):
         _query_params = []
         if _params.get('tmdb_id') is not None:  # noqa: E501
             _query_params.append(('tmdbId', _params['tmdb_id']))
+        if _params.get('exclude_local_covers') is not None:  # noqa: E501
+            _query_params.append(('excludeLocalCovers', _params['exclude_local_covers']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
