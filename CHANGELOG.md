@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/devopsarr/radarr-py/compare/v0.3.1...v0.4.0) (2023-09-12)
+
+
+### Features
+
+* **devopsarr/radarr-py#36:** add cf and at schema return type ([5467546](https://github.com/devopsarr/radarr-py/commit/5467546985e4ffd158b8bce8cabc36b2ec413678))
+
 ## [0.3.1](https://github.com/devopsarr/radarr-py/compare/v0.3.0...v0.3.1) (2023-07-21)
 
 
