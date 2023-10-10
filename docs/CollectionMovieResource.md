@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **title** | **str** |  | [optional] 
 **clean_title** | **str** |  | [optional] 
 **sort_title** | **str** |  | [optional] 
+**status** | [**MovieStatusType**](MovieStatusType.md) |  | [optional] 
 **overview** | **str** |  | [optional] 
 **runtime** | **int** |  | [optional] 
 **images** | [**List[MediaCover]**](MediaCover.md) |  | [optional] 

@@ -20,6 +20,7 @@ import json
 from typing import List, Optional
 from pydantic import BaseModel
 from radarr.models.media_cover import MediaCover
+from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.ratings import Ratings
 
 class CollectionMovieResource(BaseModel):
@@ -33,6 +34,7 @@ class CollectionMovieResource(BaseModel):
     title: Optional[str]
     clean_title: Optional[str]
     sort_title: Optional[str]
+    status: Optional[MovieStatusType]
     overview: Optional[str]
     runtime: Optional[int]
     images: Optional[List]
@@ -40,7 +42,7 @@ class CollectionMovieResource(BaseModel):
     ratings: Optional[Ratings]
     genres: Optional[List]
     folder: Optional[str]
-    __properties = ["tmdbId", "imdbId", "title", "cleanTitle", "sortTitle", "overview", "runtime", "images", "year", "ratings", "genres", "folder"]
+    __properties = ["tmdbId", "imdbId", "title", "cleanTitle", "sortTitle", "status", "overview", "runtime", "images", "year", "ratings", "genres", "folder"]
 
     class Config:
         allow_population_by_field_name = True
@@ -128,6 +130,7 @@ class CollectionMovieResource(BaseModel):
             "title": obj.get("title"),
             "clean_title": obj.get("cleanTitle"),
             "sort_title": obj.get("sortTitle"),
+            "status": obj.get("status"),
             "overview": obj.get("overview"),
             "runtime": obj.get("runtime"),
             "images": [MediaCover.from_dict(_item) for _item in obj.get("images")] if obj.get("images") is not None else None,
