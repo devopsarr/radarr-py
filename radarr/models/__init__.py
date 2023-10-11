@@ -99,7 +99,6 @@ from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.movie_translation import MovieTranslation
 from radarr.models.naming_config_resource import NamingConfigResource
 from radarr.models.notification_resource import NotificationResource
-from radarr.models.paging_resource_filter import PagingResourceFilter
 from radarr.models.parse_resource import ParseResource
 from radarr.models.parsed_movie_info import ParsedMovieInfo
 from radarr.models.ping_resource import PingResource

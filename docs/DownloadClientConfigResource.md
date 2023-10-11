@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **enable_completed_download_handling** | **bool** |  | [optional] 
 **check_for_finished_download_interval** | **int** |  | [optional] 
 **auto_redownload_failed** | **bool** |  | [optional] 
+**auto_redownload_failed_from_interactive_search** | **bool** |  | [optional] 
 
 ## Example
 

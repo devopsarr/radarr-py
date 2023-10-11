@@ -130,7 +130,6 @@ docs/NamingConfigApi.md
 docs/NamingConfigResource.md
 docs/NotificationApi.md
 docs/NotificationResource.md
-docs/PagingResourceFilter.md
 docs/ParseApi.md
 docs/ParseResource.md
 docs/ParsedMovieInfo.md
@@ -362,7 +361,6 @@ radarr/models/movie_status_type.py
 radarr/models/movie_translation.py
 radarr/models/naming_config_resource.py
 radarr/models/notification_resource.py
-radarr/models/paging_resource_filter.py
 radarr/models/parse_resource.py
 radarr/models/parsed_movie_info.py
 radarr/models/ping_resource.py

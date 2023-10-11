@@ -425,7 +425,6 @@ Class | Method | HTTP request | Description
  - [MovieTranslation](docs/MovieTranslation.md)
  - [NamingConfigResource](docs/NamingConfigResource.md)
  - [NotificationResource](docs/NotificationResource.md)
- - [PagingResourceFilter](docs/PagingResourceFilter.md)
  - [ParseResource](docs/ParseResource.md)
  - [ParsedMovieInfo](docs/ParsedMovieInfo.md)
  - [PingResource](docs/PingResource.md)
