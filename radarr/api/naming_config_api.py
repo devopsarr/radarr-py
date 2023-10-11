@@ -469,27 +469,27 @@ class NamingConfigApi(object):
         # process the query parameters
         _query_params = []
         if _params.get('rename_movies') is not None:  # noqa: E501
-            _query_params.append(('RenameMovies', _params['rename_movies']))
+            _query_params.append(('renameMovies', _params['rename_movies']))
         if _params.get('replace_illegal_characters') is not None:  # noqa: E501
-            _query_params.append(('ReplaceIllegalCharacters', _params['replace_illegal_characters']))
+            _query_params.append(('replaceIllegalCharacters', _params['replace_illegal_characters']))
         if _params.get('colon_replacement_format') is not None:  # noqa: E501
-            _query_params.append(('ColonReplacementFormat', _params['colon_replacement_format']))
+            _query_params.append(('colonReplacementFormat', _params['colon_replacement_format']))
         if _params.get('standard_movie_format') is not None:  # noqa: E501
-            _query_params.append(('StandardMovieFormat', _params['standard_movie_format']))
+            _query_params.append(('standardMovieFormat', _params['standard_movie_format']))
         if _params.get('movie_folder_format') is not None:  # noqa: E501
-            _query_params.append(('MovieFolderFormat', _params['movie_folder_format']))
+            _query_params.append(('movieFolderFormat', _params['movie_folder_format']))
         if _params.get('include_quality') is not None:  # noqa: E501
-            _query_params.append(('IncludeQuality', _params['include_quality']))
+            _query_params.append(('includeQuality', _params['include_quality']))
         if _params.get('replace_spaces') is not None:  # noqa: E501
-            _query_params.append(('ReplaceSpaces', _params['replace_spaces']))
+            _query_params.append(('replaceSpaces', _params['replace_spaces']))
         if _params.get('separator') is not None:  # noqa: E501
-            _query_params.append(('Separator', _params['separator']))
+            _query_params.append(('separator', _params['separator']))
         if _params.get('number_style') is not None:  # noqa: E501
-            _query_params.append(('NumberStyle', _params['number_style']))
+            _query_params.append(('numberStyle', _params['number_style']))
         if _params.get('id') is not None:  # noqa: E501
-            _query_params.append(('Id', _params['id']))
+            _query_params.append(('id', _params['id']))
         if _params.get('resource_name') is not None:  # noqa: E501
-            _query_params.append(('ResourceName', _params['resource_name']))
+            _query_params.append(('resourceName', _params['resource_name']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
