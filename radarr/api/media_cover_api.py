@@ -40,13 +40,13 @@ class MediaCoverApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_media_covermovie_id_by_filename(self, movie_id : StrictInt, filename : constr(strict=True), **kwargs) -> None:  # noqa: E501
-        """get_media_covermovie_id_by_filename  # noqa: E501
+    def get_media_cover_by_filename(self, movie_id : StrictInt, filename : constr(strict=True), **kwargs) -> None:  # noqa: E501
+        """get_media_cover_by_filename  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_media_covermovie_id_by_filename(movie_id, filename, async_req=True)
+        >>> thread = api.get_media_cover_by_filename(movie_id, filename, async_req=True)
         >>> result = thread.get()
 
         :param movie_id: (required)
@@ -69,16 +69,16 @@ class MediaCoverApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_media_covermovie_id_by_filename_with_http_info(movie_id, filename, **kwargs)  # noqa: E501
+        return self.get_media_cover_by_filename_with_http_info(movie_id, filename, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_media_covermovie_id_by_filename_with_http_info(self, movie_id : StrictInt, filename : constr(strict=True), **kwargs):  # noqa: E501
-        """get_media_covermovie_id_by_filename  # noqa: E501
+    def get_media_cover_by_filename_with_http_info(self, movie_id : StrictInt, filename : constr(strict=True), **kwargs):  # noqa: E501
+        """get_media_cover_by_filename  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_media_covermovie_id_by_filename_with_http_info(movie_id, filename, async_req=True)
+        >>> thread = api.get_media_cover_by_filename_with_http_info(movie_id, filename, async_req=True)
         >>> result = thread.get()
 
         :param movie_id: (required)
@@ -132,7 +132,7 @@ class MediaCoverApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_media_covermovie_id_by_filename" % _key
+                    " to method get_media_cover_by_filename" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
