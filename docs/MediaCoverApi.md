@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost:7878*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_media_covermovie_id_by_filename**](MediaCoverApi.md#get_media_covermovie_id_by_filename) | **GET** /api/v3/mediacover/{movieId}/{filename} | 
+[**get_media_cover_by_filename**](MediaCoverApi.md#get_media_cover_by_filename) | **GET** /api/v3/mediacover/{movieId}/{filename} | 
 
 
-# **get_media_covermovie_id_by_filename**
-> get_media_covermovie_id_by_filename(movie_id, filename)
+# **get_media_cover_by_filename**
+> get_media_cover_by_filename(movie_id, filename)
 
 
 
@@ -53,9 +53,9 @@ with radarr.ApiClient(configuration) as api_client:
     filename = 'filename_example' # str | 
 
     try:
-        api_instance.get_media_covermovie_id_by_filename(movie_id, filename)
+        api_instance.get_media_cover_by_filename(movie_id, filename)
     except Exception as e:
-        print("Exception when calling MediaCoverApi->get_media_covermovie_id_by_filename: %s\n" % e)
+        print("Exception when calling MediaCoverApi->get_media_cover_by_filename: %s\n" % e)
 ```
 
 * Api Key Authentication (X-Api-Key):
@@ -97,9 +97,9 @@ with radarr.ApiClient(configuration) as api_client:
     filename = 'filename_example' # str | 
 
     try:
-        api_instance.get_media_covermovie_id_by_filename(movie_id, filename)
+        api_instance.get_media_cover_by_filename(movie_id, filename)
     except Exception as e:
-        print("Exception when calling MediaCoverApi->get_media_covermovie_id_by_filename: %s\n" % e)
+        print("Exception when calling MediaCoverApi->get_media_cover_by_filename: %s\n" % e)
 ```
 
 ### Parameters

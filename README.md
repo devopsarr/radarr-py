@@ -223,7 +223,7 @@ Class | Method | HTTP request | Description
 *LogFileApi* | [**list_log_file**](docs/LogFileApi.md#list_log_file) | **GET** /api/v3/log/file | 
 *ManualImportApi* | [**create_manual_import**](docs/ManualImportApi.md#create_manual_import) | **POST** /api/v3/manualimport | 
 *ManualImportApi* | [**list_manual_import**](docs/ManualImportApi.md#list_manual_import) | **GET** /api/v3/manualimport | 
-*MediaCoverApi* | [**get_media_covermovie_id_by_filename**](docs/MediaCoverApi.md#get_media_covermovie_id_by_filename) | **GET** /api/v3/mediacover/{movieId}/{filename} | 
+*MediaCoverApi* | [**get_media_cover_by_filename**](docs/MediaCoverApi.md#get_media_cover_by_filename) | **GET** /api/v3/mediacover/{movieId}/{filename} | 
 *MediaManagementConfigApi* | [**get_media_management_config**](docs/MediaManagementConfigApi.md#get_media_management_config) | **GET** /api/v3/config/mediamanagement | 
 *MediaManagementConfigApi* | [**get_media_management_config_by_id**](docs/MediaManagementConfigApi.md#get_media_management_config_by_id) | **GET** /api/v3/config/mediamanagement/{id} | 
 *MediaManagementConfigApi* | [**update_media_management_config**](docs/MediaManagementConfigApi.md#update_media_management_config) | **PUT** /api/v3/config/mediamanagement/{id} | 
