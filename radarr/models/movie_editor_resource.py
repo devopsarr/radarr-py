@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
 from radarr.models.apply_tags import ApplyTags
 from radarr.models.movie_status_type import MovieStatusType

@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
+from typing import Any, Dict, Optional
 from pydantic import BaseModel
 from radarr.models.file_date_type import FileDateType
 from radarr.models.proper_download_types import ProperDownloadTypes
