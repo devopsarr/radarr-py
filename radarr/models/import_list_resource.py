@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
 from radarr.models.field import Field
 from radarr.models.import_list_type import ImportListType

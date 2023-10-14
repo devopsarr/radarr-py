@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
 from radarr.models.collection_movie_resource import CollectionMovieResource
 from radarr.models.media_cover import MediaCover

@@ -409,6 +409,7 @@ radarr/models/unmapped_folder.py
 radarr/models/update_changes.py
 radarr/models/update_mechanism.py
 radarr/models/update_resource.py
+radarr/py.typed
 radarr/rest.py
 setup.cfg
 setup.py
