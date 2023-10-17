@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 
 from datetime import datetime
 
-from pydantic import StrictBool, StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
@@ -183,13 +183,13 @@ class HistoryApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
+    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[conlist(StrictInt)] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[conlist(StrictInt)] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_history(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, async_req=True)
+        >>> thread = api.get_history(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, movie_ids, languages, quality, async_req=True)
         >>> result = thread.get()
 
         :param page:
@@ -206,6 +206,12 @@ class HistoryApi(object):
         :type event_type: int
         :param download_id:
         :type download_id: str
+        :param movie_ids:
+        :type movie_ids: List[int]
+        :param languages:
+        :type languages: List[int]
+        :param quality:
+        :type quality: List[int]
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -222,16 +228,16 @@ class HistoryApi(object):
         :rtype: HistoryResourcePagingResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_history_with_http_info(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, **kwargs)  # noqa: E501
+        return self.get_history_with_http_info(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, movie_ids, languages, quality, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[conlist(StrictInt)] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[conlist(StrictInt)] = None, **kwargs):  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_history_with_http_info(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, async_req=True)
+        >>> thread = api.get_history_with_http_info(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, movie_ids, languages, quality, async_req=True)
         >>> result = thread.get()
 
         :param page:
@@ -248,6 +254,12 @@ class HistoryApi(object):
         :type event_type: int
         :param download_id:
         :type download_id: str
+        :param movie_ids:
+        :type movie_ids: List[int]
+        :param languages:
+        :type languages: List[int]
+        :param quality:
+        :type quality: List[int]
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -281,7 +293,10 @@ class HistoryApi(object):
             'sort_direction',
             'include_movie',
             'event_type',
-            'download_id'
+            'download_id',
+            'movie_ids',
+            'languages',
+            'quality'
         ]
         _all_params.extend(
             [
@@ -326,6 +341,15 @@ class HistoryApi(object):
             _query_params.append(('eventType', _params['event_type']))
         if _params.get('download_id') is not None:  # noqa: E501
             _query_params.append(('downloadId', _params['download_id']))
+        if _params.get('movie_ids') is not None:  # noqa: E501
+            _query_params.append(('movieIds', _params['movie_ids']))
+            _collection_formats['movieIds'] = 'multi'
+        if _params.get('languages') is not None:  # noqa: E501
+            _query_params.append(('languages', _params['languages']))
+            _collection_formats['languages'] = 'multi'
+        if _params.get('quality') is not None:  # noqa: E501
+            _query_params.append(('quality', _params['quality']))
+            _collection_formats['quality'] = 'multi'
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
@@ -494,7 +518,7 @@ class HistoryApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
@@ -649,7 +673,7 @@ class HistoryApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
