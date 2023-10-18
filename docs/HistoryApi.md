@@ -130,7 +130,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_history**
-> HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_movie=include_movie, event_type=event_type, download_id=download_id)
+> HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_movie=include_movie, event_type=event_type, download_id=download_id, movie_ids=movie_ids, languages=languages, quality=quality)
 
 
 
@@ -178,9 +178,12 @@ with radarr.ApiClient(configuration) as api_client:
     include_movie = True # bool |  (optional)
     event_type = 56 # int |  (optional)
     download_id = 'download_id_example' # str |  (optional)
+    movie_ids = [56] # List[int] |  (optional)
+    languages = [56] # List[int] |  (optional)
+    quality = [56] # List[int] |  (optional)
 
     try:
-        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_movie=include_movie, event_type=event_type, download_id=download_id)
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_movie=include_movie, event_type=event_type, download_id=download_id, movie_ids=movie_ids, languages=languages, quality=quality)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -229,9 +232,12 @@ with radarr.ApiClient(configuration) as api_client:
     include_movie = True # bool |  (optional)
     event_type = 56 # int |  (optional)
     download_id = 'download_id_example' # str |  (optional)
+    movie_ids = [56] # List[int] |  (optional)
+    languages = [56] # List[int] |  (optional)
+    quality = [56] # List[int] |  (optional)
 
     try:
-        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_movie=include_movie, event_type=event_type, download_id=download_id)
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_movie=include_movie, event_type=event_type, download_id=download_id, movie_ids=movie_ids, languages=languages, quality=quality)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -249,6 +255,9 @@ Name | Type | Description  | Notes
  **include_movie** | **bool**|  | [optional] 
  **event_type** | **int**|  | [optional] 
  **download_id** | **str**|  | [optional] 
+ **movie_ids** | [**List[int]**](int.md)|  | [optional] 
+ **languages** | [**List[int]**](int.md)|  | [optional] 
+ **quality** | [**List[int]**](int.md)|  | [optional] 
 
 ### Return type
 
@@ -390,7 +399,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -519,7 +528,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

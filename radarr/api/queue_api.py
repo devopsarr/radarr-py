@@ -17,10 +17,11 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictBool, StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr, conlist
 
 from typing import Optional
 
+from radarr.models.download_protocol import DownloadProtocol
 from radarr.models.queue_bulk_resource import QueueBulkResource
 from radarr.models.queue_resource import QueueResource
 from radarr.models.queue_resource_paging_resource import QueueResourcePagingResource
@@ -365,13 +366,13 @@ class QueueApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_queue(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, **kwargs) -> QueueResourcePagingResource:  # noqa: E501
+    def get_queue(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, movie_ids : Optional[conlist(StrictInt)] = None, protocol : Optional[DownloadProtocol] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[StrictInt] = None, **kwargs) -> QueueResourcePagingResource:  # noqa: E501
         """get_queue  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_queue(page, page_size, sort_key, sort_direction, include_unknown_movie_items, include_movie, async_req=True)
+        >>> thread = api.get_queue(page, page_size, sort_key, sort_direction, include_unknown_movie_items, include_movie, movie_ids, protocol, languages, quality, async_req=True)
         >>> result = thread.get()
 
         :param page:
@@ -386,6 +387,14 @@ class QueueApi(object):
         :type include_unknown_movie_items: bool
         :param include_movie:
         :type include_movie: bool
+        :param movie_ids:
+        :type movie_ids: List[int]
+        :param protocol:
+        :type protocol: DownloadProtocol
+        :param languages:
+        :type languages: List[int]
+        :param quality:
+        :type quality: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -402,16 +411,16 @@ class QueueApi(object):
         :rtype: QueueResourcePagingResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_queue_with_http_info(page, page_size, sort_key, sort_direction, include_unknown_movie_items, include_movie, **kwargs)  # noqa: E501
+        return self.get_queue_with_http_info(page, page_size, sort_key, sort_direction, include_unknown_movie_items, include_movie, movie_ids, protocol, languages, quality, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_queue_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def get_queue_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, movie_ids : Optional[conlist(StrictInt)] = None, protocol : Optional[DownloadProtocol] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[StrictInt] = None, **kwargs):  # noqa: E501
         """get_queue  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_queue_with_http_info(page, page_size, sort_key, sort_direction, include_unknown_movie_items, include_movie, async_req=True)
+        >>> thread = api.get_queue_with_http_info(page, page_size, sort_key, sort_direction, include_unknown_movie_items, include_movie, movie_ids, protocol, languages, quality, async_req=True)
         >>> result = thread.get()
 
         :param page:
@@ -426,6 +435,14 @@ class QueueApi(object):
         :type include_unknown_movie_items: bool
         :param include_movie:
         :type include_movie: bool
+        :param movie_ids:
+        :type movie_ids: List[int]
+        :param protocol:
+        :type protocol: DownloadProtocol
+        :param languages:
+        :type languages: List[int]
+        :param quality:
+        :type quality: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -458,7 +475,11 @@ class QueueApi(object):
             'sort_key',
             'sort_direction',
             'include_unknown_movie_items',
-            'include_movie'
+            'include_movie',
+            'movie_ids',
+            'protocol',
+            'languages',
+            'quality'
         ]
         _all_params.extend(
             [
@@ -501,6 +522,16 @@ class QueueApi(object):
             _query_params.append(('includeUnknownMovieItems', _params['include_unknown_movie_items']))
         if _params.get('include_movie') is not None:  # noqa: E501
             _query_params.append(('includeMovie', _params['include_movie']))
+        if _params.get('movie_ids') is not None:  # noqa: E501
+            _query_params.append(('movieIds', _params['movie_ids']))
+            _collection_formats['movieIds'] = 'multi'
+        if _params.get('protocol') is not None:  # noqa: E501
+            _query_params.append(('protocol', _params['protocol']))
+        if _params.get('languages') is not None:  # noqa: E501
+            _query_params.append(('languages', _params['languages']))
+            _collection_formats['languages'] = 'multi'
+        if _params.get('quality') is not None:  # noqa: E501
+            _query_params.append(('quality', _params['quality']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
