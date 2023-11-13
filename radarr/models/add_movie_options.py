@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, Dict, Optional
+from typing import Any, ClassVar, Dict, Optional
 from pydantic import BaseModel
 from radarr.models.add_movie_method import AddMovieMethod
 from radarr.models.monitor_types import MonitorTypes

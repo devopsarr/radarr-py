@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictBool, StrictInt, StrictStr, conlist
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -44,7 +44,7 @@ class ManualImportApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def create_manual_import(self, manual_import_reprocess_resource : Optional[conlist(ManualImportReprocessResource)] = None, **kwargs) -> None:  # noqa: E501
+    def create_manual_import(self, manual_import_reprocess_resource : Optional[List[ManualImportReprocessResource]] = None, **kwargs) -> None:  # noqa: E501
         """create_manual_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -74,7 +74,7 @@ class ManualImportApi(object):
         return self.create_manual_import_with_http_info(manual_import_reprocess_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_manual_import_with_http_info(self, manual_import_reprocess_resource : Optional[conlist(ManualImportReprocessResource)] = None, **kwargs):  # noqa: E501
+    def create_manual_import_with_http_info(self, manual_import_reprocess_resource : Optional[List[ManualImportReprocessResource]] = None, **kwargs):  # noqa: E501
         """create_manual_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
