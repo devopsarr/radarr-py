@@ -17,9 +17,9 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, conlist
+from pydantic import StrictInt
 
-from typing import Optional
+from typing import List, Optional
 
 from radarr.models.movie_resource import MovieResource
 
@@ -43,7 +43,7 @@ class MovieImportApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def create_movie_import(self, movie_resource : Optional[conlist(MovieResource)] = None, **kwargs) -> None:  # noqa: E501
+    def create_movie_import(self, movie_resource : Optional[List[MovieResource]] = None, **kwargs) -> None:  # noqa: E501
         """create_movie_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -73,7 +73,7 @@ class MovieImportApi(object):
         return self.create_movie_import_with_http_info(movie_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_movie_import_with_http_info(self, movie_resource : Optional[conlist(MovieResource)] = None, **kwargs):  # noqa: E501
+    def create_movie_import_with_http_info(self, movie_resource : Optional[List[MovieResource]] = None, **kwargs):  # noqa: E501
         """create_movie_import  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an

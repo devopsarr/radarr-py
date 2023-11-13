@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 
 from datetime import datetime
 
-from pydantic import StrictBool, StrictInt, StrictStr, conlist
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -183,7 +183,7 @@ class HistoryApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[conlist(StrictInt)] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[conlist(StrictInt)] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
+    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[List[StrictInt]] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[List[StrictInt]] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -231,7 +231,7 @@ class HistoryApi(object):
         return self.get_history_with_http_info(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, movie_ids, languages, quality, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[conlist(StrictInt)] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[conlist(StrictInt)] = None, **kwargs):  # noqa: E501
+    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[List[StrictInt]] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an

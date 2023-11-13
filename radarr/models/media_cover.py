@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, Dict, Optional
+from typing import Any, ClassVar, Dict, Optional
 from pydantic import BaseModel
 from radarr.models.media_cover_types import MediaCoverTypes
 

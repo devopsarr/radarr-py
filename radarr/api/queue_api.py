@@ -17,9 +17,9 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictBool, StrictInt, StrictStr, conlist
+from pydantic import StrictBool, StrictInt, StrictStr
 
-from typing import Optional
+from typing import List, Optional
 
 from radarr.models.download_protocol import DownloadProtocol
 from radarr.models.queue_bulk_resource import QueueBulkResource
@@ -366,7 +366,7 @@ class QueueApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_queue(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, movie_ids : Optional[conlist(StrictInt)] = None, protocol : Optional[DownloadProtocol] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[StrictInt] = None, **kwargs) -> QueueResourcePagingResource:  # noqa: E501
+    def get_queue(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, movie_ids : Optional[List[StrictInt]] = None, protocol : Optional[DownloadProtocol] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[StrictInt] = None, **kwargs) -> QueueResourcePagingResource:  # noqa: E501
         """get_queue  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -414,7 +414,7 @@ class QueueApi(object):
         return self.get_queue_with_http_info(page, page_size, sort_key, sort_direction, include_unknown_movie_items, include_movie, movie_ids, protocol, languages, quality, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_queue_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, movie_ids : Optional[conlist(StrictInt)] = None, protocol : Optional[DownloadProtocol] = None, languages : Optional[conlist(StrictInt)] = None, quality : Optional[StrictInt] = None, **kwargs):  # noqa: E501
+    def get_queue_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_unknown_movie_items : Optional[StrictBool] = None, include_movie : Optional[StrictBool] = None, movie_ids : Optional[List[StrictInt]] = None, protocol : Optional[DownloadProtocol] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[StrictInt] = None, **kwargs):  # noqa: E501
         """get_queue  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
