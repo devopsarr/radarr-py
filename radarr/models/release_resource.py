@@ -71,8 +71,9 @@ class ReleaseResource(BaseModel):
     protocol: Optional[DownloadProtocol]
     movie_id: Optional[int]
     download_client_id: Optional[int]
+    download_client: Optional[str]
     should_override: Optional[bool]
-    __properties = ["id", "guid", "quality", "customFormats", "customFormatScore", "qualityWeight", "age", "ageHours", "ageMinutes", "size", "indexerId", "indexer", "releaseGroup", "subGroup", "releaseHash", "title", "sceneSource", "movieTitles", "languages", "mappedMovieId", "approved", "temporarilyRejected", "rejected", "tmdbId", "imdbId", "rejections", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "downloadAllowed", "releaseWeight", "indexerFlags", "edition", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "movieId", "downloadClientId", "shouldOverride"]
+    __properties = ["id", "guid", "quality", "customFormats", "customFormatScore", "qualityWeight", "age", "ageHours", "ageMinutes", "size", "indexerId", "indexer", "releaseGroup", "subGroup", "releaseHash", "title", "sceneSource", "movieTitles", "languages", "mappedMovieId", "approved", "temporarilyRejected", "rejected", "tmdbId", "imdbId", "rejections", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "downloadAllowed", "releaseWeight", "indexerFlags", "edition", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "movieId", "downloadClientId", "downloadClient", "shouldOverride"]
 
     class Config:
         allow_population_by_field_name = True
@@ -206,6 +207,10 @@ class ReleaseResource(BaseModel):
         if self.download_client_id is None:
             _dict['downloadClientId'] = None
 
+        # set to None if download_client (nullable) is None
+        if self.download_client is None:
+            _dict['downloadClient'] = None
+
         # set to None if should_override (nullable) is None
         if self.should_override is None:
             _dict['shouldOverride'] = None
@@ -263,6 +268,7 @@ class ReleaseResource(BaseModel):
             "protocol": obj.get("protocol"),
             "movie_id": obj.get("movieId"),
             "download_client_id": obj.get("downloadClientId"),
+            "download_client": obj.get("downloadClient"),
             "should_override": obj.get("shouldOverride")
         })
         return _obj

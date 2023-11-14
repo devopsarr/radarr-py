@@ -30,10 +30,11 @@ class ImportListBulkResource(BaseModel):
     ids: Optional[List]
     tags: Optional[List]
     apply_tags: Optional[ApplyTags]
+    enabled: Optional[bool]
     enable_auto: Optional[bool]
     root_folder_path: Optional[str]
     quality_profile_id: Optional[int]
-    __properties = ["ids", "tags", "applyTags", "enableAuto", "rootFolderPath", "qualityProfileId"]
+    __properties = ["ids", "tags", "applyTags", "enabled", "enableAuto", "rootFolderPath", "qualityProfileId"]
 
     class Config:
         allow_population_by_field_name = True
@@ -70,6 +71,10 @@ class ImportListBulkResource(BaseModel):
         if self.tags is None:
             _dict['tags'] = None
 
+        # set to None if enabled (nullable) is None
+        if self.enabled is None:
+            _dict['enabled'] = None
+
         # set to None if enable_auto (nullable) is None
         if self.enable_auto is None:
             _dict['enableAuto'] = None
@@ -97,6 +102,7 @@ class ImportListBulkResource(BaseModel):
             "ids": obj.get("ids"),
             "tags": obj.get("tags"),
             "apply_tags": obj.get("applyTags"),
+            "enabled": obj.get("enabled"),
             "enable_auto": obj.get("enableAuto"),
             "root_folder_path": obj.get("rootFolderPath"),
             "quality_profile_id": obj.get("qualityProfileId")
