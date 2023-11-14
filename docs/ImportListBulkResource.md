@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ids** | **List[int]** |  | [optional] 
 **tags** | **List[int]** |  | [optional] 
 **apply_tags** | [**ApplyTags**](ApplyTags.md) |  | [optional] 
+**enabled** | **bool** |  | [optional] 
 **enable_auto** | **bool** |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 
 **quality_profile_id** | **int** |  | [optional] 
