@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **enable_auto** | **bool** |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 
 **quality_profile_id** | **int** |  | [optional] 
+**minimum_availability** | [**MovieStatusType**](MovieStatusType.md) |  | [optional] 
 
 ## Example
 
