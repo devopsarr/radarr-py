@@ -23,7 +23,7 @@ from radarr.models.add_movie_options import AddMovieOptions
 from radarr.models.alternative_title_resource import AlternativeTitleResource
 from radarr.models.language import Language
 from radarr.models.media_cover import MediaCover
-from radarr.models.movie_collection import MovieCollection
+from radarr.models.movie_collection_resource import MovieCollectionResource
 from radarr.models.movie_file_resource import MovieFileResource
 from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.ratings import Ratings
@@ -76,7 +76,7 @@ class MovieResource(BaseModel):
     add_options: Optional[AddMovieOptions]
     ratings: Optional[Ratings]
     movie_file: Optional[MovieFileResource]
-    collection: Optional[MovieCollection]
+    collection: Optional[MovieCollectionResource]
     popularity: Optional[float]
     __properties = ["id", "title", "originalTitle", "originalLanguage", "alternateTitles", "secondaryYear", "secondaryYearSourceId", "sortTitle", "sizeOnDisk", "status", "overview", "inCinemas", "physicalRelease", "digitalRelease", "physicalReleaseNote", "images", "website", "remotePoster", "year", "hasFile", "youTubeTrailerId", "studio", "path", "qualityProfileId", "monitored", "minimumAvailability", "isAvailable", "folderName", "runtime", "cleanTitle", "imdbId", "tmdbId", "titleSlug", "rootFolderPath", "folder", "certification", "genres", "tags", "added", "addOptions", "ratings", "movieFile", "collection", "popularity"]
 
@@ -294,7 +294,7 @@ class MovieResource(BaseModel):
             "add_options": AddMovieOptions.from_dict(obj.get("addOptions")) if obj.get("addOptions") is not None else None,
             "ratings": Ratings.from_dict(obj.get("ratings")) if obj.get("ratings") is not None else None,
             "movie_file": MovieFileResource.from_dict(obj.get("movieFile")) if obj.get("movieFile") is not None else None,
-            "collection": MovieCollection.from_dict(obj.get("collection")) if obj.get("collection") is not None else None,
+            "collection": MovieCollectionResource.from_dict(obj.get("collection")) if obj.get("collection") is not None else None,
             "popularity": obj.get("popularity")
         })
         return _obj
