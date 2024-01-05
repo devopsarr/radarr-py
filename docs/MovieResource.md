@@ -46,7 +46,7 @@ Name | Type | Description | Notes
 **add_options** | [**AddMovieOptions**](AddMovieOptions.md) |  | [optional] 
 **ratings** | [**Ratings**](Ratings.md) |  | [optional] 
 **movie_file** | [**MovieFileResource**](MovieFileResource.md) |  | [optional] 
-**collection** | [**MovieCollection**](MovieCollection.md) |  | [optional] 
+**collection** | [**MovieCollectionResource**](MovieCollectionResource.md) |  | [optional] 
 **popularity** | **float** |  | [optional] 
 
 ## Example
