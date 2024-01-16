@@ -183,7 +183,7 @@ class HistoryApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[List[StrictInt]] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[List[StrictInt]] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
+    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[List[StrictInt]] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[List[StrictInt]] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[List[StrictInt]] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -203,7 +203,7 @@ class HistoryApi(object):
         :param include_movie:
         :type include_movie: bool
         :param event_type:
-        :type event_type: int
+        :type event_type: List[int]
         :param download_id:
         :type download_id: str
         :param movie_ids:
@@ -231,7 +231,7 @@ class HistoryApi(object):
         return self.get_history_with_http_info(page, page_size, sort_key, sort_direction, include_movie, event_type, download_id, movie_ids, languages, quality, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[StrictInt] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[List[StrictInt]] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
+    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_movie : Optional[StrictBool] = None, event_type : Optional[List[StrictInt]] = None, download_id : Optional[StrictStr] = None, movie_ids : Optional[List[StrictInt]] = None, languages : Optional[List[StrictInt]] = None, quality : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -251,7 +251,7 @@ class HistoryApi(object):
         :param include_movie:
         :type include_movie: bool
         :param event_type:
-        :type event_type: int
+        :type event_type: List[int]
         :param download_id:
         :type download_id: str
         :param movie_ids:
@@ -339,6 +339,7 @@ class HistoryApi(object):
             _query_params.append(('includeMovie', _params['include_movie']))
         if _params.get('event_type') is not None:  # noqa: E501
             _query_params.append(('eventType', _params['event_type']))
+            _collection_formats['eventType'] = 'multi'
         if _params.get('download_id') is not None:  # noqa: E501
             _query_params.append(('downloadId', _params['download_id']))
         if _params.get('movie_ids') is not None:  # noqa: E501
