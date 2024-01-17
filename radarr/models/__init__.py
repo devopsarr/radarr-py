@@ -93,6 +93,7 @@ from radarr.models.movie_file_resource import MovieFileResource
 from radarr.models.movie_history_event_type import MovieHistoryEventType
 from radarr.models.movie_resource import MovieResource
 from radarr.models.movie_runtime_format_type import MovieRuntimeFormatType
+from radarr.models.movie_statistics_resource import MovieStatisticsResource
 from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.naming_config_resource import NamingConfigResource
 from radarr.models.notification_resource import NotificationResource
