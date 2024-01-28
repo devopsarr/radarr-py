@@ -185,17 +185,21 @@ class ImportListMoviesApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_importlist_movie(self, include_recommendations : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
+    def get_importlist_movie(self, include_recommendations : Optional[StrictBool] = None, include_trending : Optional[StrictBool] = None, include_popular : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
         """get_importlist_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_importlist_movie(include_recommendations, async_req=True)
+        >>> thread = api.get_importlist_movie(include_recommendations, include_trending, include_popular, async_req=True)
         >>> result = thread.get()
 
         :param include_recommendations:
         :type include_recommendations: bool
+        :param include_trending:
+        :type include_trending: bool
+        :param include_popular:
+        :type include_popular: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -212,20 +216,24 @@ class ImportListMoviesApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_importlist_movie_with_http_info(include_recommendations, **kwargs)  # noqa: E501
+        return self.get_importlist_movie_with_http_info(include_recommendations, include_trending, include_popular, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_importlist_movie_with_http_info(self, include_recommendations : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def get_importlist_movie_with_http_info(self, include_recommendations : Optional[StrictBool] = None, include_trending : Optional[StrictBool] = None, include_popular : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """get_importlist_movie  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_importlist_movie_with_http_info(include_recommendations, async_req=True)
+        >>> thread = api.get_importlist_movie_with_http_info(include_recommendations, include_trending, include_popular, async_req=True)
         >>> result = thread.get()
 
         :param include_recommendations:
         :type include_recommendations: bool
+        :param include_trending:
+        :type include_trending: bool
+        :param include_popular:
+        :type include_popular: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -253,7 +261,9 @@ class ImportListMoviesApi(object):
         _params = locals()
 
         _all_params = [
-            'include_recommendations'
+            'include_recommendations',
+            'include_trending',
+            'include_popular'
         ]
         _all_params.extend(
             [
@@ -286,6 +296,10 @@ class ImportListMoviesApi(object):
         _query_params = []
         if _params.get('include_recommendations') is not None:  # noqa: E501
             _query_params.append(('includeRecommendations', _params['include_recommendations']))
+        if _params.get('include_trending') is not None:  # noqa: E501
+            _query_params.append(('includeTrending', _params['include_trending']))
+        if _params.get('include_popular') is not None:  # noqa: E501
+            _query_params.append(('includePopular', _params['include_popular']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
