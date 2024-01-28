@@ -209,6 +209,10 @@ class MovieResource(BaseModel):
         if self.path is None:
             _dict['path'] = None
 
+        # set to None if has_file (nullable) is None
+        if self.has_file is None:
+            _dict['hasFile'] = None
+
         # set to None if folder_name (nullable) is None
         if self.folder_name is None:
             _dict['folderName'] = None

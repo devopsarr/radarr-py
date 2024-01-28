@@ -462,7 +462,7 @@ class MovieFileApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_movie_file(self, movie_id : Optional[StrictInt] = None, movie_file_ids : Optional[List[StrictInt]] = None, **kwargs) -> List[MovieFileResource]:  # noqa: E501
+    def list_movie_file(self, movie_id : Optional[List[StrictInt]] = None, movie_file_ids : Optional[List[StrictInt]] = None, **kwargs) -> List[MovieFileResource]:  # noqa: E501
         """list_movie_file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -472,7 +472,7 @@ class MovieFileApi(object):
         >>> result = thread.get()
 
         :param movie_id:
-        :type movie_id: int
+        :type movie_id: List[int]
         :param movie_file_ids:
         :type movie_file_ids: List[int]
         :param async_req: Whether to execute the request asynchronously.
@@ -494,7 +494,7 @@ class MovieFileApi(object):
         return self.list_movie_file_with_http_info(movie_id, movie_file_ids, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_movie_file_with_http_info(self, movie_id : Optional[StrictInt] = None, movie_file_ids : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
+    def list_movie_file_with_http_info(self, movie_id : Optional[List[StrictInt]] = None, movie_file_ids : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
         """list_movie_file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -504,7 +504,7 @@ class MovieFileApi(object):
         >>> result = thread.get()
 
         :param movie_id:
-        :type movie_id: int
+        :type movie_id: List[int]
         :param movie_file_ids:
         :type movie_file_ids: List[int]
         :param async_req: Whether to execute the request asynchronously.
@@ -568,6 +568,7 @@ class MovieFileApi(object):
         _query_params = []
         if _params.get('movie_id') is not None:  # noqa: E501
             _query_params.append(('movieId', _params['movie_id']))
+            _collection_formats['movieId'] = 'multi'
         if _params.get('movie_file_ids') is not None:  # noqa: E501
             _query_params.append(('movieFileIds', _params['movie_file_ids']))
             _collection_formats['movieFileIds'] = 'multi'
