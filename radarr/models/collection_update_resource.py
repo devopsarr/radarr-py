@@ -30,10 +30,11 @@ class CollectionUpdateResource(BaseModel):
     collection_ids: Optional[List]
     monitored: Optional[bool]
     monitor_movies: Optional[bool]
+    search_on_add: Optional[bool]
     quality_profile_id: Optional[int]
     root_folder_path: Optional[str]
     minimum_availability: Optional[MovieStatusType]
-    __properties = ["collectionIds", "monitored", "monitorMovies", "qualityProfileId", "rootFolderPath", "minimumAvailability"]
+    __properties = ["collectionIds", "monitored", "monitorMovies", "searchOnAdd", "qualityProfileId", "rootFolderPath", "minimumAvailability"]
 
     class Config:
         allow_population_by_field_name = True
@@ -74,6 +75,10 @@ class CollectionUpdateResource(BaseModel):
         if self.monitor_movies is None:
             _dict['monitorMovies'] = None
 
+        # set to None if search_on_add (nullable) is None
+        if self.search_on_add is None:
+            _dict['searchOnAdd'] = None
+
         # set to None if quality_profile_id (nullable) is None
         if self.quality_profile_id is None:
             _dict['qualityProfileId'] = None
@@ -97,6 +102,7 @@ class CollectionUpdateResource(BaseModel):
             "collection_ids": obj.get("collectionIds"),
             "monitored": obj.get("monitored"),
             "monitor_movies": obj.get("monitorMovies"),
+            "search_on_add": obj.get("searchOnAdd"),
             "quality_profile_id": obj.get("qualityProfileId"),
             "root_folder_path": obj.get("rootFolderPath"),
             "minimum_availability": obj.get("minimumAvailability")

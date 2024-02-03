@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **collection_ids** | **List[int]** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
 **monitor_movies** | **bool** |  | [optional] 
+**search_on_add** | **bool** |  | [optional] 
 **quality_profile_id** | **int** |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 
 **minimum_availability** | [**MovieStatusType**](MovieStatusType.md) |  | [optional] 
