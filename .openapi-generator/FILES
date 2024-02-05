@@ -3,6 +3,7 @@
 README.md
 docs/AddMovieMethod.md
 docs/AddMovieOptions.md
+docs/AlternativeTitle.md
 docs/AlternativeTitleApi.md
 docs/AlternativeTitleResource.md
 docs/ApiInfoApi.md
@@ -111,7 +112,7 @@ docs/MetadataResource.md
 docs/Modifier.md
 docs/MonitorTypes.md
 docs/MovieApi.md
-docs/MovieCollectionResource.md
+docs/MovieCollection.md
 docs/MovieEditorApi.md
 docs/MovieEditorResource.md
 docs/MovieFileApi.md
@@ -120,10 +121,11 @@ docs/MovieFileResource.md
 docs/MovieHistoryEventType.md
 docs/MovieImportApi.md
 docs/MovieLookupApi.md
+docs/MovieMetadata.md
 docs/MovieResource.md
 docs/MovieRuntimeFormatType.md
-docs/MovieStatisticsResource.md
 docs/MovieStatusType.md
+docs/MovieTranslation.md
 docs/NamingConfigApi.md
 docs/NamingConfigResource.md
 docs/NotificationApi.md
@@ -277,6 +279,7 @@ radarr/exceptions.py
 radarr/models/__init__.py
 radarr/models/add_movie_method.py
 radarr/models/add_movie_options.py
+radarr/models/alternative_title.py
 radarr/models/alternative_title_resource.py
 radarr/models/api_info_resource.py
 radarr/models/apply_tags.py
@@ -346,15 +349,16 @@ radarr/models/metadata_config_resource.py
 radarr/models/metadata_resource.py
 radarr/models/modifier.py
 radarr/models/monitor_types.py
-radarr/models/movie_collection_resource.py
+radarr/models/movie_collection.py
 radarr/models/movie_editor_resource.py
 radarr/models/movie_file_list_resource.py
 radarr/models/movie_file_resource.py
 radarr/models/movie_history_event_type.py
+radarr/models/movie_metadata.py
 radarr/models/movie_resource.py
 radarr/models/movie_runtime_format_type.py
-radarr/models/movie_statistics_resource.py
 radarr/models/movie_status_type.py
+radarr/models/movie_translation.py
 radarr/models/naming_config_resource.py
 radarr/models/notification_resource.py
 radarr/models/parse_resource.py

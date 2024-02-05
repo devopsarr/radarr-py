@@ -23,9 +23,8 @@ from radarr.models.add_movie_options import AddMovieOptions
 from radarr.models.alternative_title_resource import AlternativeTitleResource
 from radarr.models.language import Language
 from radarr.models.media_cover import MediaCover
-from radarr.models.movie_collection_resource import MovieCollectionResource
+from radarr.models.movie_collection import MovieCollection
 from radarr.models.movie_file_resource import MovieFileResource
-from radarr.models.movie_statistics_resource import MovieStatisticsResource
 from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.ratings import Ratings
 
@@ -54,11 +53,11 @@ class MovieResource(BaseModel):
     website: Optional[str]
     remote_poster: Optional[str]
     year: Optional[int]
+    has_file: Optional[bool]
     you_tube_trailer_id: Optional[str]
     studio: Optional[str]
     path: Optional[str]
     quality_profile_id: Optional[int]
-    has_file: Optional[bool]
     monitored: Optional[bool]
     minimum_availability: Optional[MovieStatusType]
     is_available: Optional[bool]
@@ -77,10 +76,9 @@ class MovieResource(BaseModel):
     add_options: Optional[AddMovieOptions]
     ratings: Optional[Ratings]
     movie_file: Optional[MovieFileResource]
-    collection: Optional[MovieCollectionResource]
+    collection: Optional[MovieCollection]
     popularity: Optional[float]
-    statistics: Optional[MovieStatisticsResource]
-    __properties = ["id", "title", "originalTitle", "originalLanguage", "alternateTitles", "secondaryYear", "secondaryYearSourceId", "sortTitle", "sizeOnDisk", "status", "overview", "inCinemas", "physicalRelease", "digitalRelease", "physicalReleaseNote", "images", "website", "remotePoster", "year", "youTubeTrailerId", "studio", "path", "qualityProfileId", "hasFile", "monitored", "minimumAvailability", "isAvailable", "folderName", "runtime", "cleanTitle", "imdbId", "tmdbId", "titleSlug", "rootFolderPath", "folder", "certification", "genres", "tags", "added", "addOptions", "ratings", "movieFile", "collection", "popularity", "statistics"]
+    __properties = ["id", "title", "originalTitle", "originalLanguage", "alternateTitles", "secondaryYear", "secondaryYearSourceId", "sortTitle", "sizeOnDisk", "status", "overview", "inCinemas", "physicalRelease", "digitalRelease", "physicalReleaseNote", "images", "website", "remotePoster", "year", "hasFile", "youTubeTrailerId", "studio", "path", "qualityProfileId", "monitored", "minimumAvailability", "isAvailable", "folderName", "runtime", "cleanTitle", "imdbId", "tmdbId", "titleSlug", "rootFolderPath", "folder", "certification", "genres", "tags", "added", "addOptions", "ratings", "movieFile", "collection", "popularity"]
 
     class Config:
         allow_population_by_field_name = True
@@ -138,9 +136,6 @@ class MovieResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of collection
         if self.collection:
             _dict['collection'] = self.collection.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of statistics
-        if self.statistics:
-            _dict['statistics'] = self.statistics.to_dict()
         # set to None if title (nullable) is None
         if self.title is None:
             _dict['title'] = None
@@ -209,10 +204,6 @@ class MovieResource(BaseModel):
         if self.path is None:
             _dict['path'] = None
 
-        # set to None if has_file (nullable) is None
-        if self.has_file is None:
-            _dict['hasFile'] = None
-
         # set to None if folder_name (nullable) is None
         if self.folder_name is None:
             _dict['folderName'] = None
@@ -280,11 +271,11 @@ class MovieResource(BaseModel):
             "website": obj.get("website"),
             "remote_poster": obj.get("remotePoster"),
             "year": obj.get("year"),
+            "has_file": obj.get("hasFile"),
             "you_tube_trailer_id": obj.get("youTubeTrailerId"),
             "studio": obj.get("studio"),
             "path": obj.get("path"),
             "quality_profile_id": obj.get("qualityProfileId"),
-            "has_file": obj.get("hasFile"),
             "monitored": obj.get("monitored"),
             "minimum_availability": obj.get("minimumAvailability"),
             "is_available": obj.get("isAvailable"),
@@ -303,9 +294,8 @@ class MovieResource(BaseModel):
             "add_options": AddMovieOptions.from_dict(obj.get("addOptions")) if obj.get("addOptions") is not None else None,
             "ratings": Ratings.from_dict(obj.get("ratings")) if obj.get("ratings") is not None else None,
             "movie_file": MovieFileResource.from_dict(obj.get("movieFile")) if obj.get("movieFile") is not None else None,
-            "collection": MovieCollectionResource.from_dict(obj.get("collection")) if obj.get("collection") is not None else None,
-            "popularity": obj.get("popularity"),
-            "statistics": MovieStatisticsResource.from_dict(obj.get("statistics")) if obj.get("statistics") is not None else None
+            "collection": MovieCollection.from_dict(obj.get("collection")) if obj.get("collection") is not None else None,
+            "popularity": obj.get("popularity")
         })
         return _obj
 

@@ -176,7 +176,7 @@ with radarr.ApiClient(configuration) as api_client:
     sort_key = 'sort_key_example' # str |  (optional)
     sort_direction = radarr.SortDirection() # SortDirection |  (optional)
     include_movie = True # bool |  (optional)
-    event_type = [56] # List[int] |  (optional)
+    event_type = 56 # int |  (optional)
     download_id = 'download_id_example' # str |  (optional)
     movie_ids = [56] # List[int] |  (optional)
     languages = [56] # List[int] |  (optional)
@@ -230,7 +230,7 @@ with radarr.ApiClient(configuration) as api_client:
     sort_key = 'sort_key_example' # str |  (optional)
     sort_direction = radarr.SortDirection() # SortDirection |  (optional)
     include_movie = True # bool |  (optional)
-    event_type = [56] # List[int] |  (optional)
+    event_type = 56 # int |  (optional)
     download_id = 'download_id_example' # str |  (optional)
     movie_ids = [56] # List[int] |  (optional)
     languages = [56] # List[int] |  (optional)
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
  **sort_key** | **str**|  | [optional] 
  **sort_direction** | [**SortDirection**](.md)|  | [optional] 
  **include_movie** | **bool**|  | [optional] 
- **event_type** | [**List[int]**](int.md)|  | [optional] 
+ **event_type** | **int**|  | [optional] 
  **download_id** | **str**|  | [optional] 
  **movie_ids** | [**List[int]**](int.md)|  | [optional] 
  **languages** | [**List[int]**](int.md)|  | [optional] 
