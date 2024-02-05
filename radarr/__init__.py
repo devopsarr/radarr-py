@@ -100,6 +100,7 @@ from radarr.exceptions import ApiException
 # import models into sdk package
 from radarr.models.add_movie_method import AddMovieMethod
 from radarr.models.add_movie_options import AddMovieOptions
+from radarr.models.alternative_title import AlternativeTitle
 from radarr.models.alternative_title_resource import AlternativeTitleResource
 from radarr.models.api_info_resource import ApiInfoResource
 from radarr.models.apply_tags import ApplyTags
@@ -169,15 +170,16 @@ from radarr.models.metadata_config_resource import MetadataConfigResource
 from radarr.models.metadata_resource import MetadataResource
 from radarr.models.modifier import Modifier
 from radarr.models.monitor_types import MonitorTypes
-from radarr.models.movie_collection_resource import MovieCollectionResource
+from radarr.models.movie_collection import MovieCollection
 from radarr.models.movie_editor_resource import MovieEditorResource
 from radarr.models.movie_file_list_resource import MovieFileListResource
 from radarr.models.movie_file_resource import MovieFileResource
 from radarr.models.movie_history_event_type import MovieHistoryEventType
+from radarr.models.movie_metadata import MovieMetadata
 from radarr.models.movie_resource import MovieResource
 from radarr.models.movie_runtime_format_type import MovieRuntimeFormatType
-from radarr.models.movie_statistics_resource import MovieStatisticsResource
 from radarr.models.movie_status_type import MovieStatusType
+from radarr.models.movie_translation import MovieTranslation
 from radarr.models.naming_config_resource import NamingConfigResource
 from radarr.models.notification_resource import NotificationResource
 from radarr.models.parse_resource import ParseResource

@@ -128,7 +128,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_importlist_movie**
-> get_importlist_movie(include_recommendations=include_recommendations, include_trending=include_trending, include_popular=include_popular)
+> get_importlist_movie(include_recommendations=include_recommendations)
 
 
 
@@ -170,11 +170,9 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.ImportListMoviesApi(api_client)
     include_recommendations = False # bool |  (optional) (default to False)
-    include_trending = False # bool |  (optional) (default to False)
-    include_popular = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.get_importlist_movie(include_recommendations=include_recommendations, include_trending=include_trending, include_popular=include_popular)
+        api_instance.get_importlist_movie(include_recommendations=include_recommendations)
     except Exception as e:
         print("Exception when calling ImportListMoviesApi->get_importlist_movie: %s\n" % e)
 ```
@@ -215,11 +213,9 @@ with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.ImportListMoviesApi(api_client)
     include_recommendations = False # bool |  (optional) (default to False)
-    include_trending = False # bool |  (optional) (default to False)
-    include_popular = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.get_importlist_movie(include_recommendations=include_recommendations, include_trending=include_trending, include_popular=include_popular)
+        api_instance.get_importlist_movie(include_recommendations=include_recommendations)
     except Exception as e:
         print("Exception when calling ImportListMoviesApi->get_importlist_movie: %s\n" % e)
 ```
@@ -229,8 +225,6 @@ with radarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include_recommendations** | **bool**|  | [optional] [default to False]
- **include_trending** | **bool**|  | [optional] [default to False]
- **include_popular** | **bool**|  | [optional] [default to False]
 
 ### Return type
 

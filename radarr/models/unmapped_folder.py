@@ -28,8 +28,7 @@ class UnmappedFolder(BaseModel):
     """
     name: Optional[str]
     path: Optional[str]
-    relative_path: Optional[str]
-    __properties = ["name", "path", "relativePath"]
+    __properties = ["name", "path"]
 
     class Config:
         allow_population_by_field_name = True
@@ -66,10 +65,6 @@ class UnmappedFolder(BaseModel):
         if self.path is None:
             _dict['path'] = None
 
-        # set to None if relative_path (nullable) is None
-        if self.relative_path is None:
-            _dict['relativePath'] = None
-
         return _dict
 
     @classmethod
@@ -83,8 +78,7 @@ class UnmappedFolder(BaseModel):
 
         _obj = UnmappedFolder.parse_obj({
             "name": obj.get("name"),
-            "path": obj.get("path"),
-            "relative_path": obj.get("relativePath")
+            "path": obj.get("path")
         })
         return _obj
 
