@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from radarr.models.download_protocol import DownloadProtocol
 from radarr.models.field import Field

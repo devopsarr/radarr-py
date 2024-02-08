@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from radarr.models.language import Language
 from radarr.models.profile_format_item_resource import ProfileFormatItemResource

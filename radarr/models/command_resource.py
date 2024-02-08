@@ -16,8 +16,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from typing import Any, ClassVar, Dict, Optional
+
+
 from pydantic import BaseModel
 from radarr.models.command import Command
 from radarr.models.command_priority import CommandPriority

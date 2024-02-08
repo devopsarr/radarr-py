@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictBool, StrictInt, StrictStr
-
 from typing import List, Optional
-
 from radarr.models.manual_import_reprocess_resource import ManualImportReprocessResource
 from radarr.models.manual_import_resource import ManualImportResource
 

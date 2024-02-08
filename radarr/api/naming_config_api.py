@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictBool, StrictInt, StrictStr
-
 from typing import Optional
-
 from radarr.models.colon_replacement_format import ColonReplacementFormat
 from radarr.models.naming_config_resource import NamingConfigResource
 

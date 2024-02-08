@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
-from typing import List, Optional
-
+from typing import Optional
 from radarr.models.collection_resource import CollectionResource
 from radarr.models.collection_update_resource import CollectionUpdateResource
 

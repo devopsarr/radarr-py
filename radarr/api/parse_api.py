@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-
 from typing import Optional
-
 from radarr.models.parse_resource import ParseResource
 
 from radarr.api_client import ApiClient

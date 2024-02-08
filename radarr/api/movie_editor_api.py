@@ -18,7 +18,6 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from typing import Optional
-
 from radarr.models.movie_editor_resource import MovieEditorResource
 
 from radarr.api_client import ApiClient

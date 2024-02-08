@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **var_date** | **datetime** |  | [optional] 
 **download_id** | **str** |  | [optional] 
 **event_type** | [**MovieHistoryEventType**](MovieHistoryEventType.md) |  | [optional] 
-**data** | **Dict[str, str]** |  | [optional] 
+**data** | **Dict[str, Optional[str]]** |  | [optional] 
 **movie** | [**MovieResource**](MovieResource.md) |  | [optional] 
 
 ## Example

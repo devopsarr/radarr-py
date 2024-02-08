@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
-from typing import List, Optional
-
+from typing import Optional
 from radarr.models.auto_tagging_resource import AutoTaggingResource
 from radarr.models.auto_tagging_specification_schema import AutoTaggingSpecificationSchema
 

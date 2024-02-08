@@ -17,10 +17,8 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import Field
+from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
-from pydantic import StrictStr, field_validator
-
 
 from radarr.api_client import ApiClient
 from radarr.exceptions import (  # noqa: F401
