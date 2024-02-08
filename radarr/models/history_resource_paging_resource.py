@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from radarr.models.history_resource import HistoryResource
 from radarr.models.sort_direction import SortDirection

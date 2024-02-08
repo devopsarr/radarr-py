@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
 from typing import List, Optional
-
 from radarr.models.movie_file_list_resource import MovieFileListResource
 from radarr.models.movie_file_resource import MovieFileResource
 

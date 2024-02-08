@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from radarr.models.privacy_level import PrivacyLevel
 from radarr.models.select_option import SelectOption

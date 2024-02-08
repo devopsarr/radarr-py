@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
-from typing import List, Optional
-
+from typing import Optional
 from radarr.models.blocklist_bulk_resource import BlocklistBulkResource
 from radarr.models.blocklist_resource import BlocklistResource
 from radarr.models.blocklist_resource_paging_resource import BlocklistResourcePagingResource

@@ -18,7 +18,6 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt
-
 from radarr.models.queue_status_resource import QueueStatusResource
 
 from radarr.api_client import ApiClient
