@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **imdb** | [**RatingChild**](RatingChild.md) |  | [optional] 
