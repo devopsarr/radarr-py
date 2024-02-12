@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cover_type** | [**MediaCoverTypes**](MediaCoverTypes.md) |  | [optional] 
