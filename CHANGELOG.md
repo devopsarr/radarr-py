@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.0.0](https://github.com/devopsarr/radarr-py/compare/v0.4.0...v1.0.0) (2024-02-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **devopsarr/prowlarr-py#39:** update sdk generator to use pydantic 2.x
+
+### Features
+
+* **devopsarr/prowlarr-py#39:** update sdk generator to use pydantic 2.x ([32355c5](https://github.com/devopsarr/radarr-py/commit/32355c5d4f0e4f52da68b1804a9f7a03e1dc9edc))
+* inject api version into readme ([1a807a9](https://github.com/devopsarr/radarr-py/commit/1a807a980917720f8d38e1504fb30ac632fde1cf))
+
+
+### Bug Fixes
+
+* **python:** wrong release versioning on configuration.py ([c952099](https://github.com/devopsarr/radarr-py/commit/c95209978cab075a7b086a910630b4a48c398cb3))
+* release please commented lines ([927cea4](https://github.com/devopsarr/radarr-py/commit/927cea44c46c8bd54c2f090aa993c91bdd9d3ec0))
+* remove middle elements from method name ([e2af681](https://github.com/devopsarr/radarr-py/commit/e2af6811262b2c8b263b29f5d98255c8b9beeb03))
+
+
+### Miscellaneous Chores
+
+* release 1.0.0 ([5be6f22](https://github.com/devopsarr/radarr-py/commit/5be6f22394edd603d1f66ce67a6f825f68f61f51))
+
 ## [1.0.0](https://github.com/devopsarr/radarr-py/compare/v0.4.0...v1.0.0) (2024-02-15)
 
 
