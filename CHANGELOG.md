@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/devopsarr/radarr-py/compare/v1.0.1...v1.0.2) (2024-02-19)
+
+
+### Miscellaneous Chores
+
+* release 1.0.2 ([b432d86](https://github.com/devopsarr/radarr-py/commit/b432d867aaed68b4436703b54b2ce62047167abd))
+
 ## [1.0.1](https://github.com/devopsarr/radarr-py/compare/v1.0.0...v1.0.1) (2024-02-19)
 
 
