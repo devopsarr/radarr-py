@@ -40,6 +40,7 @@ from radarr.models.command_resource import CommandResource
 from radarr.models.command_result import CommandResult
 from radarr.models.command_status import CommandStatus
 from radarr.models.command_trigger import CommandTrigger
+from radarr.models.contract_field import ContractField
 from radarr.models.credit_resource import CreditResource
 from radarr.models.credit_type import CreditType
 from radarr.models.custom_filter_resource import CustomFilterResource
@@ -54,7 +55,6 @@ from radarr.models.download_client_resource import DownloadClientResource
 from radarr.models.download_protocol import DownloadProtocol
 from radarr.models.extra_file_resource import ExtraFileResource
 from radarr.models.extra_file_type import ExtraFileType
-from radarr.models.field import Field
 from radarr.models.file_date_type import FileDateType
 from radarr.models.health_check_result import HealthCheckResult
 from radarr.models.health_resource import HealthResource

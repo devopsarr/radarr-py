@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from radarr.models.field import Field
+from radarr.models.contract_field import ContractField
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -33,7 +33,7 @@ class AutoTaggingSpecificationSchema(BaseModel):
     implementation_name: Optional[StrictStr] = Field(default=None, alias="implementationName")
     negate: Optional[StrictBool] = None
     required: Optional[StrictBool] = None
-    fields: Optional[List[Field]] = None
+    fields: Optional[List[ContractField]] = None
     __properties: ClassVar[List[str]] = ["id", "name", "implementation", "implementationName", "negate", "required", "fields"]
 
     model_config = {
@@ -120,7 +120,7 @@ class AutoTaggingSpecificationSchema(BaseModel):
             "implementationName": obj.get("implementationName"),
             "negate": obj.get("negate"),
             "required": obj.get("required"),
-            "fields": [Field.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None
+            "fields": [ContractField.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None
         })
         return _obj
 

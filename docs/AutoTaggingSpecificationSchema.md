@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **implementation_name** | **str** |  | [optional] 
 **negate** | **bool** |  | [optional] 
 **required** | **bool** |  | [optional] 
-**fields** | [**List[Field]**](Field.md) |  | [optional] 
+**fields** | [**List[ContractField]**](ContractField.md) |  | [optional] 
 
 ## Example
 
