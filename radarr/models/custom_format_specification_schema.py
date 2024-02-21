@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from radarr.models.field import Field
+from radarr.models.contract_field import ContractField
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -34,7 +34,7 @@ class CustomFormatSpecificationSchema(BaseModel):
     info_link: Optional[StrictStr] = Field(default=None, alias="infoLink")
     negate: Optional[StrictBool] = None
     required: Optional[StrictBool] = None
-    fields: Optional[List[Field]] = None
+    fields: Optional[List[ContractField]] = None
     presets: Optional[List[CustomFormatSpecificationSchema]] = None
     __properties: ClassVar[List[str]] = ["id", "name", "implementation", "implementationName", "infoLink", "negate", "required", "fields", "presets"]
 
@@ -140,7 +140,7 @@ class CustomFormatSpecificationSchema(BaseModel):
             "infoLink": obj.get("infoLink"),
             "negate": obj.get("negate"),
             "required": obj.get("required"),
-            "fields": [Field.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None,
+            "fields": [ContractField.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None,
             "presets": [CustomFormatSpecificationSchema.from_dict(_item) for _item in obj["presets"]] if obj.get("presets") is not None else None
         })
         return _obj
