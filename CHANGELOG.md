@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/devopsarr/radarr-py/compare/v1.0.0...v1.0.1) (2024-02-21)
+
+
+### Bug Fixes
+
+* map Field to ContractField to avoid pydantic issue ([8283a75](https://github.com/devopsarr/radarr-py/commit/8283a757eb769442c839d0a1b91a7877cd1d5994))
+
 ## [1.0.0](https://github.com/devopsarr/radarr-py/compare/v0.4.0...v1.0.0) (2024-02-19)
 
 
