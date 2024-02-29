@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_naming_config_examples**
-> get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
+> get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, id=id, resource_name=resource_name)
 
 
 
@@ -220,15 +220,11 @@ with radarr.ApiClient(configuration) as api_client:
     colon_replacement_format = radarr.ColonReplacementFormat() # ColonReplacementFormat |  (optional)
     standard_movie_format = 'standard_movie_format_example' # str |  (optional)
     movie_folder_format = 'movie_folder_format_example' # str |  (optional)
-    include_quality = True # bool |  (optional)
-    replace_spaces = True # bool |  (optional)
-    separator = 'separator_example' # str |  (optional)
-    number_style = 'number_style_example' # str |  (optional)
     id = 56 # int |  (optional)
     resource_name = 'resource_name_example' # str |  (optional)
 
     try:
-        api_instance.get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
+        api_instance.get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, id=id, resource_name=resource_name)
     except Exception as e:
         print("Exception when calling NamingConfigApi->get_naming_config_examples: %s\n" % e)
 ```
@@ -245,10 +241,6 @@ Name | Type | Description  | Notes
  **colon_replacement_format** | [**ColonReplacementFormat**](.md)|  | [optional] 
  **standard_movie_format** | **str**|  | [optional] 
  **movie_folder_format** | **str**|  | [optional] 
- **include_quality** | **bool**|  | [optional] 
- **replace_spaces** | **bool**|  | [optional] 
- **separator** | **str**|  | [optional] 
- **number_style** | **str**|  | [optional] 
  **id** | **int**|  | [optional] 
  **resource_name** | **str**|  | [optional] 
 

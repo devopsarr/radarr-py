@@ -11,10 +11,6 @@ Name | Type | Description | Notes
 **colon_replacement_format** | [**ColonReplacementFormat**](ColonReplacementFormat.md) |  | [optional] 
 **standard_movie_format** | **str** |  | [optional] 
 **movie_folder_format** | **str** |  | [optional] 
-**include_quality** | **bool** |  | [optional] 
-**replace_spaces** | **bool** |  | [optional] 
-**separator** | **str** |  | [optional] 
-**number_style** | **str** |  | [optional] 
 
 ## Example
 

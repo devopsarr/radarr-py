@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
 **path** | **str** |  | [optional] 
+**relative_path** | **str** |  | [optional] 
 
 ## Example
 
