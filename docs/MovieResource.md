@@ -24,11 +24,11 @@ Name | Type | Description | Notes
 **website** | **str** |  | [optional] 
 **remote_poster** | **str** |  | [optional] 
 **year** | **int** |  | [optional] 
-**has_file** | **bool** |  | [optional] 
 **you_tube_trailer_id** | **str** |  | [optional] 
 **studio** | **str** |  | [optional] 
 **path** | **str** |  | [optional] 
 **quality_profile_id** | **int** |  | [optional] 
+**has_file** | **bool** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
 **minimum_availability** | [**MovieStatusType**](MovieStatusType.md) |  | [optional] 
 **is_available** | **bool** |  | [optional] 
@@ -47,8 +47,9 @@ Name | Type | Description | Notes
 **add_options** | [**AddMovieOptions**](AddMovieOptions.md) |  | [optional] 
 **ratings** | [**Ratings**](Ratings.md) |  | [optional] 
 **movie_file** | [**MovieFileResource**](MovieFileResource.md) |  | [optional] 
-**collection** | [**MovieCollection**](MovieCollection.md) |  | [optional] 
+**collection** | [**MovieCollectionResource**](MovieCollectionResource.md) |  | [optional] 
 **popularity** | **float** |  | [optional] 
+**statistics** | [**MovieStatisticsResource**](MovieStatisticsResource.md) |  | [optional] 
 
 ## Example
 

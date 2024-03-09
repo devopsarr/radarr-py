@@ -299,7 +299,7 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.MovieFileApi(api_client)
-    movie_id = 56 # int |  (optional)
+    movie_id = [56] # List[int] |  (optional)
     movie_file_ids = [56] # List[int] |  (optional)
 
     try:
@@ -317,7 +317,7 @@ with radarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **movie_id** | **int**|  | [optional] 
+ **movie_id** | [**List[int]**](int.md)|  | [optional] 
  **movie_file_ids** | [**List[int]**](int.md)|  | [optional] 
 
 ### Return type
