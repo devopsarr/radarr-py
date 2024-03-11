@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of Revision from a JSON string
 revision_instance = Revision.from_json(json)
 # print the JSON string representation of the object
-print Revision.to_json()
+print(Revision.to_json())
 
 # convert the object into a dict
 revision_dict = revision_instance.to_dict()

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of Language from a JSON string
 language_instance = Language.from_json(json)
 # print the JSON string representation of the object
-print Language.to_json()
+print(Language.to_json())
 
 # convert the object into a dict
 language_dict = language_instance.to_dict()

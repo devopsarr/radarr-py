@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of Ratings from a JSON string
 ratings_instance = Ratings.from_json(json)
 # print the JSON string representation of the object
-print Ratings.to_json()
+print(Ratings.to_json())
 
 # convert the object into a dict
 ratings_dict = ratings_instance.to_dict()

@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.contract_field import ContractField
 from typing import Optional, Set
@@ -38,11 +38,11 @@ class CustomFormatSpecificationSchema(BaseModel):
     presets: Optional[List[CustomFormatSpecificationSchema]] = None
     __properties: ClassVar[List[str]] = ["id", "name", "implementation", "implementationName", "infoLink", "negate", "required", "fields", "presets"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

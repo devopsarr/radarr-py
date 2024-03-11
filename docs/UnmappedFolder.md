@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of UnmappedFolder from a JSON string
 unmapped_folder_instance = UnmappedFolder.from_json(json)
 # print the JSON string representation of the object
-print UnmappedFolder.to_json()
+print(UnmappedFolder.to_json())
 
 # convert the object into a dict
 unmapped_folder_dict = unmapped_folder_instance.to_dict()

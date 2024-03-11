@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of ReleaseProfileResource from a JSON string
 release_profile_resource_instance = ReleaseProfileResource.from_json(json)
 # print the JSON string representation of the object
-print ReleaseProfileResource.to_json()
+print(ReleaseProfileResource.to_json())
 
 # convert the object into a dict
 release_profile_resource_dict = release_profile_resource_instance.to_dict()

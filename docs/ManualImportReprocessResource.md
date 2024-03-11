@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of ManualImportReprocessResource from a JSON string
 manual_import_reprocess_resource_instance = ManualImportReprocessResource.from_json(json)
 # print the JSON string representation of the object
-print ManualImportReprocessResource.to_json()
+print(ManualImportReprocessResource.to_json())
 
 # convert the object into a dict
 manual_import_reprocess_resource_dict = manual_import_reprocess_resource_instance.to_dict()

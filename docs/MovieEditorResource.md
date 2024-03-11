@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of MovieEditorResource from a JSON string
 movie_editor_resource_instance = MovieEditorResource.from_json(json)
 # print the JSON string representation of the object
-print MovieEditorResource.to_json()
+print(MovieEditorResource.to_json())
 
 # convert the object into a dict
 movie_editor_resource_dict = movie_editor_resource_instance.to_dict()

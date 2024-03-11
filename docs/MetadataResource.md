@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of MetadataResource from a JSON string
 metadata_resource_instance = MetadataResource.from_json(json)
 # print the JSON string representation of the object
-print MetadataResource.to_json()
+print(MetadataResource.to_json())
 
 # convert the object into a dict
 metadata_resource_dict = metadata_resource_instance.to_dict()

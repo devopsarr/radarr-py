@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.apply_tags import ApplyTags
 from typing import Optional, Set
@@ -36,11 +36,11 @@ class IndexerBulkResource(BaseModel):
     priority: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["ids", "tags", "applyTags", "enableRss", "enableAutomaticSearch", "enableInteractiveSearch", "priority"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

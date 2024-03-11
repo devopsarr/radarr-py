@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of Rejection from a JSON string
 rejection_instance = Rejection.from_json(json)
 # print the JSON string representation of the object
-print Rejection.to_json()
+print(Rejection.to_json())
 
 # convert the object into a dict
 rejection_dict = rejection_instance.to_dict()

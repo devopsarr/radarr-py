@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of ImportExclusionsResource from a JSON string
 import_exclusions_resource_instance = ImportExclusionsResource.from_json(json)
 # print the JSON string representation of the object
-print ImportExclusionsResource.to_json()
+print(ImportExclusionsResource.to_json())
 
 # convert the object into a dict
 import_exclusions_resource_dict = import_exclusions_resource_instance.to_dict()

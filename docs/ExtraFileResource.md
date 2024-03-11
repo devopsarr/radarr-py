@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of ExtraFileResource from a JSON string
 extra_file_resource_instance = ExtraFileResource.from_json(json)
 # print the JSON string representation of the object
-print ExtraFileResource.to_json()
+print(ExtraFileResource.to_json())
 
 # convert the object into a dict
 extra_file_resource_dict = extra_file_resource_instance.to_dict()

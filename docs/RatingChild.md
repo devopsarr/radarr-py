@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of RatingChild from a JSON string
 rating_child_instance = RatingChild.from_json(json)
 # print the JSON string representation of the object
-print RatingChild.to_json()
+print(RatingChild.to_json())
 
 # convert the object into a dict
 rating_child_dict = rating_child_instance.to_dict()

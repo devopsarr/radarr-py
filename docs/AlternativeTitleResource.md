@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of AlternativeTitleResource from a JSON string
 alternative_title_resource_instance = AlternativeTitleResource.from_json(json)
 # print the JSON string representation of the object
-print AlternativeTitleResource.to_json()
+print(AlternativeTitleResource.to_json())
 
 # convert the object into a dict
 alternative_title_resource_dict = alternative_title_resource_instance.to_dict()

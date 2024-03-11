@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, Optional
 from radarr.models.add_movie_method import AddMovieMethod
 from radarr.models.monitor_types import MonitorTypes
@@ -35,11 +35,11 @@ class AddMovieOptions(BaseModel):
     add_method: Optional[AddMovieMethod] = Field(default=None, alias="addMethod")
     __properties: ClassVar[List[str]] = ["ignoreEpisodesWithFiles", "ignoreEpisodesWithoutFiles", "monitor", "searchForMovie", "addMethod"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

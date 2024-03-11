@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of MediaCover from a JSON string
 media_cover_instance = MediaCover.from_json(json)
 # print the JSON string representation of the object
-print MediaCover.to_json()
+print(MediaCover.to_json())
 
 # convert the object into a dict
 media_cover_dict = media_cover_instance.to_dict()

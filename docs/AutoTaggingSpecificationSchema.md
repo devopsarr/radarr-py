@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of AutoTaggingSpecificationSchema from a JSON string
 auto_tagging_specification_schema_instance = AutoTaggingSpecificationSchema.from_json(json)
 # print the JSON string representation of the object
-print AutoTaggingSpecificationSchema.to_json()
+print(AutoTaggingSpecificationSchema.to_json())
 
 # convert the object into a dict
 auto_tagging_specification_schema_dict = auto_tagging_specification_schema_instance.to_dict()

@@ -31,7 +31,7 @@ json = "{}"
 # create an instance of ParsedMovieInfo from a JSON string
 parsed_movie_info_instance = ParsedMovieInfo.from_json(json)
 # print the JSON string representation of the object
-print ParsedMovieInfo.to_json()
+print(ParsedMovieInfo.to_json())
 
 # convert the object into a dict
 parsed_movie_info_dict = parsed_movie_info_instance.to_dict()

@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of CollectionMovieResource from a JSON string
 collection_movie_resource_instance = CollectionMovieResource.from_json(json)
 # print the JSON string representation of the object
-print CollectionMovieResource.to_json()
+print(CollectionMovieResource.to_json())
 
 # convert the object into a dict
 collection_movie_resource_dict = collection_movie_resource_instance.to_dict()

@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of ImportListBulkResource from a JSON string
 import_list_bulk_resource_instance = ImportListBulkResource.from_json(json)
 # print the JSON string representation of the object
-print ImportListBulkResource.to_json()
+print(ImportListBulkResource.to_json())
 
 # convert the object into a dict
 import_list_bulk_resource_dict = import_list_bulk_resource_instance.to_dict()
