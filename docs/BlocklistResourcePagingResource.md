@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of BlocklistResourcePagingResource from a JSON string
 blocklist_resource_paging_resource_instance = BlocklistResourcePagingResource.from_json(json)
 # print the JSON string representation of the object
-print BlocklistResourcePagingResource.to_json()
+print(BlocklistResourcePagingResource.to_json())
 
 # convert the object into a dict
 blocklist_resource_paging_resource_dict = blocklist_resource_paging_resource_instance.to_dict()

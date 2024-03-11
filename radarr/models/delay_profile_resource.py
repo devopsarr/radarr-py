@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.download_protocol import DownloadProtocol
 from typing import Optional, Set
@@ -40,11 +40,11 @@ class DelayProfileResource(BaseModel):
     tags: Optional[List[StrictInt]] = None
     __properties: ClassVar[List[str]] = ["id", "enableUsenet", "enableTorrent", "preferredProtocol", "usenetDelay", "torrentDelay", "bypassIfHighestQuality", "bypassIfAboveCustomFormatScore", "minimumCustomFormatScore", "order", "tags"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

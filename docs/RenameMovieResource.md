@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of RenameMovieResource from a JSON string
 rename_movie_resource_instance = RenameMovieResource.from_json(json)
 # print the JSON string representation of the object
-print RenameMovieResource.to_json()
+print(RenameMovieResource.to_json())
 
 # convert the object into a dict
 rename_movie_resource_dict = rename_movie_resource_instance.to_dict()

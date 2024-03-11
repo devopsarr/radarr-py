@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of QualityDefinitionResource from a JSON string
 quality_definition_resource_instance = QualityDefinitionResource.from_json(json)
 # print the JSON string representation of the object
-print QualityDefinitionResource.to_json()
+print(QualityDefinitionResource.to_json())
 
 # convert the object into a dict
 quality_definition_resource_dict = quality_definition_resource_instance.to_dict()

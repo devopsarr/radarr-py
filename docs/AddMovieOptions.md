@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of AddMovieOptions from a JSON string
 add_movie_options_instance = AddMovieOptions.from_json(json)
 # print the JSON string representation of the object
-print AddMovieOptions.to_json()
+print(AddMovieOptions.to_json())
 
 # convert the object into a dict
 add_movie_options_dict = add_movie_options_instance.to_dict()

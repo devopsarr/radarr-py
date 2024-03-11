@@ -38,7 +38,7 @@ json = "{}"
 # create an instance of MediaManagementConfigResource from a JSON string
 media_management_config_resource_instance = MediaManagementConfigResource.from_json(json)
 # print the JSON string representation of the object
-print MediaManagementConfigResource.to_json()
+print(MediaManagementConfigResource.to_json())
 
 # convert the object into a dict
 media_management_config_resource_dict = media_management_config_resource_instance.to_dict()

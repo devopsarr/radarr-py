@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of ParseResource from a JSON string
 parse_resource_instance = ParseResource.from_json(json)
 # print the JSON string representation of the object
-print ParseResource.to_json()
+print(ParseResource.to_json())
 
 # convert the object into a dict
 parse_resource_dict = parse_resource_instance.to_dict()

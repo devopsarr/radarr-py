@@ -25,7 +25,7 @@ json = "{}"
 # create an instance of IndexerConfigResource from a JSON string
 indexer_config_resource_instance = IndexerConfigResource.from_json(json)
 # print the JSON string representation of the object
-print IndexerConfigResource.to_json()
+print(IndexerConfigResource.to_json())
 
 # convert the object into a dict
 indexer_config_resource_dict = indexer_config_resource_instance.to_dict()

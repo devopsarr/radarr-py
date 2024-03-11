@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of TrackedDownloadStatusMessage from a JSON string
 tracked_download_status_message_instance = TrackedDownloadStatusMessage.from_json(json)
 # print the JSON string representation of the object
-print TrackedDownloadStatusMessage.to_json()
+print(TrackedDownloadStatusMessage.to_json())
 
 # convert the object into a dict
 tracked_download_status_message_dict = tracked_download_status_message_instance.to_dict()

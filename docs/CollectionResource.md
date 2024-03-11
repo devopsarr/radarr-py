@@ -30,7 +30,7 @@ json = "{}"
 # create an instance of CollectionResource from a JSON string
 collection_resource_instance = CollectionResource.from_json(json)
 # print the JSON string representation of the object
-print CollectionResource.to_json()
+print(CollectionResource.to_json())
 
 # convert the object into a dict
 collection_resource_dict = collection_resource_instance.to_dict()

@@ -32,7 +32,7 @@ json = "{}"
 # create an instance of MediaInfoResource from a JSON string
 media_info_resource_instance = MediaInfoResource.from_json(json)
 # print the JSON string representation of the object
-print MediaInfoResource.to_json()
+print(MediaInfoResource.to_json())
 
 # convert the object into a dict
 media_info_resource_dict = media_info_resource_instance.to_dict()

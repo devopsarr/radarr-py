@@ -36,7 +36,7 @@ json = "{}"
 # create an instance of ImportListResource from a JSON string
 import_list_resource_instance = ImportListResource.from_json(json)
 # print the JSON string representation of the object
-print ImportListResource.to_json()
+print(ImportListResource.to_json())
 
 # convert the object into a dict
 import_list_resource_dict = import_list_resource_instance.to_dict()

@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of BlocklistBulkResource from a JSON string
 blocklist_bulk_resource_instance = BlocklistBulkResource.from_json(json)
 # print the JSON string representation of the object
-print BlocklistBulkResource.to_json()
+print(BlocklistBulkResource.to_json())
 
 # convert the object into a dict
 blocklist_bulk_resource_dict = blocklist_bulk_resource_instance.to_dict()

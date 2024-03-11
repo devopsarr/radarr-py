@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of QueueResourcePagingResource from a JSON string
 queue_resource_paging_resource_instance = QueueResourcePagingResource.from_json(json)
 # print the JSON string representation of the object
-print QueueResourcePagingResource.to_json()
+print(QueueResourcePagingResource.to_json())
 
 # convert the object into a dict
 queue_resource_paging_resource_dict = queue_resource_paging_resource_instance.to_dict()

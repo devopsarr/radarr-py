@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.media_cover import MediaCover
 from radarr.models.movie_status_type import MovieStatusType
@@ -44,11 +44,11 @@ class CollectionMovieResource(BaseModel):
     folder: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["tmdbId", "imdbId", "title", "cleanTitle", "sortTitle", "status", "overview", "runtime", "images", "year", "ratings", "genres", "folder"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

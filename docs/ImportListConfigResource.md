@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of ImportListConfigResource from a JSON string
 import_list_config_resource_instance = ImportListConfigResource.from_json(json)
 # print the JSON string representation of the object
-print ImportListConfigResource.to_json()
+print(ImportListConfigResource.to_json())
 
 # convert the object into a dict
 import_list_config_resource_dict = import_list_config_resource_instance.to_dict()

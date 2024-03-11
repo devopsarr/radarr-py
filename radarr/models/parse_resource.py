@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.custom_format_resource import CustomFormatResource
 from radarr.models.language import Language
@@ -39,11 +39,11 @@ class ParseResource(BaseModel):
     custom_format_score: Optional[StrictInt] = Field(default=None, alias="customFormatScore")
     __properties: ClassVar[List[str]] = ["id", "title", "parsedMovieInfo", "movie", "languages", "customFormats", "customFormatScore"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

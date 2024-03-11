@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of RemotePathMappingResource from a JSON string
 remote_path_mapping_resource_instance = RemotePathMappingResource.from_json(json)
 # print the JSON string representation of the object
-print RemotePathMappingResource.to_json()
+print(RemotePathMappingResource.to_json())
 
 # convert the object into a dict
 remote_path_mapping_resource_dict = remote_path_mapping_resource_instance.to_dict()

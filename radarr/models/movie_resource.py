@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from radarr.models.add_movie_options import AddMovieOptions
 from radarr.models.alternative_title_resource import AlternativeTitleResource
@@ -83,11 +83,11 @@ class MovieResource(BaseModel):
     statistics: Optional[MovieStatisticsResource] = None
     __properties: ClassVar[List[str]] = ["id", "title", "originalTitle", "originalLanguage", "alternateTitles", "secondaryYear", "secondaryYearSourceId", "sortTitle", "sizeOnDisk", "status", "overview", "inCinemas", "physicalRelease", "digitalRelease", "physicalReleaseNote", "images", "website", "remotePoster", "year", "youTubeTrailerId", "studio", "path", "qualityProfileId", "hasFile", "monitored", "minimumAvailability", "isAvailable", "folderName", "runtime", "cleanTitle", "imdbId", "tmdbId", "titleSlug", "rootFolderPath", "folder", "certification", "genres", "tags", "added", "addOptions", "ratings", "movieFile", "collection", "popularity", "statistics"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

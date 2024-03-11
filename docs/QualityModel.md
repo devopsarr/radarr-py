@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of QualityModel from a JSON string
 quality_model_instance = QualityModel.from_json(json)
 # print the JSON string representation of the object
-print QualityModel.to_json()
+print(QualityModel.to_json())
 
 # convert the object into a dict
 quality_model_dict = quality_model_instance.to_dict()

@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of IndexerFlagResource from a JSON string
 indexer_flag_resource_instance = IndexerFlagResource.from_json(json)
 # print the JSON string representation of the object
-print IndexerFlagResource.to_json()
+print(IndexerFlagResource.to_json())
 
 # convert the object into a dict
 indexer_flag_resource_dict = indexer_flag_resource_instance.to_dict()

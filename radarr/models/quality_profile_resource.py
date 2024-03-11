@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.language import Language
 from radarr.models.profile_format_item_resource import ProfileFormatItemResource
@@ -40,11 +40,11 @@ class QualityProfileResource(BaseModel):
     language: Optional[Language] = None
     __properties: ClassVar[List[str]] = ["id", "name", "upgradeAllowed", "cutoff", "items", "minFormatScore", "cutoffFormatScore", "formatItems", "language"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

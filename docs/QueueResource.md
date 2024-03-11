@@ -40,7 +40,7 @@ json = "{}"
 # create an instance of QueueResource from a JSON string
 queue_resource_instance = QueueResource.from_json(json)
 # print the JSON string representation of the object
-print QueueResource.to_json()
+print(QueueResource.to_json())
 
 # convert the object into a dict
 queue_resource_dict = queue_resource_instance.to_dict()

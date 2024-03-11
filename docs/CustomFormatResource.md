@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of CustomFormatResource from a JSON string
 custom_format_resource_instance = CustomFormatResource.from_json(json)
 # print the JSON string representation of the object
-print CustomFormatResource.to_json()
+print(CustomFormatResource.to_json())
 
 # convert the object into a dict
 custom_format_resource_dict = custom_format_resource_instance.to_dict()

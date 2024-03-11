@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of LanguageResource from a JSON string
 language_resource_instance = LanguageResource.from_json(json)
 # print the JSON string representation of the object
-print LanguageResource.to_json()
+print(LanguageResource.to_json())
 
 # convert the object into a dict
 language_resource_dict = language_resource_instance.to_dict()

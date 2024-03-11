@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of MovieCollectionResource from a JSON string
 movie_collection_resource_instance = MovieCollectionResource.from_json(json)
 # print the JSON string representation of the object
-print MovieCollectionResource.to_json()
+print(MovieCollectionResource.to_json())
 
 # convert the object into a dict
 movie_collection_resource_dict = movie_collection_resource_instance.to_dict()

@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -38,11 +38,11 @@ class TagDetailsResource(BaseModel):
     movie_ids: Optional[List[StrictInt]] = Field(default=None, alias="movieIds")
     __properties: ClassVar[List[str]] = ["id", "label", "delayProfileIds", "importListIds", "notificationIds", "releaseProfileIds", "indexerIds", "downloadClientIds", "autoTagIds", "movieIds"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

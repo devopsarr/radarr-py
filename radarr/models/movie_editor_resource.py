@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.apply_tags import ApplyTags
 from radarr.models.movie_status_type import MovieStatusType
@@ -40,11 +40,11 @@ class MovieEditorResource(BaseModel):
     add_import_exclusion: Optional[StrictBool] = Field(default=None, alias="addImportExclusion")
     __properties: ClassVar[List[str]] = ["movieIds", "monitored", "qualityProfileId", "minimumAvailability", "rootFolderPath", "tags", "applyTags", "moveFiles", "deleteFiles", "addImportExclusion"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of CreditResource from a JSON string
 credit_resource_instance = CreditResource.from_json(json)
 # print the JSON string representation of the object
-print CreditResource.to_json()
+print(CreditResource.to_json())
 
 # convert the object into a dict
 credit_resource_dict = credit_resource_instance.to_dict()

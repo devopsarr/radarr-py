@@ -25,7 +25,7 @@ json = "{}"
 # create an instance of CustomFormatSpecificationSchema from a JSON string
 custom_format_specification_schema_instance = CustomFormatSpecificationSchema.from_json(json)
 # print the JSON string representation of the object
-print CustomFormatSpecificationSchema.to_json()
+print(CustomFormatSpecificationSchema.to_json())
 
 # convert the object into a dict
 custom_format_specification_schema_dict = custom_format_specification_schema_instance.to_dict()

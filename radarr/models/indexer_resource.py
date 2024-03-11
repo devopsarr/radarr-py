@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from radarr.models.contract_field import ContractField
 from radarr.models.download_protocol import DownloadProtocol
@@ -49,11 +49,11 @@ class IndexerResource(BaseModel):
     download_client_id: Optional[StrictInt] = Field(default=None, alias="downloadClientId")
     __properties: ClassVar[List[str]] = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "enableRss", "enableAutomaticSearch", "enableInteractiveSearch", "supportsRss", "supportsSearch", "protocol", "priority", "downloadClientId"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

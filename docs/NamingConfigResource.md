@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of NamingConfigResource from a JSON string
 naming_config_resource_instance = NamingConfigResource.from_json(json)
 # print the JSON string representation of the object
-print NamingConfigResource.to_json()
+print(NamingConfigResource.to_json())
 
 # convert the object into a dict
 naming_config_resource_dict = naming_config_resource_instance.to_dict()

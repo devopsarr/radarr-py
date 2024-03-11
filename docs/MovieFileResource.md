@@ -33,7 +33,7 @@ json = "{}"
 # create an instance of MovieFileResource from a JSON string
 movie_file_resource_instance = MovieFileResource.from_json(json)
 # print the JSON string representation of the object
-print MovieFileResource.to_json()
+print(MovieFileResource.to_json())
 
 # convert the object into a dict
 movie_file_resource_dict = movie_file_resource_instance.to_dict()

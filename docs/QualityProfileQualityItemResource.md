@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of QualityProfileQualityItemResource from a JSON string
 quality_profile_quality_item_resource_instance = QualityProfileQualityItemResource.from_json(json)
 # print the JSON string representation of the object
-print QualityProfileQualityItemResource.to_json()
+print(QualityProfileQualityItemResource.to_json())
 
 # convert the object into a dict
 quality_profile_quality_item_resource_dict = quality_profile_quality_item_resource_instance.to_dict()

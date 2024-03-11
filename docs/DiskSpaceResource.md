@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of DiskSpaceResource from a JSON string
 disk_space_resource_instance = DiskSpaceResource.from_json(json)
 # print the JSON string representation of the object
-print DiskSpaceResource.to_json()
+print(DiskSpaceResource.to_json())
 
 # convert the object into a dict
 disk_space_resource_dict = disk_space_resource_instance.to_dict()
