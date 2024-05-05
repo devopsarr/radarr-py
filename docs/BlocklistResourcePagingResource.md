@@ -27,7 +27,7 @@ print(BlocklistResourcePagingResource.to_json())
 # convert the object into a dict
 blocklist_resource_paging_resource_dict = blocklist_resource_paging_resource_instance.to_dict()
 # create an instance of BlocklistResourcePagingResource from a dict
-blocklist_resource_paging_resource_form_dict = blocklist_resource_paging_resource.from_dict(blocklist_resource_paging_resource_dict)
+blocklist_resource_paging_resource_from_dict = BlocklistResourcePagingResource.from_dict(blocklist_resource_paging_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -26,7 +26,7 @@ print(Quality.to_json())
 # convert the object into a dict
 quality_dict = quality_instance.to_dict()
 # create an instance of Quality from a dict
-quality_form_dict = quality.from_dict(quality_dict)
+quality_from_dict = Quality.from_dict(quality_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

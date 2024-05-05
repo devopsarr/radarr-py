@@ -24,7 +24,7 @@ print(LanguageResource.to_json())
 # convert the object into a dict
 language_resource_dict = language_resource_instance.to_dict()
 # create an instance of LanguageResource from a dict
-language_resource_form_dict = language_resource.from_dict(language_resource_dict)
+language_resource_from_dict = LanguageResource.from_dict(language_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

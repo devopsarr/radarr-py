@@ -26,7 +26,7 @@ print(RenameMovieResource.to_json())
 # convert the object into a dict
 rename_movie_resource_dict = rename_movie_resource_instance.to_dict()
 # create an instance of RenameMovieResource from a dict
-rename_movie_resource_form_dict = rename_movie_resource.from_dict(rename_movie_resource_dict)
+rename_movie_resource_from_dict = RenameMovieResource.from_dict(rename_movie_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

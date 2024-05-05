@@ -22,7 +22,7 @@ print(QueueBulkResource.to_json())
 # convert the object into a dict
 queue_bulk_resource_dict = queue_bulk_resource_instance.to_dict()
 # create an instance of QueueBulkResource from a dict
-queue_bulk_resource_form_dict = queue_bulk_resource.from_dict(queue_bulk_resource_dict)
+queue_bulk_resource_from_dict = QueueBulkResource.from_dict(queue_bulk_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

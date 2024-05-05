@@ -24,7 +24,7 @@ print(IndexerFlagResource.to_json())
 # convert the object into a dict
 indexer_flag_resource_dict = indexer_flag_resource_instance.to_dict()
 # create an instance of IndexerFlagResource from a dict
-indexer_flag_resource_form_dict = indexer_flag_resource.from_dict(indexer_flag_resource_dict)
+indexer_flag_resource_from_dict = IndexerFlagResource.from_dict(indexer_flag_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

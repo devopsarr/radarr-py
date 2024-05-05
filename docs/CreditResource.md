@@ -32,7 +32,7 @@ print(CreditResource.to_json())
 # convert the object into a dict
 credit_resource_dict = credit_resource_instance.to_dict()
 # create an instance of CreditResource from a dict
-credit_resource_form_dict = credit_resource.from_dict(credit_resource_dict)
+credit_resource_from_dict = CreditResource.from_dict(credit_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

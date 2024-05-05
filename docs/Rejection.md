@@ -23,7 +23,7 @@ print(Rejection.to_json())
 # convert the object into a dict
 rejection_dict = rejection_instance.to_dict()
 # create an instance of Rejection from a dict
-rejection_form_dict = rejection.from_dict(rejection_dict)
+rejection_from_dict = Rejection.from_dict(rejection_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

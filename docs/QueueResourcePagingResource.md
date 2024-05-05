@@ -27,7 +27,7 @@ print(QueueResourcePagingResource.to_json())
 # convert the object into a dict
 queue_resource_paging_resource_dict = queue_resource_paging_resource_instance.to_dict()
 # create an instance of QueueResourcePagingResource from a dict
-queue_resource_paging_resource_form_dict = queue_resource_paging_resource.from_dict(queue_resource_paging_resource_dict)
+queue_resource_paging_resource_from_dict = QueueResourcePagingResource.from_dict(queue_resource_paging_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

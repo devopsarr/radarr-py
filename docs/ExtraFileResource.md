@@ -27,7 +27,7 @@ print(ExtraFileResource.to_json())
 # convert the object into a dict
 extra_file_resource_dict = extra_file_resource_instance.to_dict()
 # create an instance of ExtraFileResource from a dict
-extra_file_resource_form_dict = extra_file_resource.from_dict(extra_file_resource_dict)
+extra_file_resource_from_dict = ExtraFileResource.from_dict(extra_file_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

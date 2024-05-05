@@ -34,7 +34,7 @@ print(ImportExclusionsResource.to_json())
 # convert the object into a dict
 import_exclusions_resource_dict = import_exclusions_resource_instance.to_dict()
 # create an instance of ImportExclusionsResource from a dict
-import_exclusions_resource_form_dict = import_exclusions_resource.from_dict(import_exclusions_resource_dict)
+import_exclusions_resource_from_dict = ImportExclusionsResource.from_dict(import_exclusions_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
