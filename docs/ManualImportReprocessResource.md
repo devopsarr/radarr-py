@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **download_id** | **str** |  | [optional] 
 **custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
 **custom_format_score** | **int** |  | [optional] 
+**indexer_flags** | **int** |  | [optional] 
 **rejections** | [**List[Rejection]**](Rejection.md) |  | [optional] 
 
 ## Example
