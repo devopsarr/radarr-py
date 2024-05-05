@@ -28,7 +28,7 @@ print(AutoTaggingSpecificationSchema.to_json())
 # convert the object into a dict
 auto_tagging_specification_schema_dict = auto_tagging_specification_schema_instance.to_dict()
 # create an instance of AutoTaggingSpecificationSchema from a dict
-auto_tagging_specification_schema_form_dict = auto_tagging_specification_schema.from_dict(auto_tagging_specification_schema_dict)
+auto_tagging_specification_schema_from_dict = AutoTaggingSpecificationSchema.from_dict(auto_tagging_specification_schema_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

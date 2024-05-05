@@ -24,7 +24,7 @@ print(UnmappedFolder.to_json())
 # convert the object into a dict
 unmapped_folder_dict = unmapped_folder_instance.to_dict()
 # create an instance of UnmappedFolder from a dict
-unmapped_folder_form_dict = unmapped_folder.from_dict(unmapped_folder_dict)
+unmapped_folder_from_dict = UnmappedFolder.from_dict(unmapped_folder_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

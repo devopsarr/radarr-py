@@ -43,7 +43,7 @@ print(MediaManagementConfigResource.to_json())
 # convert the object into a dict
 media_management_config_resource_dict = media_management_config_resource_instance.to_dict()
 # create an instance of MediaManagementConfigResource from a dict
-media_management_config_resource_form_dict = media_management_config_resource.from_dict(media_management_config_resource_dict)
+media_management_config_resource_from_dict = MediaManagementConfigResource.from_dict(media_management_config_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

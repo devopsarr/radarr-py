@@ -31,7 +31,7 @@ print(MovieEditorResource.to_json())
 # convert the object into a dict
 movie_editor_resource_dict = movie_editor_resource_instance.to_dict()
 # create an instance of MovieEditorResource from a dict
-movie_editor_resource_form_dict = movie_editor_resource.from_dict(movie_editor_resource_dict)
+movie_editor_resource_from_dict = MovieEditorResource.from_dict(movie_editor_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

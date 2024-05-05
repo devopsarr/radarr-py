@@ -28,7 +28,7 @@ print(QualityDefinitionResource.to_json())
 # convert the object into a dict
 quality_definition_resource_dict = quality_definition_resource_instance.to_dict()
 # create an instance of QualityDefinitionResource from a dict
-quality_definition_resource_form_dict = quality_definition_resource.from_dict(quality_definition_resource_dict)
+quality_definition_resource_from_dict = QualityDefinitionResource.from_dict(quality_definition_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

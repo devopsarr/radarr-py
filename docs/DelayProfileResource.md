@@ -32,7 +32,7 @@ print(DelayProfileResource.to_json())
 # convert the object into a dict
 delay_profile_resource_dict = delay_profile_resource_instance.to_dict()
 # create an instance of DelayProfileResource from a dict
-delay_profile_resource_form_dict = delay_profile_resource.from_dict(delay_profile_resource_dict)
+delay_profile_resource_from_dict = DelayProfileResource.from_dict(delay_profile_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

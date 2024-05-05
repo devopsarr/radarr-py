@@ -37,7 +37,7 @@ print(MediaInfoResource.to_json())
 # convert the object into a dict
 media_info_resource_dict = media_info_resource_instance.to_dict()
 # create an instance of MediaInfoResource from a dict
-media_info_resource_form_dict = media_info_resource.from_dict(media_info_resource_dict)
+media_info_resource_from_dict = MediaInfoResource.from_dict(media_info_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

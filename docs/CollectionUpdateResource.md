@@ -28,7 +28,7 @@ print(CollectionUpdateResource.to_json())
 # convert the object into a dict
 collection_update_resource_dict = collection_update_resource_instance.to_dict()
 # create an instance of CollectionUpdateResource from a dict
-collection_update_resource_form_dict = collection_update_resource.from_dict(collection_update_resource_dict)
+collection_update_resource_from_dict = CollectionUpdateResource.from_dict(collection_update_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

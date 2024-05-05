@@ -24,7 +24,7 @@ print(RatingChild.to_json())
 # convert the object into a dict
 rating_child_dict = rating_child_instance.to_dict()
 # create an instance of RatingChild from a dict
-rating_child_form_dict = rating_child.from_dict(rating_child_dict)
+rating_child_from_dict = RatingChild.from_dict(rating_child_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

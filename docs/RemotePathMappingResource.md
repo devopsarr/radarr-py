@@ -25,7 +25,7 @@ print(RemotePathMappingResource.to_json())
 # convert the object into a dict
 remote_path_mapping_resource_dict = remote_path_mapping_resource_instance.to_dict()
 # create an instance of RemotePathMappingResource from a dict
-remote_path_mapping_resource_form_dict = remote_path_mapping_resource.from_dict(remote_path_mapping_resource_dict)
+remote_path_mapping_resource_from_dict = RemotePathMappingResource.from_dict(remote_path_mapping_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

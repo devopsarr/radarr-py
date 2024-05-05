@@ -22,7 +22,7 @@ print(LocalizationLanguageResource.to_json())
 # convert the object into a dict
 localization_language_resource_dict = localization_language_resource_instance.to_dict()
 # create an instance of LocalizationLanguageResource from a dict
-localization_language_resource_form_dict = localization_language_resource.from_dict(localization_language_resource_dict)
+localization_language_resource_from_dict = LocalizationLanguageResource.from_dict(localization_language_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

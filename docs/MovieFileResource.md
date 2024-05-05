@@ -38,7 +38,7 @@ print(MovieFileResource.to_json())
 # convert the object into a dict
 movie_file_resource_dict = movie_file_resource_instance.to_dict()
 # create an instance of MovieFileResource from a dict
-movie_file_resource_form_dict = movie_file_resource.from_dict(movie_file_resource_dict)
+movie_file_resource_from_dict = MovieFileResource.from_dict(movie_file_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

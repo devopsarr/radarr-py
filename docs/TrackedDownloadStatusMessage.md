@@ -23,7 +23,7 @@ print(TrackedDownloadStatusMessage.to_json())
 # convert the object into a dict
 tracked_download_status_message_dict = tracked_download_status_message_instance.to_dict()
 # create an instance of TrackedDownloadStatusMessage from a dict
-tracked_download_status_message_form_dict = tracked_download_status_message.from_dict(tracked_download_status_message_dict)
+tracked_download_status_message_from_dict = TrackedDownloadStatusMessage.from_dict(tracked_download_status_message_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

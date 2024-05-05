@@ -26,7 +26,7 @@ print(DiskSpaceResource.to_json())
 # convert the object into a dict
 disk_space_resource_dict = disk_space_resource_instance.to_dict()
 # create an instance of DiskSpaceResource from a dict
-disk_space_resource_form_dict = disk_space_resource.from_dict(disk_space_resource_dict)
+disk_space_resource_from_dict = DiskSpaceResource.from_dict(disk_space_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

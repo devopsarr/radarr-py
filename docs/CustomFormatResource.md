@@ -25,7 +25,7 @@ print(CustomFormatResource.to_json())
 # convert the object into a dict
 custom_format_resource_dict = custom_format_resource_instance.to_dict()
 # create an instance of CustomFormatResource from a dict
-custom_format_resource_form_dict = custom_format_resource.from_dict(custom_format_resource_dict)
+custom_format_resource_from_dict = CustomFormatResource.from_dict(custom_format_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

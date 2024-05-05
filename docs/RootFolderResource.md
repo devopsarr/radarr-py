@@ -26,7 +26,7 @@ print(RootFolderResource.to_json())
 # convert the object into a dict
 root_folder_resource_dict = root_folder_resource_instance.to_dict()
 # create an instance of RootFolderResource from a dict
-root_folder_resource_form_dict = root_folder_resource.from_dict(root_folder_resource_dict)
+root_folder_resource_from_dict = RootFolderResource.from_dict(root_folder_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

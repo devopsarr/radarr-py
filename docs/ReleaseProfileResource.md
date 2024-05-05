@@ -28,7 +28,7 @@ print(ReleaseProfileResource.to_json())
 # convert the object into a dict
 release_profile_resource_dict = release_profile_resource_instance.to_dict()
 # create an instance of ReleaseProfileResource from a dict
-release_profile_resource_form_dict = release_profile_resource.from_dict(release_profile_resource_dict)
+release_profile_resource_from_dict = ReleaseProfileResource.from_dict(release_profile_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

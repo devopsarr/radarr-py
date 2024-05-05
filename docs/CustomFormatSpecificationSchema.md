@@ -30,7 +30,7 @@ print(CustomFormatSpecificationSchema.to_json())
 # convert the object into a dict
 custom_format_specification_schema_dict = custom_format_specification_schema_instance.to_dict()
 # create an instance of CustomFormatSpecificationSchema from a dict
-custom_format_specification_schema_form_dict = custom_format_specification_schema.from_dict(custom_format_specification_schema_dict)
+custom_format_specification_schema_from_dict = CustomFormatSpecificationSchema.from_dict(custom_format_specification_schema_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
