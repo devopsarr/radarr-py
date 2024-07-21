@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **on_movie_file_delete** | **bool** |  | [optional] 
 **on_movie_file_delete_for_upgrade** | **bool** |  | [optional] 
 **on_health_issue** | **bool** |  | [optional] 
+**include_health_warnings** | **bool** |  | [optional] 
 **on_health_restored** | **bool** |  | [optional] 
 **on_application_update** | **bool** |  | [optional] 
 **on_manual_interaction_required** | **bool** |  | [optional] 
@@ -40,7 +41,6 @@ Name | Type | Description | Notes
 **supports_on_health_restored** | **bool** |  | [optional] 
 **supports_on_application_update** | **bool** |  | [optional] 
 **supports_on_manual_interaction_required** | **bool** |  | [optional] 
-**include_health_warnings** | **bool** |  | [optional] 
 **test_command** | **str** |  | [optional] 
 
 ## Example

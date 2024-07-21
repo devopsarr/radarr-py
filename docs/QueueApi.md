@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**delete_queue**](QueueApi.md#delete_queue) | **DELETE** /api/v3/queue/{id} | 
 [**delete_queue_bulk**](QueueApi.md#delete_queue_bulk) | **DELETE** /api/v3/queue/bulk | 
 [**get_queue**](QueueApi.md#get_queue) | **GET** /api/v3/queue | 
-[**get_queue_by_id**](QueueApi.md#get_queue_by_id) | **GET** /api/v3/queue/{id} | 
 
 
 # **delete_queue**
@@ -94,7 +93,7 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -183,7 +182,7 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -286,90 +285,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_queue_by_id**
-> QueueResource get_queue_by_id(id)
-
-
-
-### Example
-
-* Api Key Authentication (apikey):
-* Api Key Authentication (X-Api-Key):
-
-```python
-import radarr
-from radarr.models.queue_resource import QueueResource
-from radarr.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost:7878
-# See configuration.py for a list of all supported configuration parameters.
-configuration = radarr.Configuration(
-    host = "http://localhost:7878"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with radarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = radarr.QueueApi(api_client)
-    id = 56 # int | 
-
-    try:
-        api_response = api_instance.get_queue_by_id(id)
-        print("The response of QueueApi->get_queue_by_id:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling QueueApi->get_queue_by_id: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**|  | 
-
-### Return type
-
-[**QueueResource**](QueueResource.md)
-
-### Authorization
-
-[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
