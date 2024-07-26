@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **ratings** | [**Ratings**](Ratings.md) |  | [optional] 
 **genres** | **List[str]** |  | [optional] 
 **folder** | **str** |  | [optional] 
+**is_existing** | **bool** |  | [optional] 
+**is_excluded** | **bool** |  | [optional] 
 
 ## Example
 

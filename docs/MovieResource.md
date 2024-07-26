@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **path** | **str** |  | [optional] 
 **quality_profile_id** | **int** |  | [optional] 
 **has_file** | **bool** |  | [optional] 
+**movie_file_id** | **int** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
 **minimum_availability** | [**MovieStatusType**](MovieStatusType.md) |  | [optional] 
 **is_available** | **bool** |  | [optional] 

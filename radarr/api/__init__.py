@@ -14,6 +14,7 @@ from radarr.api.command_api import CommandApi
 from radarr.api.credit_api import CreditApi
 from radarr.api.custom_filter_api import CustomFilterApi
 from radarr.api.custom_format_api import CustomFormatApi
+from radarr.api.cutoff_api import CutoffApi
 from radarr.api.delay_profile_api import DelayProfileApi
 from radarr.api.disk_space_api import DiskSpaceApi
 from radarr.api.download_client_api import DownloadClientApi
@@ -39,6 +40,7 @@ from radarr.api.media_cover_api import MediaCoverApi
 from radarr.api.media_management_config_api import MediaManagementConfigApi
 from radarr.api.metadata_api import MetadataApi
 from radarr.api.metadata_config_api import MetadataConfigApi
+from radarr.api.missing_api import MissingApi
 from radarr.api.movie_api import MovieApi
 from radarr.api.movie_editor_api import MovieEditorApi
 from radarr.api.movie_file_api import MovieFileApi

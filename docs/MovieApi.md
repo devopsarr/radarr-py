@@ -83,14 +83,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -174,7 +174,7 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -257,12 +257,12 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_movie**
-> List[MovieResource] list_movie(tmdb_id=tmdb_id, exclude_local_covers=exclude_local_covers)
+> List[MovieResource] list_movie(tmdb_id=tmdb_id, exclude_local_covers=exclude_local_covers, language_id=language_id)
 
 
 
@@ -306,9 +306,10 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.MovieApi(api_client)
     tmdb_id = 56 # int |  (optional)
     exclude_local_covers = False # bool |  (optional) (default to False)
+    language_id = 56 # int |  (optional)
 
     try:
-        api_response = api_instance.list_movie(tmdb_id=tmdb_id, exclude_local_covers=exclude_local_covers)
+        api_response = api_instance.list_movie(tmdb_id=tmdb_id, exclude_local_covers=exclude_local_covers, language_id=language_id)
         print("The response of MovieApi->list_movie:\n")
         pprint(api_response)
     except Exception as e:
@@ -324,6 +325,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tmdb_id** | **int**|  | [optional] 
  **exclude_local_covers** | **bool**|  | [optional] [default to False]
+ **language_id** | **int**|  | [optional] 
 
 ### Return type
 
@@ -342,7 +344,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -422,14 +424,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | Success |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
