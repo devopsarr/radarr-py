@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/devopsarr/radarr-py/compare/v1.0.1...v1.1.0) (2024-07-29)
+
+
+### Features
+
+* **devopsarr/radarr-py#71:** add radarr lookup return type ([33fc6b3](https://github.com/devopsarr/radarr-py/commit/33fc6b36a3e2a44b198ab6b227e0f5f012f3ca7e))
+
 ## [1.0.1](https://github.com/devopsarr/radarr-py/compare/v1.0.0...v1.0.1) (2024-02-21)
 
 
