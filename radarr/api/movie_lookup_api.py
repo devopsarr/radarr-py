@@ -17,7 +17,8 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-from typing import Optional
+from typing import List, Optional
+from radarr.models.movie_resource import MovieResource
 
 from radarr.api_client import ApiClient, RequestSerialized
 from radarr.api_response import ApiResponse
@@ -38,7 +39,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup(
+    def list_movie_lookup(
         self,
         term: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -53,8 +54,8 @@ class MovieLookupApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> None:
-        """get_movie_lookup
+    ) -> List[MovieResource]:
+        """list_movie_lookup
 
 
         :param term:
@@ -81,7 +82,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_serialize(
+        _param = self._list_movie_lookup_serialize(
             term=term,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -90,7 +91,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -104,7 +105,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_with_http_info(
+    def list_movie_lookup_with_http_info(
         self,
         term: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -119,8 +120,8 @@ class MovieLookupApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[None]:
-        """get_movie_lookup
+    ) -> ApiResponse[List[MovieResource]]:
+        """list_movie_lookup
 
 
         :param term:
@@ -147,7 +148,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_serialize(
+        _param = self._list_movie_lookup_serialize(
             term=term,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -156,7 +157,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -170,7 +171,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_without_preload_content(
+    def list_movie_lookup_without_preload_content(
         self,
         term: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -186,7 +187,7 @@ class MovieLookupApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """get_movie_lookup
+        """list_movie_lookup
 
 
         :param term:
@@ -213,7 +214,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_serialize(
+        _param = self._list_movie_lookup_serialize(
             term=term,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -222,7 +223,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -231,7 +232,7 @@ class MovieLookupApi:
         return response_data.response
 
 
-    def _get_movie_lookup_serialize(
+    def _list_movie_lookup_serialize(
         self,
         term,
         _request_auth,
@@ -263,6 +264,13 @@ class MovieLookupApi:
         # process the body parameter
 
 
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -290,7 +298,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_imdb(
+    def list_movie_lookup_imdb(
         self,
         imdb_id: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -305,8 +313,8 @@ class MovieLookupApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> None:
-        """get_movie_lookup_imdb
+    ) -> List[MovieResource]:
+        """list_movie_lookup_imdb
 
 
         :param imdb_id:
@@ -333,7 +341,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_imdb_serialize(
+        _param = self._list_movie_lookup_imdb_serialize(
             imdb_id=imdb_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -342,7 +350,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -356,7 +364,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_imdb_with_http_info(
+    def list_movie_lookup_imdb_with_http_info(
         self,
         imdb_id: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -371,8 +379,8 @@ class MovieLookupApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[None]:
-        """get_movie_lookup_imdb
+    ) -> ApiResponse[List[MovieResource]]:
+        """list_movie_lookup_imdb
 
 
         :param imdb_id:
@@ -399,7 +407,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_imdb_serialize(
+        _param = self._list_movie_lookup_imdb_serialize(
             imdb_id=imdb_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -408,7 +416,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -422,7 +430,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_imdb_without_preload_content(
+    def list_movie_lookup_imdb_without_preload_content(
         self,
         imdb_id: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -438,7 +446,7 @@ class MovieLookupApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """get_movie_lookup_imdb
+        """list_movie_lookup_imdb
 
 
         :param imdb_id:
@@ -465,7 +473,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_imdb_serialize(
+        _param = self._list_movie_lookup_imdb_serialize(
             imdb_id=imdb_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -474,7 +482,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -483,7 +491,7 @@ class MovieLookupApi:
         return response_data.response
 
 
-    def _get_movie_lookup_imdb_serialize(
+    def _list_movie_lookup_imdb_serialize(
         self,
         imdb_id,
         _request_auth,
@@ -515,6 +523,13 @@ class MovieLookupApi:
         # process the body parameter
 
 
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -542,7 +557,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_tmdb(
+    def list_movie_lookup_tmdb(
         self,
         tmdb_id: Optional[StrictInt] = None,
         _request_timeout: Union[
@@ -557,8 +572,8 @@ class MovieLookupApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> None:
-        """get_movie_lookup_tmdb
+    ) -> List[MovieResource]:
+        """list_movie_lookup_tmdb
 
 
         :param tmdb_id:
@@ -585,7 +600,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_tmdb_serialize(
+        _param = self._list_movie_lookup_tmdb_serialize(
             tmdb_id=tmdb_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -594,7 +609,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -608,7 +623,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_tmdb_with_http_info(
+    def list_movie_lookup_tmdb_with_http_info(
         self,
         tmdb_id: Optional[StrictInt] = None,
         _request_timeout: Union[
@@ -623,8 +638,8 @@ class MovieLookupApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[None]:
-        """get_movie_lookup_tmdb
+    ) -> ApiResponse[List[MovieResource]]:
+        """list_movie_lookup_tmdb
 
 
         :param tmdb_id:
@@ -651,7 +666,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_tmdb_serialize(
+        _param = self._list_movie_lookup_tmdb_serialize(
             tmdb_id=tmdb_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -660,7 +675,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -674,7 +689,7 @@ class MovieLookupApi:
 
 
     @validate_call
-    def get_movie_lookup_tmdb_without_preload_content(
+    def list_movie_lookup_tmdb_without_preload_content(
         self,
         tmdb_id: Optional[StrictInt] = None,
         _request_timeout: Union[
@@ -690,7 +705,7 @@ class MovieLookupApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """get_movie_lookup_tmdb
+        """list_movie_lookup_tmdb
 
 
         :param tmdb_id:
@@ -717,7 +732,7 @@ class MovieLookupApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_movie_lookup_tmdb_serialize(
+        _param = self._list_movie_lookup_tmdb_serialize(
             tmdb_id=tmdb_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -726,7 +741,7 @@ class MovieLookupApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '2XX': None,
+            '2XX': "List[MovieResource]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -735,7 +750,7 @@ class MovieLookupApi:
         return response_data.response
 
 
-    def _get_movie_lookup_tmdb_serialize(
+    def _list_movie_lookup_tmdb_serialize(
         self,
         tmdb_id,
         _request_auth,
@@ -767,6 +782,13 @@ class MovieLookupApi:
         # process the body parameter
 
 
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
