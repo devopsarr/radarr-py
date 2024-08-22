@@ -24,9 +24,9 @@ from radarr.api.file_system_api import FileSystemApi
 from radarr.api.health_api import HealthApi
 from radarr.api.history_api import HistoryApi
 from radarr.api.host_config_api import HostConfigApi
-from radarr.api.import_exclusions_api import ImportExclusionsApi
 from radarr.api.import_list_api import ImportListApi
 from radarr.api.import_list_config_api import ImportListConfigApi
+from radarr.api.import_list_exclusion_api import ImportListExclusionApi
 from radarr.api.import_list_movies_api import ImportListMoviesApi
 from radarr.api.indexer_api import IndexerApi
 from radarr.api.indexer_config_api import IndexerConfigApi
