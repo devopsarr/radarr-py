@@ -76,9 +76,9 @@ class RootFolderResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in unmapped_folders (list)
         _items = []
         if self.unmapped_folders:
-            for _item in self.unmapped_folders:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_unmapped_folders in self.unmapped_folders:
+                if _item_unmapped_folders:
+                    _items.append(_item_unmapped_folders.to_dict())
             _dict['unmappedFolders'] = _items
         # set to None if path (nullable) is None
         # and model_fields_set contains the field

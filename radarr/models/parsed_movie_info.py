@@ -94,9 +94,9 @@ class ParsedMovieInfo(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in languages (list)
         _items = []
         if self.languages:
-            for _item in self.languages:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_languages in self.languages:
+                if _item_languages:
+                    _items.append(_item_languages.to_dict())
             _dict['languages'] = _items
         # set to None if movie_titles (nullable) is None
         # and model_fields_set contains the field

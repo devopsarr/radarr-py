@@ -82,16 +82,16 @@ class QualityProfileResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in items (list)
         _items = []
         if self.items:
-            for _item in self.items:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_items in self.items:
+                if _item_items:
+                    _items.append(_item_items.to_dict())
             _dict['items'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in format_items (list)
         _items = []
         if self.format_items:
-            for _item in self.format_items:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_format_items in self.format_items:
+                if _item_format_items:
+                    _items.append(_item_format_items.to_dict())
             _dict['formatItems'] = _items
         # override the default output from pydantic by calling `to_dict()` of language
         if self.language:

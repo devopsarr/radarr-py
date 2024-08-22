@@ -76,9 +76,9 @@ class AutoTaggingResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in specifications (list)
         _items = []
         if self.specifications:
-            for _item in self.specifications:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_specifications in self.specifications:
+                if _item_specifications:
+                    _items.append(_item_specifications.to_dict())
             _dict['specifications'] = _items
         # set to None if name (nullable) is None
         # and model_fields_set contains the field
