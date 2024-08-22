@@ -93,23 +93,23 @@ class ManualImportReprocessResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in languages (list)
         _items = []
         if self.languages:
-            for _item in self.languages:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_languages in self.languages:
+                if _item_languages:
+                    _items.append(_item_languages.to_dict())
             _dict['languages'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in custom_formats (list)
         _items = []
         if self.custom_formats:
-            for _item in self.custom_formats:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_custom_formats in self.custom_formats:
+                if _item_custom_formats:
+                    _items.append(_item_custom_formats.to_dict())
             _dict['customFormats'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in rejections (list)
         _items = []
         if self.rejections:
-            for _item in self.rejections:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rejections in self.rejections:
+                if _item_rejections:
+                    _items.append(_item_rejections.to_dict())
             _dict['rejections'] = _items
         # set to None if path (nullable) is None
         # and model_fields_set contains the field

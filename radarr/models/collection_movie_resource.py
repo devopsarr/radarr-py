@@ -88,9 +88,9 @@ class CollectionMovieResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in images (list)
         _items = []
         if self.images:
-            for _item in self.images:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_images in self.images:
+                if _item_images:
+                    _items.append(_item_images.to_dict())
             _dict['images'] = _items
         # override the default output from pydantic by calling `to_dict()` of ratings
         if self.ratings:

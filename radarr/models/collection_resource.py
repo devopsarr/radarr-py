@@ -87,16 +87,16 @@ class CollectionResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in images (list)
         _items = []
         if self.images:
-            for _item in self.images:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_images in self.images:
+                if _item_images:
+                    _items.append(_item_images.to_dict())
             _dict['images'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in movies (list)
         _items = []
         if self.movies:
-            for _item in self.movies:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_movies in self.movies:
+                if _item_movies:
+                    _items.append(_item_movies.to_dict())
             _dict['movies'] = _items
         # set to None if title (nullable) is None
         # and model_fields_set contains the field

@@ -83,9 +83,9 @@ class CreditResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in images (list)
         _items = []
         if self.images:
-            for _item in self.images:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_images in self.images:
+                if _item_images:
+                    _items.append(_item_images.to_dict())
             _dict['images'] = _items
         # set to None if person_name (nullable) is None
         # and model_fields_set contains the field
