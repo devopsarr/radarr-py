@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **list_sync_level** | **str** |  | [optional] 
-**import_exclusions** | **str** |  | [optional] 
 
 ## Example
 
