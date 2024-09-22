@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **movie_file_id** | **int** |  | [optional] 
 **relative_path** | **str** |  | [optional] 
 **extension** | **str** |  | [optional] 
+**language_tags** | **List[str]** |  | [optional] 
+**title** | **str** |  | [optional] 
 **type** | [**ExtraFileType**](ExtraFileType.md) |  | [optional] 
 
 ## Example

@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **in_cinemas** | **datetime** |  | [optional] 
 **physical_release** | **datetime** |  | [optional] 
 **digital_release** | **datetime** |  | [optional] 
+**release_date** | **datetime** |  | [optional] 
 **physical_release_note** | **str** |  | [optional] 
 **images** | [**List[MediaCover]**](MediaCover.md) |  | [optional] 
 **website** | **str** |  | [optional] 
@@ -50,6 +51,7 @@ Name | Type | Description | Notes
 **movie_file** | [**MovieFileResource**](MovieFileResource.md) |  | [optional] 
 **collection** | [**MovieCollectionResource**](MovieCollectionResource.md) |  | [optional] 
 **popularity** | **float** |  | [optional] 
+**last_search_time** | **datetime** |  | [optional] 
 **statistics** | [**MovieStatisticsResource**](MovieStatisticsResource.md) |  | [optional] 
 
 ## Example
