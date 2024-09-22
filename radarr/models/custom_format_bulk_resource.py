@@ -17,17 +17,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class BlocklistBulkResource(BaseModel):
+class CustomFormatBulkResource(BaseModel):
     """
-    BlocklistBulkResource
+    CustomFormatBulkResource
     """ # noqa: E501
     ids: Optional[List[StrictInt]] = None
-    __properties: ClassVar[List[str]] = ["ids"]
+    include_custom_format_when_renaming: Optional[StrictBool] = Field(default=None, alias="includeCustomFormatWhenRenaming")
+    __properties: ClassVar[List[str]] = ["ids", "includeCustomFormatWhenRenaming"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -47,7 +48,7 @@ class BlocklistBulkResource(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of BlocklistBulkResource from a JSON string"""
+        """Create an instance of CustomFormatBulkResource from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,11 +74,16 @@ class BlocklistBulkResource(BaseModel):
         if self.ids is None and "ids" in self.model_fields_set:
             _dict['ids'] = None
 
+        # set to None if include_custom_format_when_renaming (nullable) is None
+        # and model_fields_set contains the field
+        if self.include_custom_format_when_renaming is None and "include_custom_format_when_renaming" in self.model_fields_set:
+            _dict['includeCustomFormatWhenRenaming'] = None
+
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of BlocklistBulkResource from a dict"""
+        """Create an instance of CustomFormatBulkResource from a dict"""
         if obj is None:
             return None
 
@@ -85,7 +91,8 @@ class BlocklistBulkResource(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "ids": obj.get("ids")
+            "ids": obj.get("ids"),
+            "includeCustomFormatWhenRenaming": obj.get("includeCustomFormatWhenRenaming")
         })
         return _obj
 

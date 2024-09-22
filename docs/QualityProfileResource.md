@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **items** | [**List[QualityProfileQualityItemResource]**](QualityProfileQualityItemResource.md) |  | [optional] 
 **min_format_score** | **int** |  | [optional] 
 **cutoff_format_score** | **int** |  | [optional] 
+**min_upgrade_format_score** | **int** |  | [optional] 
 **format_items** | [**List[ProfileFormatItemResource]**](ProfileFormatItemResource.md) |  | [optional] 
 **language** | [**Language**](Language.md) |  | [optional] 
 

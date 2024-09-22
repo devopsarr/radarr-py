@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
