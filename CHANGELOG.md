@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/devopsarr/radarr-py/compare/v1.1.0...v1.1.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency radarr/radarr to v5.10.4.9218 ([c7fdb55](https://github.com/devopsarr/radarr-py/commit/c7fdb55844c6ec90503028341438d885316157d2))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.9.0 ([cc28f6b](https://github.com/devopsarr/radarr-py/commit/cc28f6b405ec4493caaa706679a73a2f800fb519))
+
 ## [1.1.0](https://github.com/devopsarr/radarr-py/compare/v1.0.1...v1.1.0) (2024-07-29)
 
 
