@@ -873,7 +873,7 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.ImportListApi(api_client)
-    id = 'id_example' # str | 
+    id = 56 # int | 
     force_save = False # bool |  (optional) (default to False)
     import_list_resource = radarr.ImportListResource() # ImportListResource |  (optional)
 
@@ -892,7 +892,7 @@ with radarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**|  | 
  **force_save** | **bool**|  | [optional] [default to False]
  **import_list_resource** | [**ImportListResource**](ImportListResource.md)|  | [optional] 
 

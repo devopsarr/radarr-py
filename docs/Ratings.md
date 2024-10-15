@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **tmdb** | [**RatingChild**](RatingChild.md) |  | [optional] 
 **metacritic** | [**RatingChild**](RatingChild.md) |  | [optional] 
 **rotten_tomatoes** | [**RatingChild**](RatingChild.md) |  | [optional] 
+**trakt** | [**RatingChild**](RatingChild.md) |  | [optional] 
 
 ## Example
 
