@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **timeleft** | **str** |  | [optional] 
 **estimated_completion_time** | **datetime** |  | [optional] 
 **added** | **datetime** |  | [optional] 
-**status** | **str** |  | [optional] 
+**status** | [**QueueStatus**](QueueStatus.md) |  | [optional] 
 **tracked_download_status** | [**TrackedDownloadStatus**](TrackedDownloadStatus.md) |  | [optional] 
 **tracked_download_state** | [**TrackedDownloadState**](TrackedDownloadState.md) |  | [optional] 
 **status_messages** | [**List[TrackedDownloadStatusMessage]**](TrackedDownloadStatusMessage.md) |  | [optional] 

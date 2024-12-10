@@ -18,25 +18,28 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class ImportListType(str, Enum):
+class QueueStatus(str, Enum):
     """
-    ImportListType
+    QueueStatus
     """
 
     """
     allowed enum values
     """
-    PROGRAM = 'program'
-    TMDB = 'tmdb'
-    TRAKT = 'trakt'
-    PLEX = 'plex'
-    SIMKL = 'simkl'
-    OTHER = 'other'
-    ADVANCED = 'advanced'
+    UNKNOWN = 'unknown'
+    QUEUED = 'queued'
+    PAUSED = 'paused'
+    DOWNLOADING = 'downloading'
+    COMPLETED = 'completed'
+    FAILED = 'failed'
+    WARNING = 'warning'
+    DELAY = 'delay'
+    DOWNLOADCLIENTUNAVAILABLE = 'downloadClientUnavailable'
+    FALLBACK = 'fallback'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of ImportListType from a JSON string"""
+        """Create an instance of QueueStatus from a JSON string"""
         return cls(json.loads(json_str))
 
 

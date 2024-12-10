@@ -187,7 +187,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_queue**
-> QueueResourcePagingResource get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_movie_items=include_unknown_movie_items, include_movie=include_movie, movie_ids=movie_ids, protocol=protocol, languages=languages, quality=quality)
+> QueueResourcePagingResource get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_movie_items=include_unknown_movie_items, include_movie=include_movie, movie_ids=movie_ids, protocol=protocol, languages=languages, quality=quality, status=status)
 
 
 
@@ -200,6 +200,7 @@ void (empty response body)
 import radarr
 from radarr.models.download_protocol import DownloadProtocol
 from radarr.models.queue_resource_paging_resource import QueueResourcePagingResource
+from radarr.models.queue_status import QueueStatus
 from radarr.models.sort_direction import SortDirection
 from radarr.rest import ApiException
 from pprint import pprint
@@ -240,10 +241,11 @@ with radarr.ApiClient(configuration) as api_client:
     movie_ids = [56] # List[int] |  (optional)
     protocol = radarr.DownloadProtocol() # DownloadProtocol |  (optional)
     languages = [56] # List[int] |  (optional)
-    quality = 56 # int |  (optional)
+    quality = [56] # List[int] |  (optional)
+    status = [radarr.QueueStatus()] # List[QueueStatus] |  (optional)
 
     try:
-        api_response = api_instance.get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_movie_items=include_unknown_movie_items, include_movie=include_movie, movie_ids=movie_ids, protocol=protocol, languages=languages, quality=quality)
+        api_response = api_instance.get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_movie_items=include_unknown_movie_items, include_movie=include_movie, movie_ids=movie_ids, protocol=protocol, languages=languages, quality=quality, status=status)
         print("The response of QueueApi->get_queue:\n")
         pprint(api_response)
     except Exception as e:
@@ -266,7 +268,8 @@ Name | Type | Description  | Notes
  **movie_ids** | [**List[int]**](int.md)|  | [optional] 
  **protocol** | [**DownloadProtocol**](.md)|  | [optional] 
  **languages** | [**List[int]**](int.md)|  | [optional] 
- **quality** | **int**|  | [optional] 
+ **quality** | [**List[int]**](int.md)|  | [optional] 
+ **status** | [**List[QueueStatus]**](QueueStatus.md)|  | [optional] 
 
 ### Return type
 
