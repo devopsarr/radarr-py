@@ -14,8 +14,6 @@ Name | Type | Description | Notes
 **custom_format_score** | **int** |  | [optional] 
 **size** | **float** |  | [optional] 
 **title** | **str** |  | [optional] 
-**sizeleft** | **float** |  | [optional] 
-**timeleft** | **str** |  | [optional] 
 **estimated_completion_time** | **datetime** |  | [optional] 
 **added** | **datetime** |  | [optional] 
 **status** | [**QueueStatus**](QueueStatus.md) |  | [optional] 
@@ -29,6 +27,8 @@ Name | Type | Description | Notes
 **download_client_has_post_import_category** | **bool** |  | [optional] 
 **indexer** | **str** |  | [optional] 
 **output_path** | **str** |  | [optional] 
+**sizeleft** | **float** |  | [optional] 
+**timeleft** | **str** |  | [optional] 
 
 ## Example
 
