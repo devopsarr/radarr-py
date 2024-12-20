@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **create_movie_import**
-> create_movie_import(movie_resource=movie_resource)
+> List[MovieResource] create_movie_import(movie_resource=movie_resource)
 
 
 
@@ -53,7 +53,9 @@ with radarr.ApiClient(configuration) as api_client:
     movie_resource = [radarr.MovieResource()] # List[MovieResource] |  (optional)
 
     try:
-        api_instance.create_movie_import(movie_resource=movie_resource)
+        api_response = api_instance.create_movie_import(movie_resource=movie_resource)
+        print("The response of MovieImportApi->create_movie_import:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling MovieImportApi->create_movie_import: %s\n" % e)
 ```
@@ -69,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List[MovieResource]**](MovieResource.md)
 
 ### Authorization
 
@@ -77,8 +79,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
