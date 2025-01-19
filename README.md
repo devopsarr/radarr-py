@@ -311,7 +311,6 @@ Class | Method | HTTP request | Description
 *RootFolderApi* | [**delete_root_folder**](docs/RootFolderApi.md#delete_root_folder) | **DELETE** /api/v3/rootfolder/{id} | 
 *RootFolderApi* | [**get_root_folder_by_id**](docs/RootFolderApi.md#get_root_folder_by_id) | **GET** /api/v3/rootfolder/{id} | 
 *RootFolderApi* | [**list_root_folder**](docs/RootFolderApi.md#list_root_folder) | **GET** /api/v3/rootfolder | 
-*StaticResourceApi* | [**get**](docs/StaticResourceApi.md#get) | **GET** / | 
 *StaticResourceApi* | [**get_by_path**](docs/StaticResourceApi.md#get_by_path) | **GET** /{path} | 
 *StaticResourceApi* | [**get_content_by_path**](docs/StaticResourceApi.md#get_content_by_path) | **GET** /content/{path} | 
 *StaticResourceApi* | [**get_login**](docs/StaticResourceApi.md#get_login) | **GET** /login | 
