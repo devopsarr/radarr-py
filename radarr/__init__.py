@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.1.1" # x-release-please-version
+__version__ = "1.2.0" # x-release-please-version
 
 # import apis into sdk package
 from radarr.api.alternative_title_api import AlternativeTitleApi
