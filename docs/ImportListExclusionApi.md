@@ -17,8 +17,6 @@ Method | HTTP request | Description
 # **create_exclusions**
 > ImportListExclusionResource create_exclusions(import_list_exclusion_resource=import_list_exclusion_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -100,8 +98,6 @@ Name | Type | Description  | Notes
 # **create_exclusions_bulk**
 > create_exclusions_bulk(import_list_exclusion_resource=import_list_exclusion_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -181,8 +177,6 @@ void (empty response body)
 # **delete_exclusions**
 > delete_exclusions(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -260,8 +254,6 @@ void (empty response body)
 
 # **delete_exclusions_bulk**
 > delete_exclusions_bulk(import_list_exclusion_bulk_resource=import_list_exclusion_bulk_resource)
-
-
 
 ### Example
 
@@ -341,8 +333,6 @@ void (empty response body)
 
 # **get_exclusions_by_id**
 > ImportListExclusionResource get_exclusions_by_id(id)
-
-
 
 ### Example
 
@@ -424,8 +414,6 @@ Name | Type | Description  | Notes
 
 # **get_exclusions_paged**
 > ImportListExclusionResourcePagingResource get_exclusions_paged(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction)
-
-
 
 ### Example
 
@@ -515,8 +503,6 @@ Name | Type | Description  | Notes
 # **list_exclusions**
 > List[ImportListExclusionResource] list_exclusions()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -593,8 +579,6 @@ This endpoint does not need any parameter.
 
 # **update_exclusions**
 > ImportListExclusionResource update_exclusions(id, import_list_exclusion_resource=import_list_exclusion_resource)
-
-
 
 ### Example
 

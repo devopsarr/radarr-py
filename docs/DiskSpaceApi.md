@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_disk_space**
 > List[DiskSpaceResource] list_disk_space()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

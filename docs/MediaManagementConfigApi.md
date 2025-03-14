@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_media_management_config**
 > MediaManagementConfigResource get_media_management_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_media_management_config_by_id**
 > MediaManagementConfigResource get_media_management_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_media_management_config**
 > MediaManagementConfigResource update_media_management_config(id, media_management_config_resource=media_management_config_resource)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **delete_movie_file**
 > delete_movie_file(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -94,8 +92,6 @@ void (empty response body)
 
 # **delete_movie_file_bulk**
 > delete_movie_file_bulk(movie_file_list_resource=movie_file_list_resource)
-
-
 
 ### Example
 
@@ -175,8 +171,6 @@ void (empty response body)
 
 # **get_movie_file_by_id**
 > MovieFileResource get_movie_file_by_id(id)
-
-
 
 ### Example
 
@@ -258,8 +252,6 @@ Name | Type | Description  | Notes
 
 # **list_movie_file**
 > List[MovieFileResource] list_movie_file(movie_id=movie_id, movie_file_ids=movie_file_ids)
-
-
 
 ### Example
 
@@ -344,8 +336,6 @@ Name | Type | Description  | Notes
 # **put_movie_file_editor**
 > put_movie_file_editor(movie_file_list_resource=movie_file_list_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -424,8 +414,6 @@ void (empty response body)
 
 # **update_movie_file**
 > MovieFileResource update_movie_file(id, movie_file_resource=movie_file_resource)
-
-
 
 ### Example
 

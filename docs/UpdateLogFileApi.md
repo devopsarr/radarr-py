@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_log_file_update_by_filename**
 > get_log_file_update_by_filename(filename)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ void (empty response body)
 
 # **list_log_file_update**
 > List[LogFileResource] list_log_file_update()
-
-
 
 ### Example
 

@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_calendar**
 > List[MovieResource] list_calendar(start=start, end=end, unmonitored=unmonitored, tags=tags)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

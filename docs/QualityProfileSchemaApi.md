@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_qualityprofile_schema**
 > QualityProfileResource get_qualityprofile_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

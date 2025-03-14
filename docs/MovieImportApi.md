@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **create_movie_import**
 > List[MovieResource] create_movie_import(movie_resource=movie_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **create_queue_grab_bulk**
 > create_queue_grab_bulk(queue_bulk_resource=queue_bulk_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -91,8 +89,6 @@ void (empty response body)
 
 # **create_queue_grab_by_id**
 > create_queue_grab_by_id(id)
-
-
 
 ### Example
 

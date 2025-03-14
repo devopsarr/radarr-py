@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_queue_status**
 > QueueStatusResource get_queue_status()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_remote_path_mapping**
 > RemotePathMappingResource create_remote_path_mapping(remote_path_mapping_resource=remote_path_mapping_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -97,8 +95,6 @@ Name | Type | Description  | Notes
 # **delete_remote_path_mapping**
 > delete_remote_path_mapping(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -176,8 +172,6 @@ void (empty response body)
 
 # **get_remote_path_mapping_by_id**
 > RemotePathMappingResource get_remote_path_mapping_by_id(id)
-
-
 
 ### Example
 
@@ -260,8 +254,6 @@ Name | Type | Description  | Notes
 # **list_remote_path_mapping**
 > List[RemotePathMappingResource] list_remote_path_mapping()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -338,8 +330,6 @@ This endpoint does not need any parameter.
 
 # **update_remote_path_mapping**
 > RemotePathMappingResource update_remote_path_mapping(id, remote_path_mapping_resource=remote_path_mapping_resource)
-
-
 
 ### Example
 

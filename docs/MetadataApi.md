@@ -18,8 +18,6 @@ Method | HTTP request | Description
 # **create_metadata**
 > MetadataResource create_metadata(force_save=force_save, metadata_resource=metadata_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -103,8 +101,6 @@ Name | Type | Description  | Notes
 # **create_metadata_action_by_name**
 > create_metadata_action_by_name(name, metadata_resource=metadata_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -186,8 +182,6 @@ void (empty response body)
 # **delete_metadata**
 > delete_metadata(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -265,8 +259,6 @@ void (empty response body)
 
 # **get_metadata_by_id**
 > MetadataResource get_metadata_by_id(id)
-
-
 
 ### Example
 
@@ -349,8 +341,6 @@ Name | Type | Description  | Notes
 # **list_metadata**
 > List[MetadataResource] list_metadata()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -428,8 +418,6 @@ This endpoint does not need any parameter.
 # **list_metadata_schema**
 > List[MetadataResource] list_metadata_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -506,8 +494,6 @@ This endpoint does not need any parameter.
 
 # **test_metadata**
 > test_metadata(force_test=force_test, metadata_resource=metadata_resource)
-
-
 
 ### Example
 
@@ -590,8 +576,6 @@ void (empty response body)
 # **testall_metadata**
 > testall_metadata()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -665,8 +649,6 @@ void (empty response body)
 
 # **update_metadata**
 > MetadataResource update_metadata(id, force_save=force_save, metadata_resource=metadata_resource)
-
-
 
 ### Example
 

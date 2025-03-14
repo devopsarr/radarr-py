@@ -20,8 +20,6 @@ Method | HTTP request | Description
 # **create_import_list**
 > ImportListResource create_import_list(force_save=force_save, import_list_resource=import_list_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -105,8 +103,6 @@ Name | Type | Description  | Notes
 # **create_import_list_action_by_name**
 > create_import_list_action_by_name(name, import_list_resource=import_list_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -188,8 +184,6 @@ void (empty response body)
 # **delete_import_list**
 > delete_import_list(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -267,8 +261,6 @@ void (empty response body)
 
 # **delete_import_list_bulk**
 > delete_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
-
-
 
 ### Example
 
@@ -348,8 +340,6 @@ void (empty response body)
 
 # **get_import_list_by_id**
 > ImportListResource get_import_list_by_id(id)
-
-
 
 ### Example
 
@@ -432,8 +422,6 @@ Name | Type | Description  | Notes
 # **list_import_list**
 > List[ImportListResource] list_import_list()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -511,8 +499,6 @@ This endpoint does not need any parameter.
 # **list_import_list_schema**
 > List[ImportListResource] list_import_list_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -589,8 +575,6 @@ This endpoint does not need any parameter.
 
 # **put_import_list_bulk**
 > ImportListResource put_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
-
-
 
 ### Example
 
@@ -674,8 +658,6 @@ Name | Type | Description  | Notes
 # **test_import_list**
 > test_import_list(force_test=force_test, import_list_resource=import_list_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -757,8 +739,6 @@ void (empty response body)
 # **testall_import_list**
 > testall_import_list()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -832,8 +812,6 @@ void (empty response body)
 
 # **update_import_list**
 > ImportListResource update_import_list(id, force_save=force_save, import_list_resource=import_list_resource)
-
-
 
 ### Example
 

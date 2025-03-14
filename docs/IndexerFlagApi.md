@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_indexer_flag**
 > List[IndexerFlagResource] list_indexer_flag()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_credit**
 > get_credit(movie_id=movie_id, movie_metadata_id=movie_metadata_id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -92,8 +90,6 @@ void (empty response body)
 
 # **get_credit_by_id**
 > CreditResource get_credit_by_id(id)
-
-
 
 ### Example
 

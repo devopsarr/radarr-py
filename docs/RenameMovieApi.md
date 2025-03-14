@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_rename**
 > List[RenameMovieResource] list_rename(movie_id=movie_id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

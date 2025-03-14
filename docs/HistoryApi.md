@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **create_history_failed_by_id**
 > create_history_failed_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -92,8 +90,6 @@ void (empty response body)
 
 # **get_history**
 > HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_movie=include_movie, event_type=event_type, download_id=download_id, movie_ids=movie_ids, languages=languages, quality=quality)
-
-
 
 ### Example
 
@@ -195,8 +191,6 @@ Name | Type | Description  | Notes
 # **list_history_movie**
 > List[HistoryResource] list_history_movie(movie_id=movie_id, event_type=event_type, include_movie=include_movie)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -282,8 +276,6 @@ Name | Type | Description  | Notes
 
 # **list_history_since**
 > List[HistoryResource] list_history_since(var_date=var_date, event_type=event_type, include_movie=include_movie)
-
-
 
 ### Example
 

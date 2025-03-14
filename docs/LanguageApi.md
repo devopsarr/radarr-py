@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_language_by_id**
 > LanguageResource get_language_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -93,8 +91,6 @@ Name | Type | Description  | Notes
 
 # **list_language**
 > List[LanguageResource] list_language()
-
-
 
 ### Example
 
