@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_alttitle_by_id**
 > AlternativeTitleResource get_alttitle_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -93,8 +91,6 @@ Name | Type | Description  | Notes
 
 # **list_alttitle**
 > List[AlternativeTitleResource] list_alttitle(movie_id=movie_id, movie_metadata_id=movie_metadata_id)
-
-
 
 ### Example
 

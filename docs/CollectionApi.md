@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **get_collection_by_id**
 > CollectionResource get_collection_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -95,8 +93,6 @@ Name | Type | Description  | Notes
 
 # **list_collection**
 > List[CollectionResource] list_collection(tmdb_id=tmdb_id)
-
-
 
 ### Example
 
@@ -179,8 +175,6 @@ Name | Type | Description  | Notes
 # **put_collection**
 > put_collection(collection_update_resource=collection_update_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -259,8 +253,6 @@ void (empty response body)
 
 # **update_collection**
 > CollectionResource update_collection(id, collection_resource=collection_resource)
-
-
 
 ### Example
 

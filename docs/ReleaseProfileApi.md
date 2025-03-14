@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_release_profile**
 > ReleaseProfileResource create_release_profile(release_profile_resource=release_profile_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -97,8 +95,6 @@ Name | Type | Description  | Notes
 # **delete_release_profile**
 > delete_release_profile(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -176,8 +172,6 @@ void (empty response body)
 
 # **get_release_profile_by_id**
 > ReleaseProfileResource get_release_profile_by_id(id)
-
-
 
 ### Example
 
@@ -260,8 +254,6 @@ Name | Type | Description  | Notes
 # **list_release_profile**
 > List[ReleaseProfileResource] list_release_profile()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -338,8 +330,6 @@ This endpoint does not need any parameter.
 
 # **update_release_profile**
 > ReleaseProfileResource update_release_profile(id, release_profile_resource=release_profile_resource)
-
-
 
 ### Example
 

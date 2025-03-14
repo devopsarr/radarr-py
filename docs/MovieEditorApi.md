@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **delete_movie_editor**
 > delete_movie_editor(movie_editor_resource=movie_editor_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -91,8 +89,6 @@ void (empty response body)
 
 # **put_movie_editor**
 > put_movie_editor(movie_editor_resource=movie_editor_resource)
-
-
 
 ### Example
 

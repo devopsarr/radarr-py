@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_metadata_config**
 > MetadataConfigResource get_metadata_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_metadata_config_by_id**
 > MetadataConfigResource get_metadata_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_metadata_config**
 > MetadataConfigResource update_metadata_config(id, metadata_config_resource=metadata_config_resource)
-
-
 
 ### Example
 

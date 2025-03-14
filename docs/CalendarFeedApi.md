@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_feed_v3_calendar_radarr_ics**
 > get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

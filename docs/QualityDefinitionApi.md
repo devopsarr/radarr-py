@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **get_quality_definition_by_id**
 > QualityDefinitionResource get_quality_definition_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -96,8 +94,6 @@ Name | Type | Description  | Notes
 # **list_quality_definition**
 > List[QualityDefinitionResource] list_quality_definition()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -174,8 +170,6 @@ This endpoint does not need any parameter.
 
 # **put_quality_definition_update**
 > put_quality_definition_update(quality_definition_resource=quality_definition_resource)
-
-
 
 ### Example
 
@@ -255,8 +249,6 @@ void (empty response body)
 
 # **update_quality_definition**
 > QualityDefinitionResource update_quality_definition(id, quality_definition_resource=quality_definition_resource)
-
-
 
 ### Example
 

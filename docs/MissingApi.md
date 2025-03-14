@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_wanted_missing**
 > MovieResourcePagingResource get_wanted_missing(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, monitored=monitored)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

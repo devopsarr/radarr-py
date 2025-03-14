@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **create_auto_tagging**
 > AutoTaggingResource create_auto_tagging(auto_tagging_resource=auto_tagging_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **delete_auto_tagging**
 > delete_auto_tagging(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -177,8 +173,6 @@ void (empty response body)
 
 # **get_auto_tagging_by_id**
 > AutoTaggingResource get_auto_tagging_by_id(id)
-
-
 
 ### Example
 
@@ -261,8 +255,6 @@ Name | Type | Description  | Notes
 # **list_auto_tagging**
 > List[AutoTaggingResource] list_auto_tagging()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -340,8 +332,6 @@ This endpoint does not need any parameter.
 # **list_auto_tagging_schema**
 > List[AutoTaggingSpecificationSchema] list_auto_tagging_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -418,8 +408,6 @@ This endpoint does not need any parameter.
 
 # **update_auto_tagging**
 > AutoTaggingResource update_auto_tagging(id, auto_tagging_resource=auto_tagging_resource)
-
-
 
 ### Example
 

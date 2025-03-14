@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **create_release_push**
 > List[ReleaseResource] create_release_push(release_resource=release_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

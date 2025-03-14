@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **get_naming_config**
 > NamingConfigResource get_naming_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -91,8 +89,6 @@ This endpoint does not need any parameter.
 
 # **get_naming_config_by_id**
 > NamingConfigResource get_naming_config_by_id(id)
-
-
 
 ### Example
 
@@ -174,8 +170,6 @@ Name | Type | Description  | Notes
 
 # **get_naming_config_examples**
 > get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, id=id, resource_name=resource_name)
-
-
 
 ### Example
 
@@ -267,8 +261,6 @@ void (empty response body)
 
 # **update_naming_config**
 > NamingConfigResource update_naming_config(id, naming_config_resource=naming_config_resource)
-
-
 
 ### Example
 

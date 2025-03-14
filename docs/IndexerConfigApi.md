@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_indexer_config**
 > IndexerConfigResource get_indexer_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_indexer_config_by_id**
 > IndexerConfigResource get_indexer_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_indexer_config**
 > IndexerConfigResource update_indexer_config(id, indexer_config_resource=indexer_config_resource)
-
-
 
 ### Example
 

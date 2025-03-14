@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_quality_profile**
 > QualityProfileResource create_quality_profile(quality_profile_resource=quality_profile_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -97,8 +95,6 @@ Name | Type | Description  | Notes
 # **delete_quality_profile**
 > delete_quality_profile(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -176,8 +172,6 @@ void (empty response body)
 
 # **get_quality_profile_by_id**
 > QualityProfileResource get_quality_profile_by_id(id)
-
-
 
 ### Example
 
@@ -260,8 +254,6 @@ Name | Type | Description  | Notes
 # **list_quality_profile**
 > List[QualityProfileResource] list_quality_profile()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -338,8 +330,6 @@ This endpoint does not need any parameter.
 
 # **update_quality_profile**
 > QualityProfileResource update_quality_profile(id, quality_profile_resource=quality_profile_resource)
-
-
 
 ### Example
 

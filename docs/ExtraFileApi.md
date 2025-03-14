@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_extra_file**
 > List[ExtraFileResource] list_extra_file(movie_id=movie_id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

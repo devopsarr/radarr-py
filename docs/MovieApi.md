@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_movie**
 > MovieResource create_movie(movie_resource=movie_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -96,8 +94,6 @@ Name | Type | Description  | Notes
 
 # **delete_movie**
 > delete_movie(id, delete_files=delete_files, add_import_exclusion=add_import_exclusion)
-
-
 
 ### Example
 
@@ -181,8 +177,6 @@ void (empty response body)
 # **get_movie_by_id**
 > MovieResource get_movie_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -263,8 +257,6 @@ Name | Type | Description  | Notes
 
 # **list_movie**
 > List[MovieResource] list_movie(tmdb_id=tmdb_id, exclude_local_covers=exclude_local_covers, language_id=language_id)
-
-
 
 ### Example
 
@@ -350,8 +342,6 @@ Name | Type | Description  | Notes
 
 # **update_movie**
 > MovieResource update_movie(id, move_files=move_files, movie_resource=movie_resource)
-
-
 
 ### Example
 

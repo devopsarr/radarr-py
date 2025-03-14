@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_media_cover_by_filename**
 > get_media_cover_by_filename(movie_id, filename)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

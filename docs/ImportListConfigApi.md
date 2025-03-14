@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_import_list_config**
 > ImportListConfigResource get_import_list_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_import_list_config_by_id**
 > ImportListConfigResource get_import_list_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_import_list_config**
 > ImportListConfigResource update_import_list_config(id, import_list_config_resource=import_list_config_resource)
-
-
 
 ### Example
 

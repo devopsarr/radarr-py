@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **list_movie_lookup**
 > List[MovieResource] list_movie_lookup(term=term)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -95,8 +93,6 @@ Name | Type | Description  | Notes
 # **list_movie_lookup_imdb**
 > List[MovieResource] list_movie_lookup_imdb(imdb_id=imdb_id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -177,8 +173,6 @@ Name | Type | Description  | Notes
 
 # **list_movie_lookup_tmdb**
 > List[MovieResource] list_movie_lookup_tmdb(tmdb_id=tmdb_id)
-
-
 
 ### Example
 

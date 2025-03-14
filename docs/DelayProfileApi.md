@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **create_delay_profile**
 > DelayProfileResource create_delay_profile(delay_profile_resource=delay_profile_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **delete_delay_profile**
 > delete_delay_profile(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -177,8 +173,6 @@ void (empty response body)
 
 # **get_delay_profile_by_id**
 > DelayProfileResource get_delay_profile_by_id(id)
-
-
 
 ### Example
 
@@ -261,8 +255,6 @@ Name | Type | Description  | Notes
 # **list_delay_profile**
 > List[DelayProfileResource] list_delay_profile()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -339,8 +331,6 @@ This endpoint does not need any parameter.
 
 # **update_delay_profile**
 > DelayProfileResource update_delay_profile(id, delay_profile_resource=delay_profile_resource)
-
-
 
 ### Example
 
@@ -424,8 +414,6 @@ Name | Type | Description  | Notes
 
 # **update_delay_profile_reorder**
 > List[DelayProfileResource] update_delay_profile_reorder(id, after=after)
-
-
 
 ### Example
 
