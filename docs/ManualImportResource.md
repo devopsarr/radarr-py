@@ -12,15 +12,16 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **size** | **int** |  | [optional] 
 **movie** | [**MovieResource**](MovieResource.md) |  | [optional] 
+**movie_file_id** | **int** |  | [optional] 
+**release_group** | **str** |  | [optional] 
 **quality** | [**QualityModel**](QualityModel.md) |  | [optional] 
 **languages** | [**List[Language]**](Language.md) |  | [optional] 
-**release_group** | **str** |  | [optional] 
 **quality_weight** | **int** |  | [optional] 
 **download_id** | **str** |  | [optional] 
 **custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
 **custom_format_score** | **int** |  | [optional] 
 **indexer_flags** | **int** |  | [optional] 
-**rejections** | [**List[Rejection]**](Rejection.md) |  | [optional] 
+**rejections** | [**List[ImportRejectionResource]**](ImportRejectionResource.md) |  | [optional] 
 
 ## Example
 
