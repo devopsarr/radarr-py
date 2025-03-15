@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **comment_url** | **str** |  | [optional] 
 **download_url** | **str** |  | [optional] 
 **info_url** | **str** |  | [optional] 
+**movie_requested** | **bool** |  | [optional] 
 **download_allowed** | **bool** |  | [optional] 
 **release_weight** | **int** |  | [optional] 
 **edition** | **str** |  | [optional] 
