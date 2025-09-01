@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **folder** | **str** |  | [optional] 
 **certification** | **str** |  | [optional] 
 **genres** | **List[str]** |  | [optional] 
+**keywords** | **List[str]** |  | [optional] 
 **tags** | **List[int]** |  | [optional] 
 **added** | **datetime** |  | [optional] 
 **add_options** | [**AddMovieOptions**](AddMovieOptions.md) |  | [optional] 
