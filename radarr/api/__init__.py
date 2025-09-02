@@ -44,6 +44,7 @@ from radarr.api.missing_api import MissingApi
 from radarr.api.movie_api import MovieApi
 from radarr.api.movie_editor_api import MovieEditorApi
 from radarr.api.movie_file_api import MovieFileApi
+from radarr.api.movie_folder_api import MovieFolderApi
 from radarr.api.movie_import_api import MovieImportApi
 from radarr.api.movie_lookup_api import MovieLookupApi
 from radarr.api.naming_config_api import NamingConfigApi

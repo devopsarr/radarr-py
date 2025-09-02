@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_feed_v3_calendar_radarr_ics**
-> get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored)
+> get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored, release_types=release_types)
 
 ### Example
 
@@ -17,6 +17,7 @@ Method | HTTP request | Description
 
 ```python
 import radarr
+from radarr.models.calendar_release_type import CalendarReleaseType
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -51,9 +52,10 @@ with radarr.ApiClient(configuration) as api_client:
     future_days = 28 # int |  (optional) (default to 28)
     tags = '' # str |  (optional) (default to '')
     unmonitored = False # bool |  (optional) (default to False)
+    release_types = [radarr.CalendarReleaseType()] # List[CalendarReleaseType] |  (optional)
 
     try:
-        api_instance.get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored)
+        api_instance.get_feed_v3_calendar_radarr_ics(past_days=past_days, future_days=future_days, tags=tags, unmonitored=unmonitored, release_types=release_types)
     except Exception as e:
         print("Exception when calling CalendarFeedApi->get_feed_v3_calendar_radarr_ics: %s\n" % e)
 ```
@@ -69,6 +71,7 @@ Name | Type | Description  | Notes
  **future_days** | **int**|  | [optional] [default to 28]
  **tags** | **str**|  | [optional] [default to &#39;&#39;]
  **unmonitored** | **bool**|  | [optional] [default to False]
+ **release_types** | [**List[CalendarReleaseType]**](CalendarReleaseType.md)|  | [optional] 
 
 ### Return type
 
