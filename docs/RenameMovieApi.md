@@ -48,7 +48,7 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with radarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = radarr.RenameMovieApi(api_client)
-    movie_id = 56 # int |  (optional)
+    movie_id = [56] # List[int] |  (optional)
 
     try:
         api_response = api_instance.list_rename(movie_id=movie_id)
@@ -65,7 +65,7 @@ with radarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **movie_id** | **int**|  | [optional] 
+ **movie_id** | [**List[int]**](int.md)|  | [optional] 
 
 ### Return type
 
