@@ -1,0 +1,16 @@
+{
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+    "release-type": "python",
+    "packages": {
+        ".": {
+            "extra-files": [
+                "README.md",
+                "pyproject.toml",
+                "setup.py",
+                "radarr/__init__.py",
+                "radarr/configuration.py",
+                "radarr/api_client.py"
+            ]
+        }
+    }
+}
