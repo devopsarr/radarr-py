@@ -31,6 +31,7 @@ from radarr.models.movie_status_type import MovieStatusType
 from radarr.models.ratings import Ratings
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class MovieResource(BaseModel):
     """
@@ -88,7 +89,8 @@ class MovieResource(BaseModel):
     __properties: ClassVar[List[str]] = ["id", "title", "originalTitle", "originalLanguage", "alternateTitles", "secondaryYear", "secondaryYearSourceId", "sortTitle", "sizeOnDisk", "status", "overview", "inCinemas", "physicalRelease", "digitalRelease", "releaseDate", "physicalReleaseNote", "images", "website", "remotePoster", "year", "youTubeTrailerId", "studio", "path", "qualityProfileId", "hasFile", "movieFileId", "monitored", "minimumAvailability", "isAvailable", "folderName", "runtime", "cleanTitle", "imdbId", "tmdbId", "titleSlug", "rootFolderPath", "folder", "certification", "genres", "keywords", "tags", "added", "addOptions", "ratings", "movieFile", "collection", "popularity", "lastSearchTime", "statistics"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -100,8 +102,7 @@ class MovieResource(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
