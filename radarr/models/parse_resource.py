@@ -89,15 +89,13 @@ class ParseResource(BaseModel):
         _items = []
         if self.languages:
             for _item_languages in self.languages:
-                if _item_languages:
-                    _items.append(_item_languages.to_dict())
+                _items.append(_item_languages.to_dict() if _item_languages is not None else None)
             _dict['languages'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in custom_formats (list)
         _items = []
         if self.custom_formats:
             for _item_custom_formats in self.custom_formats:
-                if _item_custom_formats:
-                    _items.append(_item_custom_formats.to_dict())
+                _items.append(_item_custom_formats.to_dict() if _item_custom_formats is not None else None)
             _dict['customFormats'] = _items
         # set to None if title (nullable) is None
         # and model_fields_set contains the field

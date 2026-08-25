@@ -96,8 +96,7 @@ class ParsedMovieInfo(BaseModel):
         _items = []
         if self.languages:
             for _item_languages in self.languages:
-                if _item_languages:
-                    _items.append(_item_languages.to_dict())
+                _items.append(_item_languages.to_dict() if _item_languages is not None else None)
             _dict['languages'] = _items
         # set to None if movie_titles (nullable) is None
         # and model_fields_set contains the field

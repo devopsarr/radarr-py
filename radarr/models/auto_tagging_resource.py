@@ -78,8 +78,7 @@ class AutoTaggingResource(BaseModel):
         _items = []
         if self.specifications:
             for _item_specifications in self.specifications:
-                if _item_specifications:
-                    _items.append(_item_specifications.to_dict())
+                _items.append(_item_specifications.to_dict() if _item_specifications is not None else None)
             _dict['specifications'] = _items
         # set to None if name (nullable) is None
         # and model_fields_set contains the field
