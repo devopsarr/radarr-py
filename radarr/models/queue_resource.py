@@ -109,8 +109,7 @@ class QueueResource(BaseModel):
         _items = []
         if self.languages:
             for _item_languages in self.languages:
-                if _item_languages:
-                    _items.append(_item_languages.to_dict())
+                _items.append(_item_languages.to_dict() if _item_languages is not None else None)
             _dict['languages'] = _items
         # override the default output from pydantic by calling `to_dict()` of quality
         if self.quality:
@@ -119,15 +118,13 @@ class QueueResource(BaseModel):
         _items = []
         if self.custom_formats:
             for _item_custom_formats in self.custom_formats:
-                if _item_custom_formats:
-                    _items.append(_item_custom_formats.to_dict())
+                _items.append(_item_custom_formats.to_dict() if _item_custom_formats is not None else None)
             _dict['customFormats'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in status_messages (list)
         _items = []
         if self.status_messages:
             for _item_status_messages in self.status_messages:
-                if _item_status_messages:
-                    _items.append(_item_status_messages.to_dict())
+                _items.append(_item_status_messages.to_dict() if _item_status_messages is not None else None)
             _dict['statusMessages'] = _items
         # set to None if movie_id (nullable) is None
         # and model_fields_set contains the field

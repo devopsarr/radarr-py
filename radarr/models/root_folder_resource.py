@@ -78,8 +78,7 @@ class RootFolderResource(BaseModel):
         _items = []
         if self.unmapped_folders:
             for _item_unmapped_folders in self.unmapped_folders:
-                if _item_unmapped_folders:
-                    _items.append(_item_unmapped_folders.to_dict())
+                _items.append(_item_unmapped_folders.to_dict() if _item_unmapped_folders is not None else None)
             _dict['unmappedFolders'] = _items
         # set to None if path (nullable) is None
         # and model_fields_set contains the field

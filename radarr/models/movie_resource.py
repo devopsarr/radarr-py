@@ -134,15 +134,13 @@ class MovieResource(BaseModel):
         _items = []
         if self.alternate_titles:
             for _item_alternate_titles in self.alternate_titles:
-                if _item_alternate_titles:
-                    _items.append(_item_alternate_titles.to_dict())
+                _items.append(_item_alternate_titles.to_dict() if _item_alternate_titles is not None else None)
             _dict['alternateTitles'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in images (list)
         _items = []
         if self.images:
             for _item_images in self.images:
-                if _item_images:
-                    _items.append(_item_images.to_dict())
+                _items.append(_item_images.to_dict() if _item_images is not None else None)
             _dict['images'] = _items
         # override the default output from pydantic by calling `to_dict()` of add_options
         if self.add_options:
