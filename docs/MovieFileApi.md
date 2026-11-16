@@ -87,12 +87,13 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_movie_file_bulk**
-> delete_movie_file_bulk(movie_file_list_resource=movie_file_list_resource)
+> object delete_movie_file_bulk(movie_file_list_resource=movie_file_list_resource)
 
 ### Example
 
@@ -135,7 +136,9 @@ with radarr.ApiClient(configuration) as api_client:
     movie_file_list_resource = radarr.MovieFileListResource() # MovieFileListResource |  (optional)
 
     try:
-        api_instance.delete_movie_file_bulk(movie_file_list_resource=movie_file_list_resource)
+        api_response = api_instance.delete_movie_file_bulk(movie_file_list_resource=movie_file_list_resource)
+        print("The response of MovieFileApi->delete_movie_file_bulk:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling MovieFileApi->delete_movie_file_bulk: %s\n" % e)
 ```
@@ -151,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -160,12 +163,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -241,12 +245,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -330,12 +335,13 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_movie_file_bulk**
-> put_movie_file_bulk(movie_file_resource=movie_file_resource)
+> List[MovieFileResource] put_movie_file_bulk(movie_file_resource=movie_file_resource)
 
 ### Example
 
@@ -378,7 +384,9 @@ with radarr.ApiClient(configuration) as api_client:
     movie_file_resource = [radarr.MovieFileResource()] # List[MovieFileResource] |  (optional)
 
     try:
-        api_instance.put_movie_file_bulk(movie_file_resource=movie_file_resource)
+        api_response = api_instance.put_movie_file_bulk(movie_file_resource=movie_file_resource)
+        print("The response of MovieFileApi->put_movie_file_bulk:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling MovieFileApi->put_movie_file_bulk: %s\n" % e)
 ```
@@ -394,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List[MovieFileResource]**](MovieFileResource.md)
 
 ### Authorization
 
@@ -403,7 +411,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -414,7 +422,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_movie_file_editor**
-> put_movie_file_editor(movie_file_list_resource=movie_file_list_resource)
+> List[MovieFileResource] put_movie_file_editor(movie_file_list_resource=movie_file_list_resource)
 
 ### Example
 
@@ -424,6 +432,7 @@ void (empty response body)
 ```python
 import radarr
 from radarr.models.movie_file_list_resource import MovieFileListResource
+from radarr.models.movie_file_resource import MovieFileResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -457,7 +466,9 @@ with radarr.ApiClient(configuration) as api_client:
     movie_file_list_resource = radarr.MovieFileListResource() # MovieFileListResource |  (optional)
 
     try:
-        api_instance.put_movie_file_editor(movie_file_list_resource=movie_file_list_resource)
+        api_response = api_instance.put_movie_file_editor(movie_file_list_resource=movie_file_list_resource)
+        print("The response of MovieFileApi->put_movie_file_editor:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling MovieFileApi->put_movie_file_editor: %s\n" % e)
 ```
@@ -473,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List[MovieFileResource]**](MovieFileResource.md)
 
 ### Authorization
 
@@ -482,7 +493,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -565,13 +576,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**202** | Accepted |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

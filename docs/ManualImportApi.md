@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_manual_import**
-> create_manual_import(manual_import_reprocess_resource=manual_import_reprocess_resource)
+> List[ManualImportReprocessResource] create_manual_import(manual_import_reprocess_resource=manual_import_reprocess_resource)
 
 ### Example
 
@@ -52,7 +52,9 @@ with radarr.ApiClient(configuration) as api_client:
     manual_import_reprocess_resource = [radarr.ManualImportReprocessResource()] # List[ManualImportReprocessResource] |  (optional)
 
     try:
-        api_instance.create_manual_import(manual_import_reprocess_resource=manual_import_reprocess_resource)
+        api_response = api_instance.create_manual_import(manual_import_reprocess_resource=manual_import_reprocess_resource)
+        print("The response of ManualImportApi->create_manual_import:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling ManualImportApi->create_manual_import: %s\n" % e)
 ```
@@ -68,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List[ManualImportReprocessResource]**](ManualImportReprocessResource.md)
 
 ### Authorization
 
@@ -77,12 +79,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
