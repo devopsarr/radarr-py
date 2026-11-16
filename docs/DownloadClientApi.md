@@ -96,7 +96,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**201** | Created |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -177,12 +178,12 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**400** | Bad Request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_download_client**
-> delete_download_client(id)
+> object delete_download_client(id)
 
 ### Example
 
@@ -224,7 +225,9 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_instance.delete_download_client(id)
+        api_response = api_instance.delete_download_client(id)
+        print("The response of DownloadClientApi->delete_download_client:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DownloadClientApi->delete_download_client: %s\n" % e)
 ```
@@ -240,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -249,7 +252,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -260,7 +263,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_download_client_bulk**
-> delete_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
+> object delete_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
 
 ### Example
 
@@ -303,7 +306,9 @@ with radarr.ApiClient(configuration) as api_client:
     download_client_bulk_resource = radarr.DownloadClientBulkResource() # DownloadClientBulkResource |  (optional)
 
     try:
-        api_instance.delete_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
+        api_response = api_instance.delete_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
+        print("The response of DownloadClientApi->delete_download_client_bulk:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DownloadClientApi->delete_download_client_bulk: %s\n" % e)
 ```
@@ -319,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -328,7 +333,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -409,12 +414,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -574,7 +580,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_download_client_bulk**
-> DownloadClientResource put_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
+> List[DownloadClientResource] put_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
 
 ### Example
 
@@ -636,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DownloadClientResource**](DownloadClientResource.md)
+[**List[DownloadClientResource]**](DownloadClientResource.md)
 
 ### Authorization
 
@@ -651,6 +657,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -732,12 +739,12 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testall_download_client**
-> testall_download_client()
+> List[ProviderTestAllResult] testall_download_client()
 
 ### Example
 
@@ -746,6 +753,7 @@ void (empty response body)
 
 ```python
 import radarr
+from radarr.models.provider_test_all_result import ProviderTestAllResult
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -778,7 +786,9 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.DownloadClientApi(api_client)
 
     try:
-        api_instance.testall_download_client()
+        api_response = api_instance.testall_download_client()
+        print("The response of DownloadClientApi->testall_download_client:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DownloadClientApi->testall_download_client: %s\n" % e)
 ```
@@ -791,7 +801,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**List[ProviderTestAllResult]**](ProviderTestAllResult.md)
 
 ### Authorization
 
@@ -800,12 +810,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -891,7 +902,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**202** | Accepted |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

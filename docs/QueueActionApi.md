@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_queue_grab_bulk**
-> create_queue_grab_bulk(queue_bulk_resource=queue_bulk_resource)
+> object create_queue_grab_bulk(queue_bulk_resource=queue_bulk_resource)
 
 ### Example
 
@@ -52,7 +52,9 @@ with radarr.ApiClient(configuration) as api_client:
     queue_bulk_resource = radarr.QueueBulkResource() # QueueBulkResource |  (optional)
 
     try:
-        api_instance.create_queue_grab_bulk(queue_bulk_resource=queue_bulk_resource)
+        api_response = api_instance.create_queue_grab_bulk(queue_bulk_resource=queue_bulk_resource)
+        print("The response of QueueActionApi->create_queue_grab_bulk:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling QueueActionApi->create_queue_grab_bulk: %s\n" % e)
 ```
@@ -68,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -77,18 +79,19 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_queue_grab_by_id**
-> create_queue_grab_by_id(id)
+> object create_queue_grab_by_id(id)
 
 ### Example
 
@@ -130,7 +133,9 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_instance.create_queue_grab_by_id(id)
+        api_response = api_instance.create_queue_grab_by_id(id)
+        print("The response of QueueActionApi->create_queue_grab_by_id:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling QueueActionApi->create_queue_grab_by_id: %s\n" % e)
 ```
@@ -146,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -155,12 +160,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
