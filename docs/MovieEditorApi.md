@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **delete_movie_editor**
-> object delete_movie_editor(movie_editor_resource=movie_editor_resource)
+> delete_movie_editor(movie_editor_resource=movie_editor_resource)
 
 ### Example
 
@@ -52,9 +52,7 @@ with radarr.ApiClient(configuration) as api_client:
     movie_editor_resource = radarr.MovieEditorResource() # MovieEditorResource |  (optional)
 
     try:
-        api_response = api_instance.delete_movie_editor(movie_editor_resource=movie_editor_resource)
-        print("The response of MovieEditorApi->delete_movie_editor:\n")
-        pprint(api_response)
+        api_instance.delete_movie_editor(movie_editor_resource=movie_editor_resource)
     except Exception as e:
         print("Exception when calling MovieEditorApi->delete_movie_editor: %s\n" % e)
 ```
@@ -70,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -78,8 +76,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -90,7 +88,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_movie_editor**
-> List[MovieResource] put_movie_editor(movie_editor_resource=movie_editor_resource)
+> put_movie_editor(movie_editor_resource=movie_editor_resource)
 
 ### Example
 
@@ -100,7 +98,6 @@ Name | Type | Description  | Notes
 ```python
 import radarr
 from radarr.models.movie_editor_resource import MovieEditorResource
-from radarr.models.movie_resource import MovieResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -134,9 +131,7 @@ with radarr.ApiClient(configuration) as api_client:
     movie_editor_resource = radarr.MovieEditorResource() # MovieEditorResource |  (optional)
 
     try:
-        api_response = api_instance.put_movie_editor(movie_editor_resource=movie_editor_resource)
-        print("The response of MovieEditorApi->put_movie_editor:\n")
-        pprint(api_response)
+        api_instance.put_movie_editor(movie_editor_resource=movie_editor_resource)
     except Exception as e:
         print("Exception when calling MovieEditorApi->put_movie_editor: %s\n" % e)
 ```
@@ -152,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[MovieResource]**](MovieResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -160,14 +155,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

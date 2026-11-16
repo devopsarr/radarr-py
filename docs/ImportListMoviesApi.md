@@ -5,11 +5,11 @@ All URIs are relative to *http://localhost:7878*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_importlist_movie**](ImportListMoviesApi.md#create_importlist_movie) | **POST** /api/v3/importlist/movie | 
-[**list_importlist_movie**](ImportListMoviesApi.md#list_importlist_movie) | **GET** /api/v3/importlist/movie | 
+[**get_importlist_movie**](ImportListMoviesApi.md#get_importlist_movie) | **GET** /api/v3/importlist/movie | 
 
 
 # **create_importlist_movie**
-> List[MovieResource] create_importlist_movie(movie_resource=movie_resource)
+> create_importlist_movie(movie_resource=movie_resource)
 
 ### Example
 
@@ -52,9 +52,7 @@ with radarr.ApiClient(configuration) as api_client:
     movie_resource = [radarr.MovieResource()] # List[MovieResource] |  (optional)
 
     try:
-        api_response = api_instance.create_importlist_movie(movie_resource=movie_resource)
-        print("The response of ImportListMoviesApi->create_importlist_movie:\n")
-        pprint(api_response)
+        api_instance.create_importlist_movie(movie_resource=movie_resource)
     except Exception as e:
         print("Exception when calling ImportListMoviesApi->create_importlist_movie: %s\n" % e)
 ```
@@ -70,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[MovieResource]**](MovieResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -78,8 +76,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -89,8 +87,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_importlist_movie**
-> List[ImportListMoviesResource] list_importlist_movie(include_recommendations=include_recommendations, include_trending=include_trending, include_popular=include_popular)
+# **get_importlist_movie**
+> get_importlist_movie(include_recommendations=include_recommendations, include_trending=include_trending, include_popular=include_popular)
 
 ### Example
 
@@ -99,7 +97,6 @@ Name | Type | Description  | Notes
 
 ```python
 import radarr
-from radarr.models.import_list_movies_resource import ImportListMoviesResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -135,11 +132,9 @@ with radarr.ApiClient(configuration) as api_client:
     include_popular = False # bool |  (optional) (default to False)
 
     try:
-        api_response = api_instance.list_importlist_movie(include_recommendations=include_recommendations, include_trending=include_trending, include_popular=include_popular)
-        print("The response of ImportListMoviesApi->list_importlist_movie:\n")
-        pprint(api_response)
+        api_instance.get_importlist_movie(include_recommendations=include_recommendations, include_trending=include_trending, include_popular=include_popular)
     except Exception as e:
-        print("Exception when calling ImportListMoviesApi->list_importlist_movie: %s\n" % e)
+        print("Exception when calling ImportListMoviesApi->get_importlist_movie: %s\n" % e)
 ```
 
 
@@ -155,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[ImportListMoviesResource]**](ImportListMoviesResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -164,7 +159,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 

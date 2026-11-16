@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_system_backup_restore_by_id**
-> BackupRestoreResource create_system_backup_restore_by_id(id)
+> create_system_backup_restore_by_id(id)
 
 ### Example
 
@@ -20,7 +20,6 @@ Method | HTTP request | Description
 
 ```python
 import radarr
-from radarr.models.backup_restore_resource import BackupRestoreResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -54,9 +53,7 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_response = api_instance.create_system_backup_restore_by_id(id)
-        print("The response of BackupApi->create_system_backup_restore_by_id:\n")
-        pprint(api_response)
+        api_instance.create_system_backup_restore_by_id(id)
     except Exception as e:
         print("Exception when calling BackupApi->create_system_backup_restore_by_id: %s\n" % e)
 ```
@@ -72,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BackupRestoreResource**](BackupRestoreResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -81,19 +78,18 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_system_backup_restore_upload**
-> BackupRestoreResource create_system_backup_restore_upload()
+> create_system_backup_restore_upload()
 
 ### Example
 
@@ -102,7 +98,6 @@ Name | Type | Description  | Notes
 
 ```python
 import radarr
-from radarr.models.backup_restore_resource import BackupRestoreResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -135,9 +130,7 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.BackupApi(api_client)
 
     try:
-        api_response = api_instance.create_system_backup_restore_upload()
-        print("The response of BackupApi->create_system_backup_restore_upload:\n")
-        pprint(api_response)
+        api_instance.create_system_backup_restore_upload()
     except Exception as e:
         print("Exception when calling BackupApi->create_system_backup_restore_upload: %s\n" % e)
 ```
@@ -150,7 +143,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BackupRestoreResource**](BackupRestoreResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -159,19 +152,18 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_system_backup**
-> object delete_system_backup(id)
+> delete_system_backup(id)
 
 ### Example
 
@@ -213,9 +205,7 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_response = api_instance.delete_system_backup(id)
-        print("The response of BackupApi->delete_system_backup:\n")
-        pprint(api_response)
+        api_instance.delete_system_backup(id)
     except Exception as e:
         print("Exception when calling BackupApi->delete_system_backup: %s\n" % e)
 ```
@@ -231,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -240,13 +230,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -318,7 +307,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 

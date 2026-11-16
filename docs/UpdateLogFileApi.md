@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_log_file_update_by_filename**
-> str get_log_file_update_by_filename(filename)
+> get_log_file_update_by_filename(filename)
 
 ### Example
 
@@ -51,9 +51,7 @@ with radarr.ApiClient(configuration) as api_client:
     filename = 'filename_example' # str | 
 
     try:
-        api_response = api_instance.get_log_file_update_by_filename(filename)
-        print("The response of UpdateLogFileApi->get_log_file_update_by_filename:\n")
-        pprint(api_response)
+        api_instance.get_log_file_update_by_filename(filename)
     except Exception as e:
         print("Exception when calling UpdateLogFileApi->get_log_file_update_by_filename: %s\n" % e)
 ```
@@ -69,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**str**
+void (empty response body)
 
 ### Authorization
 
@@ -78,13 +76,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain
+ - **Accept**: Not defined
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -156,7 +153,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
