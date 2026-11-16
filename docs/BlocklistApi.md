@@ -89,7 +89,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_blocklist_bulk**
-> object delete_blocklist_bulk(blocklist_bulk_resource=blocklist_bulk_resource)
+> delete_blocklist_bulk(blocklist_bulk_resource=blocklist_bulk_resource)
 
 ### Example
 
@@ -132,9 +132,7 @@ with radarr.ApiClient(configuration) as api_client:
     blocklist_bulk_resource = radarr.BlocklistBulkResource() # BlocklistBulkResource |  (optional)
 
     try:
-        api_response = api_instance.delete_blocklist_bulk(blocklist_bulk_resource=blocklist_bulk_resource)
-        print("The response of BlocklistApi->delete_blocklist_bulk:\n")
-        pprint(api_response)
+        api_instance.delete_blocklist_bulk(blocklist_bulk_resource=blocklist_bulk_resource)
     except Exception as e:
         print("Exception when calling BlocklistApi->delete_blocklist_bulk: %s\n" % e)
 ```
@@ -150,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -158,8 +156,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -333,7 +331,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 

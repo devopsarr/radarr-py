@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **quality** | [**QualityModel**](QualityModel.md) |  | [optional] 
 **custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
 **custom_format_score** | **int** |  | [optional] 
-**history** | [**ReleaseHistoryResource**](ReleaseHistoryResource.md) |  | [optional] 
 **quality_weight** | **int** |  | [optional] 
 **age** | **int** |  | [optional] 
 **age_hours** | **float** |  | [optional] 

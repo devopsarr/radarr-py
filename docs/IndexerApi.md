@@ -96,8 +96,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Created |  -  |
-**404** | Not Found |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -178,12 +177,12 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**400** | Bad Request |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_indexer**
-> object delete_indexer(id)
+> delete_indexer(id)
 
 ### Example
 
@@ -225,9 +224,7 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_response = api_instance.delete_indexer(id)
-        print("The response of IndexerApi->delete_indexer:\n")
-        pprint(api_response)
+        api_instance.delete_indexer(id)
     except Exception as e:
         print("Exception when calling IndexerApi->delete_indexer: %s\n" % e)
 ```
@@ -243,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -252,7 +249,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -263,7 +260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_indexer_bulk**
-> object delete_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
+> delete_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
 
 ### Example
 
@@ -306,9 +303,7 @@ with radarr.ApiClient(configuration) as api_client:
     indexer_bulk_resource = radarr.IndexerBulkResource() # IndexerBulkResource |  (optional)
 
     try:
-        api_response = api_instance.delete_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
-        print("The response of IndexerApi->delete_indexer_bulk:\n")
-        pprint(api_response)
+        api_instance.delete_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
     except Exception as e:
         print("Exception when calling IndexerApi->delete_indexer_bulk: %s\n" % e)
 ```
@@ -324,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -333,7 +328,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -414,13 +409,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -580,7 +574,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_indexer_bulk**
-> List[IndexerResource] put_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
+> IndexerResource put_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
 
 ### Example
 
@@ -642,7 +636,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[IndexerResource]**](IndexerResource.md)
+[**IndexerResource**](IndexerResource.md)
 
 ### Authorization
 
@@ -657,7 +651,6 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -739,12 +732,12 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No Content |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testall_indexer**
-> List[ProviderTestAllResult] testall_indexer()
+> testall_indexer()
 
 ### Example
 
@@ -753,7 +746,6 @@ void (empty response body)
 
 ```python
 import radarr
-from radarr.models.provider_test_all_result import ProviderTestAllResult
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -786,9 +778,7 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.IndexerApi(api_client)
 
     try:
-        api_response = api_instance.testall_indexer()
-        print("The response of IndexerApi->testall_indexer:\n")
-        pprint(api_response)
+        api_instance.testall_indexer()
     except Exception as e:
         print("Exception when calling IndexerApi->testall_indexer: %s\n" % e)
 ```
@@ -801,7 +791,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List[ProviderTestAllResult]**](ProviderTestAllResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -810,13 +800,12 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -902,8 +891,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**202** | Accepted |  -  |
-**404** | Not Found |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

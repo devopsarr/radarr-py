@@ -85,14 +85,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Created |  -  |
-**404** | Not Found |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -175,7 +174,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_custom_format_bulk**
-> object delete_custom_format_bulk(custom_format_bulk_resource=custom_format_bulk_resource)
+> delete_custom_format_bulk(custom_format_bulk_resource=custom_format_bulk_resource)
 
 ### Example
 
@@ -218,9 +217,7 @@ with radarr.ApiClient(configuration) as api_client:
     custom_format_bulk_resource = radarr.CustomFormatBulkResource() # CustomFormatBulkResource |  (optional)
 
     try:
-        api_response = api_instance.delete_custom_format_bulk(custom_format_bulk_resource=custom_format_bulk_resource)
-        print("The response of CustomFormatApi->delete_custom_format_bulk:\n")
-        pprint(api_response)
+        api_instance.delete_custom_format_bulk(custom_format_bulk_resource=custom_format_bulk_resource)
     except Exception as e:
         print("Exception when calling CustomFormatApi->delete_custom_format_bulk: %s\n" % e)
 ```
@@ -236,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -245,7 +242,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -326,13 +323,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -492,7 +488,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_custom_format_bulk**
-> List[CustomFormatResource] put_custom_format_bulk(custom_format_bulk_resource=custom_format_bulk_resource)
+> CustomFormatResource put_custom_format_bulk(custom_format_bulk_resource=custom_format_bulk_resource)
 
 ### Example
 
@@ -554,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[CustomFormatResource]**](CustomFormatResource.md)
+[**CustomFormatResource**](CustomFormatResource.md)
 
 ### Authorization
 
@@ -569,7 +565,6 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -647,14 +642,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**202** | Accepted |  -  |
-**404** | Not Found |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

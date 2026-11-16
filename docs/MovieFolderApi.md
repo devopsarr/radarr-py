@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_movie_folder**
-> MovieFolderResource get_movie_folder(id)
+> get_movie_folder(id)
 
 ### Example
 
@@ -17,7 +17,6 @@ Method | HTTP request | Description
 
 ```python
 import radarr
-from radarr.models.movie_folder_resource import MovieFolderResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -51,9 +50,7 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_response = api_instance.get_movie_folder(id)
-        print("The response of MovieFolderApi->get_movie_folder:\n")
-        pprint(api_response)
+        api_instance.get_movie_folder(id)
     except Exception as e:
         print("Exception when calling MovieFolderApi->get_movie_folder: %s\n" % e)
 ```
@@ -69,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MovieFolderResource**](MovieFolderResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -78,7 +75,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 

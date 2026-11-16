@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_localization**
-> get_localization()
+> str get_localization()
 
 ### Example
 
@@ -50,7 +50,9 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.LocalizationApi(api_client)
 
     try:
-        api_instance.get_localization()
+        api_response = api_instance.get_localization()
+        print("The response of LocalizationApi->get_localization:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling LocalizationApi->get_localization: %s\n" % e)
 ```
@@ -63,7 +65,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**str**
 
 ### Authorization
 
@@ -72,7 +74,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 

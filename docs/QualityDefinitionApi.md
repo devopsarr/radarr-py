@@ -82,13 +82,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -160,7 +159,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
@@ -237,7 +236,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
@@ -248,7 +247,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_quality_definition_update**
-> List[QualityDefinitionResource] put_quality_definition_update(quality_definition_resource=quality_definition_resource)
+> put_quality_definition_update(quality_definition_resource=quality_definition_resource)
 
 ### Example
 
@@ -291,9 +290,7 @@ with radarr.ApiClient(configuration) as api_client:
     quality_definition_resource = [radarr.QualityDefinitionResource()] # List[QualityDefinitionResource] |  (optional)
 
     try:
-        api_response = api_instance.put_quality_definition_update(quality_definition_resource=quality_definition_resource)
-        print("The response of QualityDefinitionApi->put_quality_definition_update:\n")
-        pprint(api_response)
+        api_instance.put_quality_definition_update(quality_definition_resource=quality_definition_resource)
     except Exception as e:
         print("Exception when calling QualityDefinitionApi->put_quality_definition_update: %s\n" % e)
 ```
@@ -309,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[QualityDefinitionResource]**](QualityDefinitionResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -317,8 +314,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -400,15 +397,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**202** | Accepted |  -  |
-**404** | Not Found |  -  |
+**2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

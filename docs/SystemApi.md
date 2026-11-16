@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_system_restart**
-> SystemRestartResource create_system_restart()
+> create_system_restart()
 
 ### Example
 
@@ -21,7 +21,6 @@ Method | HTTP request | Description
 
 ```python
 import radarr
-from radarr.models.system_restart_resource import SystemRestartResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -54,9 +53,7 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.SystemApi(api_client)
 
     try:
-        api_response = api_instance.create_system_restart()
-        print("The response of SystemApi->create_system_restart:\n")
-        pprint(api_response)
+        api_instance.create_system_restart()
     except Exception as e:
         print("Exception when calling SystemApi->create_system_restart: %s\n" % e)
 ```
@@ -69,7 +66,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SystemRestartResource**](SystemRestartResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -78,7 +75,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -89,7 +86,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_system_shutdown**
-> SystemShutdownResource create_system_shutdown()
+> create_system_shutdown()
 
 ### Example
 
@@ -98,7 +95,6 @@ This endpoint does not need any parameter.
 
 ```python
 import radarr
-from radarr.models.system_shutdown_resource import SystemShutdownResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -131,9 +127,7 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.SystemApi(api_client)
 
     try:
-        api_response = api_instance.create_system_shutdown()
-        print("The response of SystemApi->create_system_shutdown:\n")
-        pprint(api_response)
+        api_instance.create_system_shutdown()
     except Exception as e:
         print("Exception when calling SystemApi->create_system_shutdown: %s\n" % e)
 ```
@@ -146,7 +140,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SystemShutdownResource**](SystemShutdownResource.md)
+void (empty response body)
 
 ### Authorization
 
@@ -155,7 +149,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -166,7 +160,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_system_routes**
-> str get_system_routes()
+> get_system_routes()
 
 ### Example
 
@@ -207,9 +201,7 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.SystemApi(api_client)
 
     try:
-        api_response = api_instance.get_system_routes()
-        print("The response of SystemApi->get_system_routes:\n")
-        pprint(api_response)
+        api_instance.get_system_routes()
     except Exception as e:
         print("Exception when calling SystemApi->get_system_routes: %s\n" % e)
 ```
@@ -222,7 +214,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**str**
+void (empty response body)
 
 ### Authorization
 
@@ -231,7 +223,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -242,7 +234,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_system_routes_duplicate**
-> Dict[str, List[str]] get_system_routes_duplicate()
+> get_system_routes_duplicate()
 
 ### Example
 
@@ -283,9 +275,7 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.SystemApi(api_client)
 
     try:
-        api_response = api_instance.get_system_routes_duplicate()
-        print("The response of SystemApi->get_system_routes_duplicate:\n")
-        pprint(api_response)
+        api_instance.get_system_routes_duplicate()
     except Exception as e:
         print("Exception when calling SystemApi->get_system_routes_duplicate: %s\n" % e)
 ```
@@ -298,7 +288,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dict[str, List[str]]**
+void (empty response body)
 
 ### Authorization
 
@@ -307,7 +297,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 
@@ -384,7 +374,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 
