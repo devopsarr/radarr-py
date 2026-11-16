@@ -94,7 +94,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**201** | Created |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -175,12 +176,12 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**400** | Bad Request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_metadata**
-> delete_metadata(id)
+> object delete_metadata(id)
 
 ### Example
 
@@ -222,7 +223,9 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_instance.delete_metadata(id)
+        api_response = api_instance.delete_metadata(id)
+        print("The response of MetadataApi->delete_metadata:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling MetadataApi->delete_metadata: %s\n" % e)
 ```
@@ -238,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -247,7 +250,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -328,12 +331,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -569,12 +573,12 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testall_metadata**
-> testall_metadata()
+> List[ProviderTestAllResult] testall_metadata()
 
 ### Example
 
@@ -583,6 +587,7 @@ void (empty response body)
 
 ```python
 import radarr
+from radarr.models.provider_test_all_result import ProviderTestAllResult
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -615,7 +620,9 @@ with radarr.ApiClient(configuration) as api_client:
     api_instance = radarr.MetadataApi(api_client)
 
     try:
-        api_instance.testall_metadata()
+        api_response = api_instance.testall_metadata()
+        print("The response of MetadataApi->testall_metadata:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling MetadataApi->testall_metadata: %s\n" % e)
 ```
@@ -628,7 +635,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**List[ProviderTestAllResult]**](ProviderTestAllResult.md)
 
 ### Authorization
 
@@ -637,12 +644,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -728,7 +736,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**202** | Accepted |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

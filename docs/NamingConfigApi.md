@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -158,18 +158,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_naming_config_examples**
-> get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, id=id, resource_name=resource_name)
+> NamingExampleResource get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, id=id, resource_name=resource_name)
 
 ### Example
 
@@ -179,6 +180,7 @@ Name | Type | Description  | Notes
 ```python
 import radarr
 from radarr.models.colon_replacement_format import ColonReplacementFormat
+from radarr.models.naming_example_resource import NamingExampleResource
 from radarr.rest import ApiException
 from pprint import pprint
 
@@ -218,7 +220,9 @@ with radarr.ApiClient(configuration) as api_client:
     resource_name = 'resource_name_example' # str |  (optional)
 
     try:
-        api_instance.get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, id=id, resource_name=resource_name)
+        api_response = api_instance.get_naming_config_examples(rename_movies=rename_movies, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_movie_format=standard_movie_format, movie_folder_format=movie_folder_format, id=id, resource_name=resource_name)
+        print("The response of NamingConfigApi->get_naming_config_examples:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling NamingConfigApi->get_naming_config_examples: %s\n" % e)
 ```
@@ -240,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**NamingExampleResource**](NamingExampleResource.md)
 
 ### Authorization
 
@@ -249,7 +253,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -331,14 +335,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**202** | Accepted |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

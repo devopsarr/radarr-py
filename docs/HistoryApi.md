@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_history_failed_by_id**
-> create_history_failed_by_id(id)
+> object create_history_failed_by_id(id)
 
 ### Example
 
@@ -53,7 +53,9 @@ with radarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_instance.create_history_failed_by_id(id)
+        api_response = api_instance.create_history_failed_by_id(id)
+        print("The response of HistoryApi->create_history_failed_by_id:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling HistoryApi->create_history_failed_by_id: %s\n" % e)
 ```
@@ -69,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -78,7 +80,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 

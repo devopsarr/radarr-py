@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **tmdb_id** | **int** |  | [optional] 
 **images** | [**List[MediaCover]**](MediaCover.md) |  | [optional] 
 **genres** | **List[str]** |  | [optional] 
+**keywords** | **List[str]** |  | [optional] 
 **in_cinemas** | **datetime** |  | [optional] 
 **physical_release** | **datetime** |  | [optional] 
 **digital_release** | **datetime** |  | [optional] 
@@ -48,12 +49,12 @@ json = "{}"
 # create an instance of MovieMetadata from a JSON string
 movie_metadata_instance = MovieMetadata.from_json(json)
 # print the JSON string representation of the object
-print MovieMetadata.to_json()
+print(MovieMetadata.to_json())
 
 # convert the object into a dict
 movie_metadata_dict = movie_metadata_instance.to_dict()
 # create an instance of MovieMetadata from a dict
-movie_metadata_form_dict = movie_metadata.from_dict(movie_metadata_dict)
+movie_metadata_from_dict = MovieMetadata.from_dict(movie_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
