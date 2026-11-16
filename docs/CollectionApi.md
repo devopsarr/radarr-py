@@ -81,12 +81,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -173,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_collection**
-> put_collection(collection_update_resource=collection_update_resource)
+> List[CollectionResource] put_collection(collection_update_resource=collection_update_resource)
 
 ### Example
 
@@ -182,6 +183,7 @@ Name | Type | Description  | Notes
 
 ```python
 import radarr
+from radarr.models.collection_resource import CollectionResource
 from radarr.models.collection_update_resource import CollectionUpdateResource
 from radarr.rest import ApiException
 from pprint import pprint
@@ -216,7 +218,9 @@ with radarr.ApiClient(configuration) as api_client:
     collection_update_resource = radarr.CollectionUpdateResource() # CollectionUpdateResource |  (optional)
 
     try:
-        api_instance.put_collection(collection_update_resource=collection_update_resource)
+        api_response = api_instance.put_collection(collection_update_resource=collection_update_resource)
+        print("The response of CollectionApi->put_collection:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling CollectionApi->put_collection: %s\n" % e)
 ```
@@ -232,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List[CollectionResource]**](CollectionResource.md)
 
 ### Authorization
 
@@ -241,7 +245,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -324,13 +328,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**202** | Accepted |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

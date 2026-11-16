@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_release**
-> create_release(release_resource=release_resource)
+> ReleaseResource create_release(release_resource=release_resource)
 
 ### Example
 
@@ -52,7 +52,9 @@ with radarr.ApiClient(configuration) as api_client:
     release_resource = radarr.ReleaseResource() # ReleaseResource |  (optional)
 
     try:
-        api_instance.create_release(release_resource=release_resource)
+        api_response = api_instance.create_release(release_resource=release_resource)
+        print("The response of ReleaseApi->create_release:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling ReleaseApi->create_release: %s\n" % e)
 ```
@@ -68,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ReleaseResource**](ReleaseResource.md)
 
 ### Authorization
 
@@ -77,12 +79,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -164,6 +167,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**400** | Bad Request |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

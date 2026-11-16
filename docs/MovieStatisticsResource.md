@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **movie_file_count** | **int** |  | [optional] 
 **size_on_disk** | **int** |  | [optional] 
 **release_groups** | **List[str]** |  | [optional] 
+**movie_file_qualities** | [**List[Quality]**](Quality.md) |  | [optional] 
 
 ## Example
 

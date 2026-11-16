@@ -85,18 +85,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**201** | Created |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_exclusions_bulk**
-> create_exclusions_bulk(import_list_exclusion_resource=import_list_exclusion_resource)
+> List[ImportListExclusionResource] create_exclusions_bulk(import_list_exclusion_resource=import_list_exclusion_resource)
 
 ### Example
 
@@ -139,7 +140,9 @@ with radarr.ApiClient(configuration) as api_client:
     import_list_exclusion_resource = [radarr.ImportListExclusionResource()] # List[ImportListExclusionResource] |  (optional)
 
     try:
-        api_instance.create_exclusions_bulk(import_list_exclusion_resource=import_list_exclusion_resource)
+        api_response = api_instance.create_exclusions_bulk(import_list_exclusion_resource=import_list_exclusion_resource)
+        print("The response of ImportListExclusionApi->create_exclusions_bulk:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling ImportListExclusionApi->create_exclusions_bulk: %s\n" % e)
 ```
@@ -155,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List[ImportListExclusionResource]**](ImportListExclusionResource.md)
 
 ### Authorization
 
@@ -163,8 +166,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -253,7 +256,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_exclusions_bulk**
-> delete_exclusions_bulk(import_list_exclusion_bulk_resource=import_list_exclusion_bulk_resource)
+> object delete_exclusions_bulk(import_list_exclusion_bulk_resource=import_list_exclusion_bulk_resource)
 
 ### Example
 
@@ -296,7 +299,9 @@ with radarr.ApiClient(configuration) as api_client:
     import_list_exclusion_bulk_resource = radarr.ImportListExclusionBulkResource() # ImportListExclusionBulkResource |  (optional)
 
     try:
-        api_instance.delete_exclusions_bulk(import_list_exclusion_bulk_resource=import_list_exclusion_bulk_resource)
+        api_response = api_instance.delete_exclusions_bulk(import_list_exclusion_bulk_resource=import_list_exclusion_bulk_resource)
+        print("The response of ImportListExclusionApi->delete_exclusions_bulk:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling ImportListExclusionApi->delete_exclusions_bulk: %s\n" % e)
 ```
@@ -312,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -320,8 +325,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -402,12 +407,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**404** | Not Found |  -  |
 **2XX** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -650,13 +656,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**2XX** | OK |  -  |
+**202** | Accepted |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

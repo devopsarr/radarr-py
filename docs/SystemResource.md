@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **is_osx** | **bool** |  | [optional] 
 **is_windows** | **bool** |  | [optional] 
 **is_docker** | **bool** |  | [optional] 
+**is_containerized** | **bool** |  | [optional] 
 **mode** | [**RuntimeMode**](RuntimeMode.md) |  | [optional] 
 **branch** | **str** |  | [optional] 
 **database_type** | [**DatabaseType**](DatabaseType.md) |  | [optional] 
