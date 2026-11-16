@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.2.2 (2026-11-16)
+
+## What's Changed
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.16.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/100
+* fix(deps): update dependency radarr/radarr to v5.28.0.10274 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/102
+* fix(deps): update dependency radarr/radarr to v6 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/103
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.18.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/104
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.19.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/105
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.20.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/106
+* chore: add files for relase please v4 migration by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/107
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.21.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/108
+* fix(deps): update dependency radarr/radarr to v6.1.1.10360 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/109
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.22.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/110
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.23.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/111
+* fix(deps): update dependency radarr/radarr to v6.2.1.10461 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/112
+* fix(deps): update dependency radarr/radarr to v6.3.0.10514 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/113
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.25.0 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/114
+* fix(deps): update dependency radarr/radarr to v6.3.0.10514 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/115
+* fix(deps): update dependency radarr/radarr to v6.4.4.10685 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/116
+* fix(deps): update dependency radarr/radarr to v6.4.4.10685 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/117
+* chore: align-versions by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/118
+* chore: edit changelog type to github by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/119
+* fix(deps): update dependency seerr-team/seerr to v3.5.2 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/120
+* fix(deps): update dependency radarr/radarr to v7 by @devopsarr[bot] in https://github.com/devopsarr/radarr-py/pull/121
+
+
+**Full Changelog**: https://github.com/devopsarr/radarr-py/compare/v1.2.1...v1.2.2
+
 ## [1.2.1](https://github.com/devopsarr/radarr-py/compare/v1.2.0...v1.2.1) (2025-09-04)
 
 
